@@ -22,9 +22,9 @@ namespace ProjetoFinal.Presentation.Views
 
             InitializeComponent();
 
-            var repo = new ProdutoRepository(new Infrastructure.Context.LaloContext());
+            //var repo = new ProdutoRepository(new Infrastructure.Context.LaloContext());
 
-            var produtos = _produtoRepository.FindAll();
+           // var produtos = _produtoRepository.FindAll();
         }
 
         #region Events
