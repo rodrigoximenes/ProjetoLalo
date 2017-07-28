@@ -1,7 +1,9 @@
 ﻿
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ProjetoFinal.Domain.Model
 {
-    //[Table("Produto")]
+    [Table("PRODUTO")]
     public partial class Produto
     {
         public int Id { get; set; }
