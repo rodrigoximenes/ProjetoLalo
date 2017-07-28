@@ -23,6 +23,7 @@ namespace ProjetoFinal.Infrastructure.Context
             base.Dispose(disposing);
         }
 
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
