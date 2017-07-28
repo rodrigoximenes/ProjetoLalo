@@ -1,30 +1,36 @@
-﻿namespace ProjetoFinal.Infrastructure.Context
-{
-    using Domain.Model;
-    using System;
-    using System.Data.Entity;
-    using System.Linq;
+﻿using ProjetoFinal.Domain.Model;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
+namespace ProjetoFinal.Infrastructure.Context
+{
     public class LaloContext : DbContext
     {
 
         public DbSet<Produto> produtos { get; set; }
-        // Your context has been configured to use a 'LaloContext' connection string from your application's 
-        // configuration file (App.config or Web.config). By default, this connection string targets the 
-        // 'ProjetoFinal.Infrastructure.Context.LaloContext' database on your LocalDb instance. 
-        // 
-        // If you wish to target a different database and/or database provider, modify the 'LaloContext' 
-        // connection string in the application configuration file.
+        public DbSet<Usuario> usuario { get; set; }
+        public DbSet<Cliente> cliente { get; set; }
+        public DbSet<Item> item { get; set; }
+        public DbSet<Pedido> pedido { get; set; }
+      
         public LaloContext()
             : base("name=LaloContext")
         {
         }
 
-        // Add a DbSet for each entity type that you want to include in your model. For more information 
-        // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+
+            modelBuilder.Properties().Where(x => x.Name == x.ReflectedType.Name + "Id").Configure(x => x.IsKey());
+
             base.OnModelCreating(modelBuilder);
         }
     }
