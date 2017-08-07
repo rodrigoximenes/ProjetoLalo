@@ -18,7 +18,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void StartScreen()
         {
-            dtTmPkrDataEntrega.Value = DateTime.Now;
+            dtTmPkrDataEntrega.Value = DateTime.Now; 
             dtTmPkrDataRegistro.Value = DateTime.Today.AddDays(-1);
             cmbBoxStatus.SelectedIndex = -1;
             txtBoxNumeroPedido.Text = string.Empty;
@@ -54,12 +54,12 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         #region Events
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (dtTmPkrDataRegistro.Value > dtTmPkrDataEntrega.Value)
+            if(dtTmPkrDataRegistro.Value > dtTmPkrDataEntrega.Value)
             {
                 MessageBox.Show("Data de Entrega não pode ser menor que a Data de Registro");
                 return;
             }
-
+            
         }
 
         private void btnLimparFiltros_Click(object sender, EventArgs e)

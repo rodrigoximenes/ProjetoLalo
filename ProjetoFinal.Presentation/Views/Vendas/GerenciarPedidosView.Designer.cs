@@ -1,6 +1,5 @@
 ﻿namespace ProjetoFinal.Presentation.Views.Vendas
 {
-
     partial class GerenciarPedidosView
     {
         /// <summary>

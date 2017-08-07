@@ -1,6 +1,13 @@
 ﻿using ProjetoFinal.Presentation.Views.Clientes;
 using ProjetoFinal.Presentation.Views.Vendas;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoFinal.Presentation.Views
@@ -48,8 +55,8 @@ namespace ProjetoFinal.Presentation.Views
 
         private void btnGerenciarPedido_Click(object sender, EventArgs e)
         {
-            if (!Equals(VerifyPanel(), true)) return;
-
+            if (!Equals(VerifyPanel(), true)) return;        
+            
             var form = new GerenciarPedidosView();
             form.TopLevel = false;
             pnlMain.Controls.Add(form);

@@ -1,9 +1,10 @@
 ﻿using ProjetoFinal.Domain.Interface.Repository;
 using ProjetoFinal.Infrastructure.NinjectConfig;
 using ProjetoFinal.Infrastructure.Repository;
+using ProjetoFinal.Presentation.Views;
 using System.Windows.Forms;
 
-namespace ProjetoFinal.Presentation.Views
+namespace ProjetoFinal.Presentation
 {
     public partial class Login : Form
     {
@@ -17,14 +18,14 @@ namespace ProjetoFinal.Presentation.Views
 
             var repo = new ProdutoRepository(new Infrastructure.Context.LaloContext());
 
-            var produtos = _produtoRepository.FindAll();
+            var produtos = repo.FindAll();
         }
 
         #region Events
 
         private void btnLogar_Click(object sender, System.EventArgs e)
         {
-            if (Equals(txtBoxLogin.Text, "admin") && Equals(txtBoxSenha.Text, "admin"))
+            if(Equals(txtBoxLogin.Text, "admin") && Equals(txtBoxSenha.Text, "admin"))
             {
                 Main menu = new Main();
                 menu.ShowDialog();

@@ -9,15 +9,12 @@ namespace ProjetoFinal.Presentation.Views.Vendas
     {
         private IList<Item> ItemLista;
 
-
-
         public CriarPedidoView()
         {
             InitializeComponent();
             BindComboEntregas();
             BindComboProdutos();
             StartScreen();
-
         }
 
         #region PrivateMethods
@@ -133,20 +130,39 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         {
             if (!Equals(VerifyPanel(), true)) return;
 
-            //var pedido = new Pedido();
+            try
+            {
+                var cliente = new Cliente();
+                var pedido = new Pedido();
+                var endereco = new Endereco();
+                var produtos = new Produto();
 
-            //pedido.Cliente.NomeCompleto = txtBoxNome.Text;
-            //pedido.Cliente.Cpf = txtBoxCPF.Text;
-            //pedido.Cliente.Telefone = txtBoxTelefone.Text;
-            //pedido.Cliente.Endereco.Logradouro = txtBoxEndereco.Text;
+                endereco.Logradouro = txtBoxEndereco.Text;
+                endereco.Bairro = "Bairro";
+                
 
-            //pedido.DataEntrega = DateTime.Parse(dtTmPkrDataEntrega.Text);
-            //pedido.DataSolicitacao = DateTime.Now;
-            //pedido.TipoEntrega = cmbBoxFormaEntrega.SelectedText;
+                cliente.Endereco = endereco;
+                cliente.NomeCompleto = txtBoxNome.Text;
+                cliente.Cpf = txtBoxCPF.Text;
+                cliente.Telefone = txtBoxTelefone.Text;
 
-            var form = new FinalizarPedidoView();
-            form.ShowDialog();
-            form.Focus();
+                pedido.Cliente = cliente;
+                pedido.DataEntrega = DateTime.Parse(dtTmPkrDataEntrega.Text);
+                pedido.DataSolicitacao = DateTime.Now;
+                pedido.TipoEntrega = cmbBoxFormaEntrega.SelectedText;
+                pedido.EnderecoEntrega = endereco;
+
+
+
+                var form = new FinalizarPedidoView(pedido, cliente, endereco, produtos);
+                form.ShowDialog();
+                form.Focus();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Há algum campo inválido.");
+                return;
+            }
         }
 
         #endregion
