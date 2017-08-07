@@ -12,7 +12,7 @@ namespace ProjetoFinal.Infrastructure.Mapping
             Property(x => x.Quantidade).HasColumnName("Quantidade");
             Property(x => x.PrecoUnitario).HasColumnName("PrecoUnitario");
 
-            ToTable("Produtos");
+            ToTable("Produto");
         }
     }
 }

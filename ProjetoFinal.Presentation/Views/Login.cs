@@ -1,4 +1,6 @@
 ﻿using ProjetoFinal.Domain.Interface.Repository;
+using ProjetoFinal.Infrastructure.NinjectConfig;
+using ProjetoFinal.Infrastructure.Repository;
 using System.Windows.Forms;
 
 namespace ProjetoFinal.Presentation.Views
@@ -9,13 +11,13 @@ namespace ProjetoFinal.Presentation.Views
 
         public Login()
         {
-            //_produtoRepository = ProjetoFinalKernel.GetInstance< IProdutoRepository>();
+            _produtoRepository = LaloKernel.GetInstance<IProdutoRepository>();
 
             InitializeComponent();
 
-            //var repo = new ProdutoRepository(new Infrastructure.Context.LaloContext());
+            var repo = new ProdutoRepository(new Infrastructure.Context.LaloContext());
 
-           // var produtos = _produtoRepository.FindAll();
+            var produtos = _produtoRepository.FindAll();
         }
 
         #region Events
