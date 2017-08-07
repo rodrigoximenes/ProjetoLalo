@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace ProjetoFinal.Domain.Interface.Repository
 {
-    public interface IBaseRepository<TEntity>
+    public interface IBaseRepository <TEntity>
     {
         void Add(TEntity entity);
 

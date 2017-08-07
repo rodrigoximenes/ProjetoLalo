@@ -1,6 +1,0 @@
-﻿
-CREATE TABLE [dbo].[PRODUTO]
-(
-	[Id] INT NOT NULL PRIMARY KEY, 
-    [Nome] NVARCHAR(50) NOT NULL
-)

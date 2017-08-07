@@ -1,4 +1,4 @@
-﻿namespace ProjetoFinal.Domain.Model
+﻿namespace ProjetoFinal.MainProject._01__Domain
 {
     public partial class Produto
     {
