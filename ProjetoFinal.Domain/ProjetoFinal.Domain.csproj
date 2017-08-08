@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Interface\Repository\IBaseRepository.cs" />
     <Compile Include="Interface\Repository\IClienteRepository.cs" />
+    <Compile Include="Interface\Repository\IItemRepository.cs" />
     <Compile Include="Interface\Repository\IPedidoRepository.cs" />
     <Compile Include="Interface\Repository\IProdutoRepository.cs" />
     <Compile Include="Interface\Repository\IUsuarioRepository.cs" />

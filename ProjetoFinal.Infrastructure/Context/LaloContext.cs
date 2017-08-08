@@ -8,7 +8,7 @@ namespace ProjetoFinal.Infrastructure.Context
     {
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
-        //public DbSet<Item> Item { get; set; }
+        public DbSet<Item> Item { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         //public DbSet<Endereco> Endereco { get; set; }
         //public DbSet<Estoque> Estoque { get; set; }
@@ -24,6 +24,7 @@ namespace ProjetoFinal.Infrastructure.Context
             modelBuilder.Configurations.Add(new ClienteMap());
             modelBuilder.Configurations.Add(new ProdutoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
+            modelBuilder.Configurations.Add(new ItemMap());
         }
     }
 }

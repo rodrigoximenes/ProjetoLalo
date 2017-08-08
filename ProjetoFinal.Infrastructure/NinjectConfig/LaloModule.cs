@@ -17,6 +17,7 @@ namespace ProjetoFinal.Infrastructure.NinjectConfig
             this.Bind<IProdutoRepository>().To<ProdutoRepository>();
             this.Bind<IPedidoRepository>().To<PedidoRepository>();
             this.Bind<IClienteRepository>().To<ClienteRepository>();
+            this.Bind<IItemRepository>().To<ItemRepository>();
 
             this.Bind(typeof(IBaseRepository<>)).To(typeof(BaseRepository<>));
         }
