@@ -10,9 +10,7 @@ namespace ProjetoFinal.Infrastructure.Context
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Item> Item { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
-        //public DbSet<Endereco> Endereco { get; set; }
-        //public DbSet<Estoque> Estoque { get; set; }
-        //public DbSet<Pedido> Pedido { get; set; }
+        public DbSet<Pedido> Pedido { get; set; }
 
         public LaloContext() : base("LaloContext")
         {
@@ -25,6 +23,8 @@ namespace ProjetoFinal.Infrastructure.Context
             modelBuilder.Configurations.Add(new ProdutoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
             modelBuilder.Configurations.Add(new ItemMap());
+            modelBuilder.Configurations.Add(new PedidoMap());
+
         }
     }
 }
