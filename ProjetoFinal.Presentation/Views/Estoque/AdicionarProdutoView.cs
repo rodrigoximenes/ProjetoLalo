@@ -10,11 +10,52 @@ namespace ProjetoFinal.Presentation.Views.Estoque
     {
         private readonly IProdutoRepository _produtoRepository;
 
+        public int IdProdutoSelecionado { get; set; }
+
         public AdicionarProdutoView()
         {
             _produtoRepository = LaloKernel.GetInstance<IProdutoRepository>();
 
             InitializeComponent();
+
+            this.Load += AdicionarProdutoView_Load;
+
+            gridProdutos.CellClick += GridProdutos_CellClick;
+        }
+
+        private void ClearFields()
+        {
+            IdProdutoSelecionado = 0;
+            txtBoxNome.Text = string.Empty;
+            txtBoxPrecoUnitario.Text = string.Empty;
+            txtBoxQuantidade.Text = string.Empty;
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void GridProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IdProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[0].Cells[0].Value);
+
+            var produto = _produtoRepository.Find(IdProdutoSelecionado);
+
+            txtBoxNome.Text = produto.Nome;
+            txtBoxPrecoUnitario.Text = produto.PrecoUnitario.ToString();
+            txtBoxQuantidade.Text = produto.Quantidade.ToString();
+        }
+
+        private void LoadProdutos()
+        {
+            gridProdutos.DataSource = _produtoRepository.FindAll();
+            ClearFields();
+        }
+
+        private void AdicionarProdutoView_Load(object sender, EventArgs e)
+        {
+            LoadProdutos();
         }
 
         private void btnSalvar_Click(object sender, System.EventArgs e)
@@ -35,12 +76,38 @@ namespace ProjetoFinal.Presentation.Views.Estoque
                 produto.PrecoUnitario = Decimal.Parse(txtBoxPrecoUnitario.Text);
                 produto.Quantidade = Convert.ToInt32(txtBoxQuantidade.Text);
 
-                _produtoRepository.Add(produto);
+                if (IdProdutoSelecionado > 0)
+                {
+                    _produtoRepository.Update(produto);
+                }
+                else
+                {
+                    _produtoRepository.Add(produto);
+                }                
+
                 MessageBox.Show("Produto salvo com sucesso");
+
+                LoadProdutos();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Favor preencher os campos corretamente.");
+                MessageBox.Show("Erro ao tentar excluir o produto.");
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _produtoRepository.Delete(IdProdutoSelecionado);
+
+                MessageBox.Show("Produto excluído com sucesso");
+
+                LoadProdutos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao tentar excluir o produto.");
             }
         }
     }

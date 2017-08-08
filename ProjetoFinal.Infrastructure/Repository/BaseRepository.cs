@@ -21,8 +21,10 @@ namespace ProjetoFinal.Infrastructure.Repository
             _context.SaveChanges();
         }
 
-        public void Delete(TEntity entity)
+        public void Delete(int id)
         {
+            var entity = Find(id);
+
             _context.Set<TEntity>().Remove(entity);
             _context.SaveChanges();
         }
@@ -53,6 +55,12 @@ namespace ProjetoFinal.Infrastructure.Repository
 
         public void Update(TEntity entity)
         {
+            //_context.Entry<TEntity>(entity).State = EntityState.Modified;
+            //var entityAux = _context.Set<TEntity>().Find(entity);
+            //entityAux = entity;
+
+            //TODO: Ver como faz o update do EF
+
             _context.Set<TEntity>().Attach(entity);
             _context.SaveChanges();
         }

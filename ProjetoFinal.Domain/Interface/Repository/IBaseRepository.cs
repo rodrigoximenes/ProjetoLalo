@@ -7,7 +7,7 @@ namespace ProjetoFinal.Domain.Interface.Repository
     {
         void Add(TEntity entity);
 
-        void Delete(TEntity entity);
+        void Delete(int id);
 
         void Update(TEntity entity);
 
