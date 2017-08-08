@@ -1,6 +1,7 @@
 ﻿using ProjetoFinal.Domain.Interface.Repository;
 using ProjetoFinal.Domain.Model;
 using ProjetoFinal.Infrastructure.NinjectConfig;
+using ProjetoFinal.Presentation.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -11,10 +12,12 @@ namespace ProjetoFinal.Presentation.Views.Vendas
     {
         private IList<Item> ItemLista;
         private readonly IPedidoRepository _pedidoRepository;
+        private readonly IProdutoRepository _produtoRepository;
 
         public CriarPedidoView()
         {
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
+            _produtoRepository = LaloKernel.GetInstance<IProdutoRepository>();
 
             InitializeComponent();
             BindComboEntregas();
@@ -43,13 +46,9 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void BindComboProdutos()
         {
-            var produtosList = new List<string>();
-
-            produtosList.Add("Guaraná Jesus");
-            produtosList.Add("Pitú");
-            produtosList.Add("Seven-Up");
-            produtosList.Add("Groselha Milani");
-            cmbBoxProdutos.DataSource = produtosList;
+            cmbBoxProdutos.DataSource = _produtoRepository.FindAll();
+            cmbBoxProdutos.DisplayMember = "Nome";
+            cmbBoxProdutos.ValueMember = "Id";
         }
 
         private bool VerifyPanel()
@@ -144,7 +143,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
                 endereco.Logradouro = txtBoxEndereco.Text;
                 endereco.Bairro = "Bairro";
-                
+
 
                 cliente.Endereco = "endereco1";
                 cliente.NomeCompleto = txtBoxNome.Text;
@@ -171,5 +170,26 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         }
 
         #endregion
+
+        private void btnAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            var itemPedidoViewModel = new ItemPedidoViewModel();
+
+            var produtoSelecionado = _produtoRepository.Find(Convert.ToInt32(cmbBoxProdutos.SelectedValue));
+
+            itemPedidoViewModel.IdProduto = produtoSelecionado.Id;
+            itemPedidoViewModel.NomeProduto = produtoSelecionado.Nome;
+            itemPedidoViewModel.Quantidade = Convert.ToInt32(txtBoxQuantidade.Text);
+            itemPedidoViewModel.PrecoTotal = Convert.ToDecimal(txtBoxValorTotal.Text);
+        }
+
+        private void txtBoxQuantidade_ValueChanged(object sender, EventArgs e)
+        {
+            var produtoSelecionado = _produtoRepository.Find(Convert.ToInt32(cmbBoxProdutos.SelectedValue));
+            var quantidade = txtBoxQuantidade.Value;
+
+            if (Equals(cmbBoxProdutos.SelectedIndex, -1)) return;
+            txtBoxValorTotal.Text = (produtoSelecionado.PrecoUnitario * quantidade).ToString();
+        }
     }
 }

@@ -34,15 +34,15 @@
             this.txtBoxPrecoUnitario = new System.Windows.Forms.TextBox();
             this.txtBoxQuantidade = new System.Windows.Forms.TextBox();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
-            this.grpBoxProdutosGrid = new System.Windows.Forms.GroupBox();
-            this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
-            this.gridProdutos = new System.Windows.Forms.DataGridView();
             this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblQuantidade = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblPrecoUnitario = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.btnNovo = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnSalvar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.grpBoxProdutosGrid = new System.Windows.Forms.GroupBox();
+            this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
+            this.gridProdutos = new System.Windows.Forms.DataGridView();
             this.tlpMain.SuspendLayout();
             this.grpBoxProdutos.SuspendLayout();
             this.tlpCliente.SuspendLayout();
@@ -130,49 +130,6 @@
             this.txtBoxNome.Size = new System.Drawing.Size(153, 20);
             this.txtBoxNome.TabIndex = 0;
             // 
-            // grpBoxProdutosGrid
-            // 
-            this.grpBoxProdutosGrid.Controls.Add(this.tlpProdutos);
-            this.grpBoxProdutosGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpBoxProdutosGrid.Location = new System.Drawing.Point(3, 158);
-            this.grpBoxProdutosGrid.Name = "grpBoxProdutosGrid";
-            this.grpBoxProdutosGrid.Size = new System.Drawing.Size(636, 202);
-            this.grpBoxProdutosGrid.TabIndex = 3;
-            this.grpBoxProdutosGrid.TabStop = false;
-            this.grpBoxProdutosGrid.Text = "Produtos Cadastrados";
-            // 
-            // tlpProdutos
-            // 
-            this.tlpProdutos.ColumnCount = 6;
-            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.612439F));
-            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.58692F));
-            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.32376F));
-            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.409887F));
-            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.26794F));
-            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.68254F));
-            this.tlpProdutos.Controls.Add(this.gridProdutos, 0, 0);
-            this.tlpProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpProdutos.Location = new System.Drawing.Point(3, 16);
-            this.tlpProdutos.Name = "tlpProdutos";
-            this.tlpProdutos.RowCount = 1;
-            this.tlpProdutos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 183F));
-            this.tlpProdutos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 183F));
-            this.tlpProdutos.Size = new System.Drawing.Size(630, 183);
-            this.tlpProdutos.TabIndex = 2;
-            // 
-            // gridProdutos
-            // 
-            this.gridProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tlpProdutos.SetColumnSpan(this.gridProdutos, 6);
-            this.gridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridProdutos.Location = new System.Drawing.Point(3, 3);
-            this.gridProdutos.MultiSelect = false;
-            this.gridProdutos.Name = "gridProdutos";
-            this.gridProdutos.ReadOnly = true;
-            this.gridProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridProdutos.Size = new System.Drawing.Size(624, 177);
-            this.gridProdutos.TabIndex = 0;
-            // 
             // lblNome
             // 
             this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -239,6 +196,50 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // grpBoxProdutosGrid
+            // 
+            this.grpBoxProdutosGrid.Controls.Add(this.tlpProdutos);
+            this.grpBoxProdutosGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpBoxProdutosGrid.Location = new System.Drawing.Point(3, 158);
+            this.grpBoxProdutosGrid.Name = "grpBoxProdutosGrid";
+            this.grpBoxProdutosGrid.Size = new System.Drawing.Size(636, 202);
+            this.grpBoxProdutosGrid.TabIndex = 3;
+            this.grpBoxProdutosGrid.TabStop = false;
+            this.grpBoxProdutosGrid.Text = "Produtos Cadastrados";
+            // 
+            // tlpProdutos
+            // 
+            this.tlpProdutos.ColumnCount = 6;
+            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.612439F));
+            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.58692F));
+            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.32376F));
+            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.409887F));
+            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.26794F));
+            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.68254F));
+            this.tlpProdutos.Controls.Add(this.gridProdutos, 0, 0);
+            this.tlpProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpProdutos.Location = new System.Drawing.Point(3, 16);
+            this.tlpProdutos.Name = "tlpProdutos";
+            this.tlpProdutos.RowCount = 1;
+            this.tlpProdutos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+            this.tlpProdutos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+            this.tlpProdutos.Size = new System.Drawing.Size(630, 183);
+            this.tlpProdutos.TabIndex = 2;
+            // 
+            // gridProdutos
+            // 
+            this.gridProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tlpProdutos.SetColumnSpan(this.gridProdutos, 6);
+            this.gridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridProdutos.Location = new System.Drawing.Point(3, 3);
+            this.gridProdutos.MultiSelect = false;
+            this.gridProdutos.Name = "gridProdutos";
+            this.gridProdutos.ReadOnly = true;
+            this.gridProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridProdutos.Size = new System.Drawing.Size(624, 177);
+            this.gridProdutos.TabIndex = 0;
             // 
             // AdicionarProdutoView
             // 

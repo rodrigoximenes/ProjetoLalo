@@ -35,7 +35,6 @@
             this.cmbBoxProdutos = new System.Windows.Forms.ComboBox();
             this.gridProdutos = new System.Windows.Forms.DataGridView();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBoxQuantidade = new System.Windows.Forms.TextBox();
             this.grpBoxInfoEntrega = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBoxEndereco = new System.Windows.Forms.TextBox();
@@ -48,6 +47,10 @@
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.chkBoxUsuarioPadrao = new System.Windows.Forms.CheckBox();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecoUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblValor = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblQuantidade = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblProduto = new ProjetoFinal.Presentation.Components.LaloLabel();
@@ -62,6 +65,7 @@
             this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.txtBoxQuantidade = new System.Windows.Forms.NumericUpDown();
             this.tlpMain.SuspendLayout();
             this.grpBoxProdutos.SuspendLayout();
             this.tlpProdutos.SuspendLayout();
@@ -71,6 +75,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.grpBoxInfoCliente.SuspendLayout();
             this.tlpCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBoxQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -141,6 +146,7 @@
             // cmbBoxProdutos
             // 
             this.cmbBoxProdutos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbBoxProdutos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxProdutos.FormattingEnabled = true;
             this.cmbBoxProdutos.Location = new System.Drawing.Point(57, 18);
             this.cmbBoxProdutos.Name = "cmbBoxProdutos";
@@ -150,10 +156,16 @@
             // gridProdutos
             // 
             this.gridProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome,
+            this.Quantidade,
+            this.PrecoUnitario,
+            this.PrecoTotal});
             this.tlpProdutos.SetColumnSpan(this.gridProdutos, 6);
             this.gridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridProdutos.Location = new System.Drawing.Point(3, 61);
             this.gridProdutos.Name = "gridProdutos";
+            this.gridProdutos.ReadOnly = true;
             this.gridProdutos.Size = new System.Drawing.Size(493, 78);
             this.gridProdutos.TabIndex = 4;
             // 
@@ -173,14 +185,6 @@
             this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpButtons.Size = new System.Drawing.Size(120, 84);
             this.tlpButtons.TabIndex = 12;
-            // 
-            // txtBoxQuantidade
-            // 
-            this.txtBoxQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxQuantidade.Location = new System.Drawing.Point(232, 19);
-            this.txtBoxQuantidade.Name = "txtBoxQuantidade";
-            this.txtBoxQuantidade.Size = new System.Drawing.Size(53, 20);
-            this.txtBoxQuantidade.TabIndex = 1;
             // 
             // grpBoxInfoEntrega
             // 
@@ -328,6 +332,30 @@
             this.chkBoxUsuarioPadrao.UseVisualStyleBackColor = true;
             this.chkBoxUsuarioPadrao.CheckedChanged += new System.EventHandler(this.chkBoxUsuarioPadrao_CheckedChanged);
             // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Produto";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.ReadOnly = true;
+            // 
+            // PrecoUnitario
+            // 
+            this.PrecoUnitario.HeaderText = "Preço Unitário";
+            this.PrecoUnitario.Name = "PrecoUnitario";
+            this.PrecoUnitario.ReadOnly = true;
+            // 
+            // PrecoTotal
+            // 
+            this.PrecoTotal.HeaderText = "Total";
+            this.PrecoTotal.Name = "PrecoTotal";
+            this.PrecoTotal.ReadOnly = true;
+            // 
             // lblValor
             // 
             this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -394,6 +422,7 @@
             this.btnAdicionarProduto.TabIndex = 3;
             this.btnAdicionarProduto.Text = "Adicionar Produto";
             this.btnAdicionarProduto.UseVisualStyleBackColor = false;
+            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
             // 
             // lblEndereco
             // 
@@ -481,6 +510,15 @@
             this.btnBuscarCliente.Text = "Buscar Cliente";
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
             // 
+            // txtBoxQuantidade
+            // 
+            this.txtBoxQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxQuantidade.Location = new System.Drawing.Point(232, 19);
+            this.txtBoxQuantidade.Name = "txtBoxQuantidade";
+            this.txtBoxQuantidade.Size = new System.Drawing.Size(53, 20);
+            this.txtBoxQuantidade.TabIndex = 16;
+            this.txtBoxQuantidade.ValueChanged += new System.EventHandler(this.txtBoxQuantidade_ValueChanged);
+            // 
             // CriarPedidoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,6 +541,7 @@
             this.grpBoxInfoCliente.ResumeLayout(false);
             this.tlpCliente.ResumeLayout(false);
             this.tlpCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBoxQuantidade)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,8 +579,12 @@
         private Components.LaloPrimaryButton btnCancelar;
         private Components.LaloPrimaryButton btnAdicionarProduto;
         private Components.LaloLabel lblQuantidade;
-        private System.Windows.Forms.TextBox txtBoxQuantidade;
         private System.Windows.Forms.TextBox txtBoxValorTotal;
         private Components.LaloLabel lblValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecoUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecoTotal;
+        private System.Windows.Forms.NumericUpDown txtBoxQuantidade;
     }
 }
