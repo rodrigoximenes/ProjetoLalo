@@ -27,6 +27,7 @@ namespace ProjetoFinal.Presentation.Views.Usuarios
             perfilList.Add("Vendedor");
             perfilList.Add("Gerente");
             cmbBoxPerfil.DataSource = perfilList;
+            cmbBoxPerfil.SelectedIndex = -1;
         }
 
         private void btnSalvar_Click(object sender, System.EventArgs e)
@@ -45,7 +46,7 @@ namespace ProjetoFinal.Presentation.Views.Usuarios
                 var usuario = new Usuario();
                 usuario.Nome = txtBoxNome.Text;
                 usuario.Senha = txtBoxSenha.Text;
-                usuario.Perfil = cmbBoxPerfil.SelectedText;
+                usuario.Perfil = cmbBoxPerfil.SelectedItem.ToString();
 
                 _usuarioRepository.Add(usuario);
                 MessageBox.Show("Usuario salvo com sucesso");
