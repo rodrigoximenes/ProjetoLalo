@@ -84,8 +84,8 @@
             // 
             this.tlpCliente.ColumnCount = 5;
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.04501F));
-            this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.5873F));
-            this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.23809F));
+            this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.03175F));
+            this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.79365F));
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.14286F));
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.73016F));
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -120,25 +120,25 @@
             // txtBoxSenha
             // 
             this.txtBoxSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxSenha.Location = new System.Drawing.Point(246, 98);
+            this.txtBoxSenha.Location = new System.Drawing.Point(211, 98);
             this.txtBoxSenha.Name = "txtBoxSenha";
-            this.txtBoxSenha.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxSenha.Size = new System.Drawing.Size(188, 20);
             this.txtBoxSenha.TabIndex = 2;
             // 
             // txtBoxPerfil
             // 
             this.txtBoxPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxPerfil.Location = new System.Drawing.Point(246, 54);
+            this.txtBoxPerfil.Location = new System.Drawing.Point(211, 54);
             this.txtBoxPerfil.Name = "txtBoxPerfil";
-            this.txtBoxPerfil.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxPerfil.Size = new System.Drawing.Size(188, 20);
             this.txtBoxPerfil.TabIndex = 1;
             // 
             // txtBoxNome
             // 
             this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxNome.Location = new System.Drawing.Point(246, 11);
+            this.txtBoxNome.Location = new System.Drawing.Point(211, 11);
             this.txtBoxNome.Name = "txtBoxNome";
-            this.txtBoxNome.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxNome.Size = new System.Drawing.Size(188, 20);
             this.txtBoxNome.TabIndex = 0;
             // 
             // lblNome
@@ -146,7 +146,7 @@
             this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblNome.AutoSize = true;
             this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNome.Location = new System.Drawing.Point(202, 15);
+            this.lblNome.Location = new System.Drawing.Point(167, 15);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(38, 13);
             this.lblNome.TabIndex = 1;
@@ -157,7 +157,7 @@
             this.lblPerfil.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPerfil.Location = new System.Drawing.Point(207, 58);
+            this.lblPerfil.Location = new System.Drawing.Point(172, 58);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(33, 13);
             this.lblPerfil.TabIndex = 7;
@@ -168,7 +168,7 @@
             this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSenha.AutoSize = true;
             this.lblSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSenha.Location = new System.Drawing.Point(199, 101);
+            this.lblSenha.Location = new System.Drawing.Point(164, 101);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(41, 13);
             this.lblSenha.TabIndex = 1;

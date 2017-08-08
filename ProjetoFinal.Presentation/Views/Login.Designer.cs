@@ -44,7 +44,7 @@
             this.tlpMain.ColumnCount = 3;
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.6F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.4F));
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
             this.tlpMain.Controls.Add(this.txtBoxSenha, 1, 2);
             this.tlpMain.Controls.Add(this.lblLogin, 0, 1);
             this.tlpMain.Controls.Add(this.lblSenha, 0, 2);
@@ -67,18 +67,19 @@
             // 
             this.txtBoxSenha.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tlpMain.SetColumnSpan(this.txtBoxSenha, 2);
-            this.txtBoxSenha.Location = new System.Drawing.Point(107, 75);
+            this.txtBoxSenha.Location = new System.Drawing.Point(106, 75);
             this.txtBoxSenha.Name = "txtBoxSenha";
             this.txtBoxSenha.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSenha.TabIndex = 1;
             this.txtBoxSenha.Text = "admin";
+            this.txtBoxSenha.UseSystemPasswordChar = true;
             // 
             // lblLogin
             // 
             this.lblLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblLogin.AutoSize = true;
             this.lblLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLogin.Location = new System.Drawing.Point(65, 44);
+            this.lblLogin.Location = new System.Drawing.Point(64, 44);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(36, 13);
             this.lblLogin.TabIndex = 1;
@@ -89,7 +90,7 @@
             this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSenha.AutoSize = true;
             this.lblSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSenha.Location = new System.Drawing.Point(60, 78);
+            this.lblSenha.Location = new System.Drawing.Point(59, 78);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(41, 13);
             this.lblSenha.TabIndex = 2;
@@ -99,7 +100,7 @@
             // 
             this.txtBoxLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tlpMain.SetColumnSpan(this.txtBoxLogin, 2);
-            this.txtBoxLogin.Location = new System.Drawing.Point(107, 41);
+            this.txtBoxLogin.Location = new System.Drawing.Point(106, 41);
             this.txtBoxLogin.Name = "txtBoxLogin";
             this.txtBoxLogin.Size = new System.Drawing.Size(100, 20);
             this.txtBoxLogin.TabIndex = 0;
@@ -124,7 +125,7 @@
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(121, 109);
+            this.btnCancelar.Location = new System.Drawing.Point(120, 109);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -138,7 +139,7 @@
             this.btnLogar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnLogar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnLogar.Location = new System.Drawing.Point(26, 109);
+            this.btnLogar.Location = new System.Drawing.Point(25, 109);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(75, 23);
             this.btnLogar.TabIndex = 2;
