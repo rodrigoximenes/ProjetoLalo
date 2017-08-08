@@ -45,7 +45,7 @@
             this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.grpBoxDadosConsultaDetalhada = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
-            this.gridProdutos = new System.Windows.Forms.DataGridView();
+            this.gridClientes = new System.Windows.Forms.DataGridView();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
             this.btnEditarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnExcluirCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
@@ -54,7 +54,7 @@
             this.tlpCliente.SuspendLayout();
             this.grpBoxDadosConsultaDetalhada.SuspendLayout();
             this.tlpProdutos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).BeginInit();
             this.tlpButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,6 +175,7 @@
             this.btnBuscarCliente.TabIndex = 5;
             this.btnBuscarCliente.Text = "Buscar Cliente";
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // txtBoxCPF
             // 
@@ -256,7 +257,7 @@
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.26794F));
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.68254F));
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.4127F));
-            this.tlpProdutos.Controls.Add(this.gridProdutos, 0, 0);
+            this.tlpProdutos.Controls.Add(this.gridClientes, 0, 0);
             this.tlpProdutos.Controls.Add(this.tlpButtons, 6, 0);
             this.tlpProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpProdutos.Location = new System.Drawing.Point(3, 16);
@@ -267,15 +268,15 @@
             this.tlpProdutos.Size = new System.Drawing.Size(630, 183);
             this.tlpProdutos.TabIndex = 2;
             // 
-            // gridProdutos
+            // gridClientes
             // 
-            this.gridProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tlpProdutos.SetColumnSpan(this.gridProdutos, 6);
-            this.gridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridProdutos.Location = new System.Drawing.Point(3, 3);
-            this.gridProdutos.Name = "gridProdutos";
-            this.gridProdutos.Size = new System.Drawing.Size(507, 177);
-            this.gridProdutos.TabIndex = 0;
+            this.gridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tlpProdutos.SetColumnSpan(this.gridClientes, 6);
+            this.gridClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridClientes.Location = new System.Drawing.Point(3, 3);
+            this.gridClientes.Name = "gridClientes";
+            this.gridClientes.Size = new System.Drawing.Size(507, 177);
+            this.gridClientes.TabIndex = 0;
             // 
             // tlpButtons
             // 
@@ -303,6 +304,7 @@
             this.btnEditarCliente.TabIndex = 0;
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.UseVisualStyleBackColor = false;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // btnExcluirCliente
             // 
@@ -331,7 +333,7 @@
             this.tlpCliente.PerformLayout();
             this.grpBoxDadosConsultaDetalhada.ResumeLayout(false);
             this.tlpProdutos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
             this.tlpButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -353,7 +355,7 @@
         private Components.LaloPrimaryButton btnSalvar;
         private System.Windows.Forms.GroupBox grpBoxDadosConsultaDetalhada;
         private System.Windows.Forms.TableLayoutPanel tlpProdutos;
-        private System.Windows.Forms.DataGridView gridProdutos;
+        private System.Windows.Forms.DataGridView gridClientes;
         private System.Windows.Forms.TableLayoutPanel tlpButtons;
         private Components.LaloPrimaryButton btnEditarCliente;
         private Components.LaloPrimaryButton btnExcluirCliente;

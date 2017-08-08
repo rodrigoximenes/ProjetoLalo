@@ -12,6 +12,6 @@ namespace ProjetoFinal.Domain.Model
         public DateTime DataSolicitacao { get; set; }
         public DateTime DataEntrega { get; set; }
         public string TipoEntrega { get; set; }
-        public Endereco EnderecoEntrega { get; set; }
+        public string EnderecoEntrega { get; set; }
     }
 }

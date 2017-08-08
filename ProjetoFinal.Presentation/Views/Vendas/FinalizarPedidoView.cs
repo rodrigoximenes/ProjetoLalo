@@ -29,7 +29,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
             txtBoxNome.Text = cliente.NomeCompleto;
             txtBoxFormaEntrega.Text = pedido.TipoEntrega;
-            txtBoxEndereco.Text = pedido.EnderecoEntrega.Logradouro;
+            txtBoxEndereco.Text = pedido.EnderecoEntrega;
         }
 
         #region

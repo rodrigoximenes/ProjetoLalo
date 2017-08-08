@@ -150,7 +150,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 pedido.DataEntrega = DateTime.Parse(dtTmPkrDataEntrega.Text);
                 pedido.DataSolicitacao = DateTime.Now;
                 pedido.TipoEntrega = cmbBoxFormaEntrega.SelectedText;
-                pedido.EnderecoEntrega = endereco;
+                //pedido.EnderecoEntrega = endereco;
 
 
 
