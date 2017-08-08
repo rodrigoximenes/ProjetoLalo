@@ -1,6 +1,6 @@
 ﻿namespace ProjetoFinal.Presentation.Views.Estoque
 {
-    partial class AdicionarProduto
+    partial class AdicionarProdutoView
     {
         /// <summary>
         /// Required designer variable.

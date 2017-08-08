@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal.Presentation.Views.Estoque
 {
-    public partial class AdicionarProduto : Form
+    public partial class AdicionarProdutoView : Form
     {
-        public AdicionarProduto()
+        public AdicionarProdutoView()
         {
             InitializeComponent();
         }

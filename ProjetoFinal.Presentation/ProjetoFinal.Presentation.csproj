@@ -102,11 +102,11 @@
     <Compile Include="Views\Clientes\AdicionarClienteView.Designer.cs">
       <DependentUpon>AdicionarClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Estoque\AdicionarProduto.cs">
+    <Compile Include="Views\Estoque\AdicionarProdutoView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Estoque\AdicionarProduto.Designer.cs">
-      <DependentUpon>AdicionarProduto.cs</DependentUpon>
+    <Compile Include="Views\Estoque\AdicionarProdutoView.Designer.cs">
+      <DependentUpon>AdicionarProdutoView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
@@ -150,8 +150,8 @@
     <EmbeddedResource Include="Views\Clientes\AdicionarClienteView.resx">
       <DependentUpon>AdicionarClienteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Estoque\AdicionarProduto.resx">
-      <DependentUpon>AdicionarProduto.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Estoque\AdicionarProdutoView.resx">
+      <DependentUpon>AdicionarProdutoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

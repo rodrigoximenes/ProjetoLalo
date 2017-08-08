@@ -1,4 +1,5 @@
 ﻿using ProjetoFinal.Presentation.Views.Clientes;
+using ProjetoFinal.Presentation.Views.Estoque;
 using ProjetoFinal.Presentation.Views.Vendas;
 using System;
 using System.Collections.Generic;
@@ -80,7 +81,18 @@ namespace ProjetoFinal.Presentation.Views
             form.Dock = DockStyle.Fill;
             form.Show();
             form.Focus();
+        }
 
+        private void btnAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            if (!Equals(VerifyPanel(), true)) return;
+
+            var form = new AdicionarProdutoView();
+            form.TopLevel = false;
+            pnlMain.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            form.Focus();
         }
 
         #endregion
