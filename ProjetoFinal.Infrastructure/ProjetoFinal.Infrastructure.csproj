@@ -80,6 +80,7 @@
     <Compile Include="Context\LaloContext.cs" />
     <Compile Include="Mapping\ClienteMap.cs" />
     <Compile Include="Mapping\ProdutoMap.cs" />
+    <Compile Include="Mapping\UsuarioMap.cs" />
     <Compile Include="NinjectConfig\LaloKernel.cs" />
     <Compile Include="NinjectConfig\LaloModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

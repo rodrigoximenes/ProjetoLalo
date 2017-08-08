@@ -1,13 +1,7 @@
 ﻿using ProjetoFinal.Domain.Interface.Repository;
+using ProjetoFinal.Domain.Model;
 using ProjetoFinal.Infrastructure.NinjectConfig;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoFinal.Presentation.Views.Usuarios
@@ -21,6 +15,33 @@ namespace ProjetoFinal.Presentation.Views.Usuarios
             _usuarioRepository = LaloKernel.GetInstance<IUsuarioRepository>();
 
             InitializeComponent();
+        }
+
+        private void btnSalvar_Click(object sender, System.EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(txtBoxNome.Text) ||
+              string.IsNullOrEmpty(txtBoxPerfil.Text) ||
+              string.IsNullOrEmpty(txtBoxSenha.Text))
+            {
+                MessageBox.Show("Favor preencher os campos corretamente.");
+                return;
+            }
+
+            try
+            {
+                var usuario = new Usuario();
+                usuario.Nome = txtBoxNome.Text;
+                usuario.Senha = txtBoxSenha.Text;
+                usuario.Perfil = txtBoxPerfil.Text;
+
+                _usuarioRepository.Add(usuario);
+                MessageBox.Show("Usuario salvo com sucesso");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Favor preencher os campos corretamente.");
+            }
         }
     }
 }
