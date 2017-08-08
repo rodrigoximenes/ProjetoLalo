@@ -32,18 +32,18 @@
             this.grpBoxProdutos = new System.Windows.Forms.GroupBox();
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalvar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.txtBoxNome = new System.Windows.Forms.TextBox();
+            this.txtBoxPrecoUnitario = new System.Windows.Forms.TextBox();
             this.txtBoxQuantidade = new System.Windows.Forms.TextBox();
-            this.lblPrecoUnitario = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblQuantidade = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblPrecoUnitario = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.grpBoxProdutosGrid = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.gridProdutos = new System.Windows.Forms.DataGridView();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
             this.btnEditarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnExcluirCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.txtBoxPrecoUnitario = new System.Windows.Forms.TextBox();
             this.tlpMain.SuspendLayout();
             this.grpBoxProdutos.SuspendLayout();
             this.tlpCliente.SuspendLayout();
@@ -115,6 +115,31 @@
             this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txtBoxPrecoUnitario
+            // 
+            this.txtBoxPrecoUnitario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxPrecoUnitario.Location = new System.Drawing.Point(246, 98);
+            this.txtBoxPrecoUnitario.Name = "txtBoxPrecoUnitario";
+            this.txtBoxPrecoUnitario.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxPrecoUnitario.TabIndex = 2;
+            // 
+            // txtBoxQuantidade
+            // 
+            this.txtBoxQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxQuantidade.Location = new System.Drawing.Point(246, 54);
+            this.txtBoxQuantidade.Name = "txtBoxQuantidade";
+            this.txtBoxQuantidade.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxQuantidade.TabIndex = 1;
+            // 
+            // txtBoxNome
+            // 
+            this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxNome.Location = new System.Drawing.Point(246, 11);
+            this.txtBoxNome.Name = "txtBoxNome";
+            this.txtBoxNome.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxNome.TabIndex = 0;
             // 
             // lblNome
             // 
@@ -127,21 +152,16 @@
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome:";
             // 
-            // txtBoxNome
+            // lblQuantidade
             // 
-            this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxNome.Location = new System.Drawing.Point(246, 11);
-            this.txtBoxNome.Name = "txtBoxNome";
-            this.txtBoxNome.Size = new System.Drawing.Size(153, 20);
-            this.txtBoxNome.TabIndex = 0;
-            // 
-            // txtBoxQuantidade
-            // 
-            this.txtBoxQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxQuantidade.Location = new System.Drawing.Point(246, 54);
-            this.txtBoxQuantidade.Name = "txtBoxQuantidade";
-            this.txtBoxQuantidade.Size = new System.Drawing.Size(153, 20);
-            this.txtBoxQuantidade.TabIndex = 1;
+            this.lblQuantidade.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblQuantidade.Location = new System.Drawing.Point(175, 58);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(65, 13);
+            this.lblQuantidade.TabIndex = 7;
+            this.lblQuantidade.Text = "Quantidade:";
             // 
             // lblPrecoUnitario
             // 
@@ -153,17 +173,6 @@
             this.lblPrecoUnitario.Size = new System.Drawing.Size(100, 13);
             this.lblPrecoUnitario.TabIndex = 1;
             this.lblPrecoUnitario.Text = "Preço Unitário (R$):";
-            // 
-            // lblQuantidade
-            // 
-            this.lblQuantidade.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblQuantidade.Location = new System.Drawing.Point(175, 58);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(65, 13);
-            this.lblQuantidade.TabIndex = 7;
-            this.lblQuantidade.Text = "Quantidade:";
             // 
             // grpBoxProdutosGrid
             // 
@@ -245,15 +254,7 @@
             this.btnExcluirCliente.Text = "Excluir";
             this.btnExcluirCliente.UseVisualStyleBackColor = false;
             // 
-            // txtBoxPrecoUnitario
-            // 
-            this.txtBoxPrecoUnitario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxPrecoUnitario.Location = new System.Drawing.Point(246, 98);
-            this.txtBoxPrecoUnitario.Name = "txtBoxPrecoUnitario";
-            this.txtBoxPrecoUnitario.Size = new System.Drawing.Size(153, 20);
-            this.txtBoxPrecoUnitario.TabIndex = 2;
-            // 
-            // AdicionarProduto
+            // AdicionarProdutoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,7 +262,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdicionarProduto";
+            this.Name = "AdicionarProdutoView";
             this.Text = "Criar Pedido";
             this.tlpMain.ResumeLayout(false);
             this.grpBoxProdutos.ResumeLayout(false);
