@@ -33,11 +33,11 @@
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalvar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxSenha = new System.Windows.Forms.TextBox();
-            this.txtBoxPerfil = new System.Windows.Forms.TextBox();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblPerfil = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblSenha = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.cmbBoxPerfil = new System.Windows.Forms.ComboBox();
             this.grpBoxUsuariosGrid = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.gridUsuarios = new System.Windows.Forms.DataGridView();
@@ -85,17 +85,17 @@
             this.tlpCliente.ColumnCount = 5;
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.04501F));
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.03175F));
-            this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.79365F));
-            this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.14286F));
+            this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.26984F));
+            this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.73016F));
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpCliente.Controls.Add(this.btnSalvar, 4, 0);
             this.tlpCliente.Controls.Add(this.txtBoxSenha, 2, 2);
-            this.tlpCliente.Controls.Add(this.txtBoxPerfil, 2, 1);
             this.tlpCliente.Controls.Add(this.txtBoxNome, 2, 0);
             this.tlpCliente.Controls.Add(this.lblNome, 1, 0);
             this.tlpCliente.Controls.Add(this.lblPerfil, 1, 1);
             this.tlpCliente.Controls.Add(this.lblSenha, 1, 2);
+            this.tlpCliente.Controls.Add(this.cmbBoxPerfil, 2, 1);
             this.tlpCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCliente.Location = new System.Drawing.Point(3, 16);
             this.tlpCliente.Name = "tlpCliente";
@@ -122,23 +122,15 @@
             this.txtBoxSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxSenha.Location = new System.Drawing.Point(211, 98);
             this.txtBoxSenha.Name = "txtBoxSenha";
-            this.txtBoxSenha.Size = new System.Drawing.Size(188, 20);
+            this.txtBoxSenha.Size = new System.Drawing.Size(191, 20);
             this.txtBoxSenha.TabIndex = 2;
-            // 
-            // txtBoxPerfil
-            // 
-            this.txtBoxPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxPerfil.Location = new System.Drawing.Point(211, 54);
-            this.txtBoxPerfil.Name = "txtBoxPerfil";
-            this.txtBoxPerfil.Size = new System.Drawing.Size(188, 20);
-            this.txtBoxPerfil.TabIndex = 1;
             // 
             // txtBoxNome
             // 
             this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxNome.Location = new System.Drawing.Point(211, 11);
             this.txtBoxNome.Name = "txtBoxNome";
-            this.txtBoxNome.Size = new System.Drawing.Size(188, 20);
+            this.txtBoxNome.Size = new System.Drawing.Size(191, 20);
             this.txtBoxNome.TabIndex = 0;
             // 
             // lblNome
@@ -173,6 +165,15 @@
             this.lblSenha.Size = new System.Drawing.Size(41, 13);
             this.lblSenha.TabIndex = 1;
             this.lblSenha.Text = "Senha:";
+            // 
+            // cmbBoxPerfil
+            // 
+            this.cmbBoxPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbBoxPerfil.FormattingEnabled = true;
+            this.cmbBoxPerfil.Location = new System.Drawing.Point(211, 54);
+            this.cmbBoxPerfil.Name = "cmbBoxPerfil";
+            this.cmbBoxPerfil.Size = new System.Drawing.Size(191, 21);
+            this.cmbBoxPerfil.TabIndex = 1;
             // 
             // grpBoxUsuariosGrid
             // 
@@ -283,7 +284,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpCliente;
         private Components.LaloLabel lblNome;
         private System.Windows.Forms.TextBox txtBoxNome;
-        private System.Windows.Forms.TextBox txtBoxPerfil;
         private Components.LaloLabel lblSenha;
         private Components.LaloPrimaryButton btnSalvar;
         private System.Windows.Forms.GroupBox grpBoxUsuariosGrid;
@@ -294,5 +294,6 @@
         private Components.LaloPrimaryButton btnExcluirCliente;
         private Components.LaloLabel lblPerfil;
         private System.Windows.Forms.TextBox txtBoxSenha;
+        private System.Windows.Forms.ComboBox cmbBoxPerfil;
     }
 }
