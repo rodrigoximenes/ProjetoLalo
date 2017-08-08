@@ -141,7 +141,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 endereco.Bairro = "Bairro";
                 
 
-                cliente.Endereco = endereco;
+                cliente.Endereco = "endereco1";
                 cliente.NomeCompleto = txtBoxNome.Text;
                 cliente.Cpf = txtBoxCPF.Text;
                 cliente.Telefone = txtBoxTelefone.Text;

@@ -93,7 +93,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnFinalizarPedido_Click(object sender, System.EventArgs e)
         {
-            _pedido.Cliente.Endereco = _endereco;
+            _pedido.Cliente.Endereco = "_endereco1";
             _pedido.Cliente = _cliente;
 
             _pedidoRepository.Add(_pedido);

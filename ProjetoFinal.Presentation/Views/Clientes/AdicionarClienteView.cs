@@ -1,5 +1,6 @@
 ﻿using ProjetoFinal.Domain.Interface.Repository;
 using ProjetoFinal.Domain.Model;
+using ProjetoFinal.Infrastructure.NinjectConfig;
 using System.Windows.Forms;
 
 namespace ProjetoFinal.Presentation.Views.Clientes
@@ -10,6 +11,8 @@ namespace ProjetoFinal.Presentation.Views.Clientes
 
         public AdicionarClienteView()
         {
+            _clienteRepository = LaloKernel.GetInstance<IClienteRepository>();
+
             InitializeComponent();
         }
 
@@ -20,7 +23,7 @@ namespace ProjetoFinal.Presentation.Views.Clientes
             cliente.Telefone = "99284475";
             cliente.Email = "rodrigo@gmail.com";
             cliente.Cpf = "8674565";
-            cliente.Endereco = new Endereco { Bairro = "Bairro1", Logradouro = "Logradouro1" };
+            cliente.Endereco = "Bairro1 Logradouro1";
 
             _clienteRepository.Add(cliente);
         }
