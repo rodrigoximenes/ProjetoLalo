@@ -19,6 +19,15 @@ namespace ProjetoFinal.Presentation.Views.Estoque
 
         private void btnSalvar_Click(object sender, System.EventArgs e)
         {
+
+            if(string.IsNullOrEmpty(txtBoxPrecoUnitario.Text) ||
+                string.IsNullOrEmpty(txtBoxNome.Text) ||
+                string.IsNullOrEmpty(txtBoxQuantidade.Text))
+            {
+                MessageBox.Show("Favor preencher os campos corretamente.");
+                return;
+            }
+
             try
             {
                 var produto = new Produto();

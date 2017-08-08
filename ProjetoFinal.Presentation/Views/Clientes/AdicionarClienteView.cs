@@ -1,6 +1,5 @@
 ﻿using ProjetoFinal.Domain.Interface.Repository;
 using ProjetoFinal.Domain.Model;
-using ProjetoFinal.Infrastructure.Context;
 using ProjetoFinal.Infrastructure.NinjectConfig;
 using System;
 using System.Windows.Forms;

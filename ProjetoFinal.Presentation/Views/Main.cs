@@ -1,5 +1,6 @@
 ﻿using ProjetoFinal.Presentation.Views.Clientes;
 using ProjetoFinal.Presentation.Views.Estoque;
+using ProjetoFinal.Presentation.Views.Usuarios;
 using ProjetoFinal.Presentation.Views.Vendas;
 using System;
 using System.Collections.Generic;
@@ -88,6 +89,18 @@ namespace ProjetoFinal.Presentation.Views
             if (!Equals(VerifyPanel(), true)) return;
 
             var form = new AdicionarProdutoView();
+            form.TopLevel = false;
+            pnlMain.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            form.Focus();
+        }
+
+        private void btnAdicionarUsuário_Click(object sender, EventArgs e)
+        {
+            if (!Equals(VerifyPanel(), true)) return;
+
+            var form = new AdicionarUsuarioView();
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
             form.Dock = DockStyle.Fill;

@@ -1,4 +1,6 @@
-﻿using ProjetoFinal.Domain.Model;
+﻿using ProjetoFinal.Domain.Interface.Repository;
+using ProjetoFinal.Domain.Model;
+using ProjetoFinal.Infrastructure.NinjectConfig;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -8,9 +10,12 @@ namespace ProjetoFinal.Presentation.Views.Vendas
     public partial class CriarPedidoView : Form
     {
         private IList<Item> ItemLista;
+        private readonly IPedidoRepository _pedidoRepository;
 
         public CriarPedidoView()
         {
+            _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
+
             InitializeComponent();
             BindComboEntregas();
             BindComboProdutos();

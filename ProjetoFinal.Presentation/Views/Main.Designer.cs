@@ -51,7 +51,6 @@
             this.pnlIntro = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tlpHeader = new System.Windows.Forms.TableLayoutPanel();
-            this.lblOla = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.tlpFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.pnlMenuStrip.SuspendLayout();
@@ -66,7 +65,6 @@
             this.pnlVendas.SuspendLayout();
             this.grpBoxVendas.SuspendLayout();
             this.tlpVendas.SuspendLayout();
-            this.tlpHeader.SuspendLayout();
             this.tlpFooter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,6 +141,7 @@
             this.btnAdicionarUsuário.Text = "Adicionar Usuário";
             this.btnAdicionarUsuário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdicionarUsuário.UseVisualStyleBackColor = false;
+            this.btnAdicionarUsuário.Click += new System.EventHandler(this.btnAdicionarUsuário_Click);
             // 
             // pnlGestao
             // 
@@ -384,7 +383,6 @@
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpHeader.Controls.Add(this.lblOla, 0, 0);
             this.tlpHeader.Location = new System.Drawing.Point(240, 0);
             this.tlpHeader.Margin = new System.Windows.Forms.Padding(0);
             this.tlpHeader.Name = "tlpHeader";
@@ -392,18 +390,6 @@
             this.tlpHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpHeader.Size = new System.Drawing.Size(645, 59);
             this.tlpHeader.TabIndex = 2;
-            // 
-            // lblOla
-            // 
-            this.lblOla.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblOla.AutoSize = true;
-            this.lblOla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblOla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOla.Location = new System.Drawing.Point(3, 19);
-            this.lblOla.Name = "lblOla";
-            this.lblOla.Size = new System.Drawing.Size(108, 20);
-            this.lblOla.TabIndex = 0;
-            this.lblOla.Text = "Olá Usuário!";
             // 
             // tlpFooter
             // 
@@ -458,8 +444,6 @@
             this.pnlVendas.ResumeLayout(false);
             this.grpBoxVendas.ResumeLayout(false);
             this.tlpVendas.ResumeLayout(false);
-            this.tlpHeader.ResumeLayout(false);
-            this.tlpHeader.PerformLayout();
             this.tlpFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -490,7 +474,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpCliente;
         private System.Windows.Forms.GroupBox grpBoxUsuario;
         private System.Windows.Forms.TableLayoutPanel tlpUsuario;
-        private Components.LaloLabel lblOla;
         private System.Windows.Forms.TableLayoutPanel tlpFooter;
         private System.Windows.Forms.Button btnFecharTela;
     }

@@ -120,6 +120,12 @@
     <Compile Include="Views\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Usuarios\AdicionarUsuarioView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Usuarios\AdicionarUsuarioView.Designer.cs">
+      <DependentUpon>AdicionarUsuarioView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Vendas\CriarPedidoView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Usuarios\AdicionarUsuarioView.resx">
+      <DependentUpon>AdicionarUsuarioView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Vendas\CriarPedidoView.resx">
       <DependentUpon>CriarPedidoView.cs</DependentUpon>
@@ -213,9 +222,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Usuarios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
