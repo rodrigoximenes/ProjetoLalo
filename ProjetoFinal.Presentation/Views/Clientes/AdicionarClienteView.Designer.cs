@@ -80,7 +80,7 @@
             this.grpBoxDadosConsulta.Size = new System.Drawing.Size(636, 149);
             this.grpBoxDadosConsulta.TabIndex = 1;
             this.grpBoxDadosConsulta.TabStop = false;
-            this.grpBoxDadosConsulta.Text = "Dados da Consulta";
+            this.grpBoxDadosConsulta.Text = "Clientes";
             // 
             // tlpCliente
             // 
@@ -254,7 +254,7 @@
             this.grpBoxDadosConsultaDetalhada.Size = new System.Drawing.Size(636, 202);
             this.grpBoxDadosConsultaDetalhada.TabIndex = 3;
             this.grpBoxDadosConsultaDetalhada.TabStop = false;
-            this.grpBoxDadosConsultaDetalhada.Text = "Dados da Consulta Detalhada";
+            this.grpBoxDadosConsultaDetalhada.Text = "Clientes Cadastrados";
             // 
             // tlpProdutos
             // 

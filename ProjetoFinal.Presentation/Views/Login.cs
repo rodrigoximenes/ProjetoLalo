@@ -8,17 +8,14 @@ namespace ProjetoFinal.Presentation
 {
     public partial class Login : Form
     {
-       // private IProdutoRepository _produtoRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
 
         public Login()
         {
-          //  _produtoRepository = LaloKernel.GetInstance<IProdutoRepository>();
+            _usuarioRepository = LaloKernel.GetInstance<IUsuarioRepository>();
 
             InitializeComponent();
-
-           // var repo = new ProdutoRepository(new Infrastructure.Context.LaloContext());
-
-           // var produtos = repo.FindAll();
+           
         }
 
         #region Events

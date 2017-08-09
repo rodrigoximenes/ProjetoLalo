@@ -169,7 +169,7 @@
             this.btnNovo.Location = new System.Drawing.Point(513, 3);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(111, 33);
-            this.btnNovo.TabIndex = 0;
+            this.btnNovo.TabIndex = 3;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -181,7 +181,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(513, 95);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(111, 32);
-            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -192,7 +192,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(513, 46);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(114, 33);
-            this.btnSalvar.TabIndex = 3;
+            this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
