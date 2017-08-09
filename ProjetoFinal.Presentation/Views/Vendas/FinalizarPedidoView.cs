@@ -1,6 +1,7 @@
 ﻿using ProjetoFinal.Domain.Interface.Repository;
 using ProjetoFinal.Domain.Model;
 using ProjetoFinal.Infrastructure.NinjectConfig;
+using ProjetoFinal.Presentation.ViewModel;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -9,27 +10,29 @@ namespace ProjetoFinal.Presentation.Views.Vendas
     public partial class FinalizarPedidoView : Form
     {
         private readonly IPedidoRepository _pedidoRepository;
+        private readonly IItemRepository _itemRepository;
 
         public Pedido _pedido;
         public Cliente _cliente;
         public Endereco _endereco;
         public Produto _produtos;
 
-        public FinalizarPedidoView(Pedido pedido, Cliente cliente, Endereco endereco, Produto produtos)
+        public FinalizarPedidoView(PedidoViewModel pedidoViewModel)
         {
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
+            _itemRepository = LaloKernel.GetInstance<IItemRepository>();
 
             InitializeComponent();
             BindComboEntregas();
 
-            this._endereco = endereco;
-            this._pedido = pedido;
-            this._cliente = cliente;
-            this._produtos = produtos;
+            //this._endereco = endereco;
+            //this._pedido = pedido;
+            //this._cliente = cliente;
+            //this._produtos = produtos;
 
-            txtBoxNome.Text = cliente.NomeCompleto;
-            txtBoxFormaEntrega.Text = pedido.TipoEntrega;
-            txtBoxEndereco.Text = pedido.EnderecoEntrega;
+            txtBoxNome.Text = pedidoViewModel.NomeCliente;
+            txtBoxFormaEntrega.Text = pedidoViewModel.TipoEntrega;
+            txtBoxEndereco.Text = pedidoViewModel.EnderecoEntrega;
         }
 
         #region

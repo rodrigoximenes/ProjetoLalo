@@ -15,14 +15,14 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IProdutoRepository _produtoRepository;
 
-        public List<ItemPedidoViewModel> itemsPedidoViewModel { get; set; }
+        public PedidoViewModel PedidoViewModel { get; set; }
 
         public CriarPedidoView()
         {
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
             _produtoRepository = LaloKernel.GetInstance<IProdutoRepository>();
 
-            itemsPedidoViewModel = new List<ItemPedidoViewModel>();
+            PedidoViewModel = new PedidoViewModel();
 
             InitializeComponent();
 
@@ -144,29 +144,17 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
             try
             {
-                var cliente = new Cliente();
-                var pedido = new Pedido();
-                var endereco = new Endereco();
-                var produtos = new Produto();
+                PedidoViewModel.EnderecoCliente = "endereco1";
+                PedidoViewModel.NomeCliente = txtBoxNome.Text;
+                PedidoViewModel.CPF = txtBoxCPF.Text;
+                PedidoViewModel.Telefone = txtBoxTelefone.Text;
 
-                endereco.Logradouro = txtBoxEndereco.Text;
-                endereco.Bairro = "Bairro";
+                PedidoViewModel.DataEntrega = DateTime.Parse(dtTmPkrDataEntrega.Text);
+                PedidoViewModel.DataSolicitacao = DateTime.Now;
+                PedidoViewModel.TipoEntrega = cmbBoxFormaEntrega.SelectedText;
+                PedidoViewModel.EnderecoEntrega = txtBoxEndereco.Text;
 
-
-                cliente.Endereco = "endereco1";
-                cliente.NomeCompleto = txtBoxNome.Text;
-                cliente.Cpf = txtBoxCPF.Text;
-                cliente.Telefone = txtBoxTelefone.Text;
-
-                pedido.Cliente = cliente;
-                pedido.DataEntrega = DateTime.Parse(dtTmPkrDataEntrega.Text);
-                pedido.DataSolicitacao = DateTime.Now;
-                pedido.TipoEntrega = cmbBoxFormaEntrega.SelectedText;
-                //pedido.EnderecoEntrega = endereco;
-
-
-
-                var form = new FinalizarPedidoView(pedido, cliente, endereco, produtos);
+                var form = new FinalizarPedidoView(PedidoViewModel);
                 form.ShowDialog();
                 form.Focus();
             }
@@ -183,7 +171,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         {
             var produtoSelecionado = _produtoRepository.Find(Convert.ToInt32(cmbBoxProdutos.SelectedValue));
 
-            var itemExiste = itemsPedidoViewModel.SingleOrDefault(x => x.IdProduto == produtoSelecionado.Id);
+            var itemExiste = PedidoViewModel.ItemsViewModel.SingleOrDefault(x => x.IdProduto == produtoSelecionado.Id);
 
             if (itemExiste != null)
             {
@@ -198,11 +186,11 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 itemViewModel.Quantidade = Convert.ToInt32(txtBoxQuantidade.Text);
                 itemViewModel.PrecoUnitario = produtoSelecionado.PrecoUnitario;
                 itemViewModel.PrecoTotal = Convert.ToDecimal(txtBoxValorTotal.Text);
-                itemsPedidoViewModel.Add(itemViewModel);
+                PedidoViewModel.ItemsViewModel.Add(itemViewModel);
             }
 
             gridProdutos.DataSource = null;
-            gridProdutos.DataSource = itemsPedidoViewModel;
+            gridProdutos.DataSource = PedidoViewModel.ItemsViewModel;
         }
 
         private void txtBoxQuantidade_ValueChanged(object sender, EventArgs e)
