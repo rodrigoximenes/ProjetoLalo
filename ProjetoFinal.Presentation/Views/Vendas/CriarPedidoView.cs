@@ -203,11 +203,13 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnRetirarProduto_Click(object sender, EventArgs e)
         {
-            var idProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[0].Cells[0].Value);
+            for (int i = 0; i < gridProdutos.SelectedRows.Count; i++)
+            {
+                var idProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[i].Cells[0].Value);
+                var produtoExcluir = PedidoViewModel.ItemsViewModel.SingleOrDefault(x => x.IdProduto == idProdutoSelecionado);
 
-            var produtoExcluir = PedidoViewModel.ItemsViewModel.SingleOrDefault(x => x.IdProduto == idProdutoSelecionado);
-
-            PedidoViewModel.ItemsViewModel.Remove(produtoExcluir);
+                PedidoViewModel.ItemsViewModel.Remove(produtoExcluir);
+            }
 
             gridProdutos.DataSource = null;
             gridProdutos.DataSource = PedidoViewModel.ItemsViewModel;

@@ -63,10 +63,10 @@
             this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.chkBoxUsuarioPadrao = new System.Windows.Forms.CheckBox();
-            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.tlpMain.SuspendLayout();
             this.grpBoxProdutos.SuspendLayout();
             this.tlpProdutos.SuspendLayout();
@@ -201,7 +201,6 @@
             this.tlpProdutos.SetColumnSpan(this.gridProdutos, 6);
             this.gridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridProdutos.Location = new System.Drawing.Point(3, 61);
-            this.gridProdutos.MultiSelect = false;
             this.gridProdutos.Name = "gridProdutos";
             this.gridProdutos.ReadOnly = true;
             this.gridProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -500,6 +499,16 @@
             this.lblTelefone.TabIndex = 3;
             this.lblTelefone.Text = "Telefone:";
             // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(507, 32);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(114, 33);
+            this.btnBuscarCliente.TabIndex = 4;
+            this.btnBuscarCliente.Text = "Buscar Cliente";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            // 
             // txtBoxNome
             // 
             this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -527,16 +536,6 @@
             this.chkBoxUsuarioPadrao.Text = "Usuário Padrão";
             this.chkBoxUsuarioPadrao.UseVisualStyleBackColor = true;
             this.chkBoxUsuarioPadrao.CheckedChanged += new System.EventHandler(this.chkBoxUsuarioPadrao_CheckedChanged);
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(507, 32);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(114, 33);
-            this.btnBuscarCliente.TabIndex = 4;
-            this.btnBuscarCliente.Text = "Buscar Cliente";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
             // 
             // CriarPedidoView
             // 

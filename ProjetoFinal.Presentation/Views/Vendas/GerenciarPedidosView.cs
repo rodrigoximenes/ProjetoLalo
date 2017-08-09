@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoFinal.Domain.Interface.Repository;
+using ProjetoFinal.Infrastructure.NinjectConfig;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -6,12 +8,29 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 {
     public partial class GerenciarPedidosView : Form
     {
+        public int IdPedidoSelecionado { get; set; }
+        private readonly IPedidoRepository _pedidoRepository;
+
         public GerenciarPedidosView()
         {
+            _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
             InitializeComponent();
             BindCombo();
             BindDateTime();
             StartScreen();
+            this.Load += GerenciarPedidosView_Load;
+        }
+
+        private void GerenciarPedidosView_Load(object sender, EventArgs e)
+        {
+            LoadPedidos();
+        }
+
+        private void LoadPedidos()
+        {
+            gridPedidos.DataSource = _pedidoRepository.FindAll();
+            CleanFields();
+
         }
 
         #region PrivateMethods
@@ -42,6 +61,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void CleanFields()
         {
+            IdPedidoSelecionado = 0;
             txtBoxNumeroPedido.Text = string.Empty;
             txtBoxNomeCliente.Text = string.Empty;
             cmbBoxStatus.SelectedIndex = -1;
@@ -52,6 +72,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         #endregion
 
         #region Events
+
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             if(dtTmPkrDataRegistro.Value > dtTmPkrDataEntrega.Value)
@@ -67,14 +88,20 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             CleanFields();
         }
 
-        private void btnAbrirPedido_Click(object sender, EventArgs e)
+        private void btnConsultarPedido_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnConsultarPedido_Click(object sender, EventArgs e)
+        private void gridPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            IdPedidoSelecionado = Convert.ToInt32(gridPedidos.SelectedRows[0].Cells[0].Value);
 
+            var pedido = _pedidoRepository.Find(IdPedidoSelecionado);
+
+            txtBoxNomeCliente.Text = pedido.Cliente.NomeCompleto;
+            txtBoxNumeroPedido.Text = pedido.Id.ToString();
+            dtTmPkrDataEntrega.Text = pedido.DataEntrega.ToString();
         }
 
         #endregion
