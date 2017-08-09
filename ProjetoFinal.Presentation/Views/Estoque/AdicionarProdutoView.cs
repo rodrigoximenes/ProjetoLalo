@@ -19,8 +19,6 @@ namespace ProjetoFinal.Presentation.Views.Estoque
             InitializeComponent();
 
             this.Load += AdicionarProdutoView_Load;
-
-            gridProdutos.CellClick += GridProdutos_CellClick;
         }
 
         private void ClearFields()
@@ -34,17 +32,6 @@ namespace ProjetoFinal.Presentation.Views.Estoque
         private void btnNovo_Click(object sender, EventArgs e)
         {
             ClearFields();
-        }
-
-        private void GridProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            IdProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[0].Cells[0].Value);
-
-            var produto = _produtoRepository.Find(IdProdutoSelecionado);
-
-            txtBoxNome.Text = produto.Nome;
-            txtBoxPrecoUnitario.Text = produto.PrecoUnitario.ToString();
-            txtBoxQuantidade.Text = produto.Quantidade.ToString();
         }
 
         private void LoadProdutos()
@@ -109,6 +96,17 @@ namespace ProjetoFinal.Presentation.Views.Estoque
             {
                 MessageBox.Show("Erro ao tentar excluir o produto.");
             }
+        }
+
+        private void gridProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IdProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[0].Cells[0].Value);
+
+            var produto = _produtoRepository.Find(IdProdutoSelecionado);
+
+            txtBoxNome.Text = produto.Nome;
+            txtBoxPrecoUnitario.Text = produto.PrecoUnitario.ToString();
+            txtBoxQuantidade.Text = produto.Quantidade.ToString();
         }
     }
 }

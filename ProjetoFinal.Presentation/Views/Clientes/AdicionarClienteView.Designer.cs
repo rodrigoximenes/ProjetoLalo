@@ -36,7 +36,7 @@
             this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
-            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.btnNovo = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new ProjetoFinal.Presentation.Components.LaloLabel();
@@ -46,16 +46,13 @@
             this.grpBoxDadosConsultaDetalhada = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.gridClientes = new System.Windows.Forms.DataGridView();
-            this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.btnEditarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.btnExcluirCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.tlpMain.SuspendLayout();
             this.grpBoxDadosConsulta.SuspendLayout();
             this.tlpCliente.SuspendLayout();
             this.grpBoxDadosConsultaDetalhada.SuspendLayout();
             this.tlpProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).BeginInit();
-            this.tlpButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -94,12 +91,13 @@
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.6361F));
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.984127F));
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.73016F));
+            this.tlpCliente.Controls.Add(this.btnExcluir, 5, 2);
             this.tlpCliente.Controls.Add(this.btnSalvar, 5, 1);
             this.tlpCliente.Controls.Add(this.txtBoxTelefone, 3, 0);
             this.tlpCliente.Controls.Add(this.lblNome, 0, 0);
             this.tlpCliente.Controls.Add(this.lblTelefone, 2, 0);
             this.tlpCliente.Controls.Add(this.txtBoxNome, 1, 0);
-            this.tlpCliente.Controls.Add(this.btnBuscarCliente, 5, 0);
+            this.tlpCliente.Controls.Add(this.btnNovo, 5, 0);
             this.tlpCliente.Controls.Add(this.txtBoxCPF, 1, 1);
             this.tlpCliente.Controls.Add(this.txtBoxEmail, 3, 1);
             this.tlpCliente.Controls.Add(this.lblEmail, 2, 1);
@@ -166,16 +164,16 @@
             this.txtBoxNome.Size = new System.Drawing.Size(155, 20);
             this.txtBoxNome.TabIndex = 0;
             // 
-            // btnBuscarCliente
+            // btnNovo
             // 
-            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(513, 3);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(114, 33);
-            this.btnBuscarCliente.TabIndex = 5;
-            this.btnBuscarCliente.Text = "Buscar Cliente";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovo.Location = new System.Drawing.Point(513, 3);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(114, 33);
+            this.btnNovo.TabIndex = 5;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // txtBoxCPF
             // 
@@ -249,16 +247,14 @@
             // 
             // tlpProdutos
             // 
-            this.tlpProdutos.ColumnCount = 7;
+            this.tlpProdutos.ColumnCount = 6;
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.612439F));
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.58692F));
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.32376F));
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.409887F));
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.26794F));
             this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.68254F));
-            this.tlpProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.4127F));
             this.tlpProdutos.Controls.Add(this.gridClientes, 0, 0);
-            this.tlpProdutos.Controls.Add(this.tlpButtons, 6, 0);
             this.tlpProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpProdutos.Location = new System.Drawing.Point(3, 16);
             this.tlpProdutos.Name = "tlpProdutos";
@@ -275,47 +271,20 @@
             this.gridClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridClientes.Location = new System.Drawing.Point(3, 3);
             this.gridClientes.Name = "gridClientes";
-            this.gridClientes.Size = new System.Drawing.Size(507, 177);
+            this.gridClientes.Size = new System.Drawing.Size(624, 177);
             this.gridClientes.TabIndex = 0;
+            this.gridClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellClick);
             // 
-            // tlpButtons
+            // btnExcluir
             // 
-            this.tlpButtons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tlpButtons.ColumnCount = 1;
-            this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpButtons.Controls.Add(this.btnEditarCliente, 0, 0);
-            this.tlpButtons.Controls.Add(this.btnExcluirCliente, 0, 1);
-            this.tlpButtons.Location = new System.Drawing.Point(513, 0);
-            this.tlpButtons.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpButtons.Name = "tlpButtons";
-            this.tlpButtons.RowCount = 3;
-            this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpButtons.Size = new System.Drawing.Size(117, 183);
-            this.tlpButtons.TabIndex = 12;
-            // 
-            // btnEditarCliente
-            // 
-            this.btnEditarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarCliente.Location = new System.Drawing.Point(3, 3);
-            this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(111, 33);
-            this.btnEditarCliente.TabIndex = 0;
-            this.btnEditarCliente.Text = "Editar";
-            this.btnEditarCliente.UseVisualStyleBackColor = false;
-            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
-            // 
-            // btnExcluirCliente
-            // 
-            this.btnExcluirCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExcluirCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirCliente.Location = new System.Drawing.Point(3, 44);
-            this.btnExcluirCliente.Name = "btnExcluirCliente";
-            this.btnExcluirCliente.Size = new System.Drawing.Size(111, 32);
-            this.btnExcluirCliente.TabIndex = 1;
-            this.btnExcluirCliente.Text = "Excluir";
-            this.btnExcluirCliente.UseVisualStyleBackColor = false;
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.Location = new System.Drawing.Point(513, 89);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(111, 33);
+            this.btnExcluir.TabIndex = 0;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // AdicionarClienteView
             // 
@@ -334,7 +303,6 @@
             this.grpBoxDadosConsultaDetalhada.ResumeLayout(false);
             this.tlpProdutos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
-            this.tlpButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -347,7 +315,7 @@
         private System.Windows.Forms.TextBox txtBoxTelefone;
         private Components.LaloLabel lblNome;
         private Components.LaloLabel lblTelefone;
-        private Components.LaloPrimaryButton btnBuscarCliente;
+        private Components.LaloPrimaryButton btnNovo;
         private System.Windows.Forms.TextBox txtBoxNome;
         private System.Windows.Forms.TextBox txtBoxCPF;
         private Components.LaloLabel lblEmail;
@@ -356,9 +324,7 @@
         private System.Windows.Forms.GroupBox grpBoxDadosConsultaDetalhada;
         private System.Windows.Forms.TableLayoutPanel tlpProdutos;
         private System.Windows.Forms.DataGridView gridClientes;
-        private System.Windows.Forms.TableLayoutPanel tlpButtons;
-        private Components.LaloPrimaryButton btnEditarCliente;
-        private Components.LaloPrimaryButton btnExcluirCliente;
+        private Components.LaloPrimaryButton btnExcluir;
         private System.Windows.Forms.TextBox txtBoxEmail;
         private System.Windows.Forms.TextBox txtBoxEndereco;
         private Components.LaloLabel lblCPF;

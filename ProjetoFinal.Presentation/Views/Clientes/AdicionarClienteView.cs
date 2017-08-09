@@ -8,6 +8,7 @@ namespace ProjetoFinal.Presentation.Views.Clientes
 {
     public partial class AdicionarClienteView : Form
     {
+        public int IdClienteSelecionado { get; set; }
         private readonly IClienteRepository _clienteRepository;
 
         public AdicionarClienteView()
@@ -15,10 +16,41 @@ namespace ProjetoFinal.Presentation.Views.Clientes
             _clienteRepository = LaloKernel.GetInstance<IClienteRepository>();
 
             InitializeComponent();
+
+            this.Load += AdicionarClienteView_Load;
+        }
+
+        private void AdicionarClienteView_Load(object sender, EventArgs e)
+        {
+            LoadCliente();
+        }
+
+        private void LoadCliente()
+        {
+            gridClientes.DataSource = _clienteRepository.FindAll();
+            ClearFields();
+        }
+
+        private void ClearFields()
+        {
+            IdClienteSelecionado = 0;
+            txtBoxNome.Text = string.Empty;
+            txtBoxCPF.Text = string.Empty;
+            txtBoxEmail.Text = string.Empty;
+            txtBoxEndereco.Text = string.Empty;
+            txtBoxTelefone.Text = string.Empty;
         }
 
         private void btnSalvar_Click(object sender, System.EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtBoxNome.Text) ||
+                string.IsNullOrEmpty(txtBoxEndereco.Text) ||
+                string.IsNullOrEmpty(txtBoxTelefone.Text) ||
+                string.IsNullOrEmpty(txtBoxCPF.Text))
+            {
+                MessageBox.Show("Favor preencher os campos corretamente.");
+                return;
+            }
             try
             {
                 var cliente = new Cliente();
@@ -37,28 +69,38 @@ namespace ProjetoFinal.Presentation.Views.Clientes
             }
         }
 
-        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
             {
-                //var clienteProcurado = _clienteRepository.Find(c => c.Nome == );
+                _clienteRepository.Delete(IdClienteSelecionado);
 
-                //if (clienteProcurado == null) throw new ArgumentNullException(nameof(clienteProcurado));
+                MessageBox.Show("Cliente excluído com sucesso");
 
-                //gridClientes.DataSource = clienteProcurado;
-
+                LoadCliente();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                MessageBox.Show("Cliente não encontrado");
+                MessageBox.Show("Erro ao tentar excluir o cliente.");
             }
-
         }
 
-        private void btnEditarCliente_Click(object sender, EventArgs e)
+        private void gridClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var cliente = gridClientes.SelectedRows;
+            IdClienteSelecionado = Convert.ToInt32(gridClientes.SelectedRows[0].Cells[0].Value);
+
+            var cliente = _clienteRepository.Find(IdClienteSelecionado);
+
+            txtBoxNome.Text = cliente.NomeCompleto;
+            txtBoxTelefone.Text = cliente.Telefone;
+            txtBoxEndereco.Text = cliente.Endereco;
+            txtBoxCPF.Text = cliente.Cpf;
+            txtBoxEmail.Text = cliente.Email;
         }
     }
 }
