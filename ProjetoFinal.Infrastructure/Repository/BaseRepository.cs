@@ -55,9 +55,7 @@ namespace ProjetoFinal.Infrastructure.Repository
 
         public void Update(TEntity entity)
         {
-            _context.Entry<TEntity>(entity).State = System.Data.Entity.EntityState.Modified;
-            //var entityAux = _context.Set<TEntity>().Find(entity);
-            //entityAux = entity;
+            //_context.Entry<TEntity>(entity).State = System.Data.Entity.EntityState.Modified;
 
             _context.Set<TEntity>().Attach(entity);
             _context.SaveChanges();
