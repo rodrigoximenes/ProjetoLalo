@@ -37,5 +37,16 @@ namespace ProjetoFinal.Presentation.ViewModel
         {
             ItemsViewModel = new List<ItemPedidoViewModel>();
         }
+
+        public decimal getValorTotal()
+        {
+            decimal valorTotal = 0;
+
+            foreach (var item in ItemsViewModel)
+            {
+                valorTotal += item.PrecoTotal;
+            }
+            return valorTotal;
+        }
     }
 }

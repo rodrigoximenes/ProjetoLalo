@@ -33,6 +33,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             txtBoxNome.Text = pedidoViewModel.NomeCliente;
             txtBoxFormaEntrega.Text = pedidoViewModel.TipoEntrega;
             txtBoxEndereco.Text = pedidoViewModel.EnderecoEntrega;
+            txtBoxValorPedido.Text = pedidoViewModel.getValorTotal().ToString();
         }
 
         #region
