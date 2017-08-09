@@ -4,6 +4,7 @@ using ProjetoFinal.Infrastructure.NinjectConfig;
 using ProjetoFinal.Presentation.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ProjetoFinal.Presentation.Views.Vendas
@@ -14,12 +15,19 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IProdutoRepository _produtoRepository;
 
+        public List<ItemPedidoViewModel> itemsPedidoViewModel { get; set; }
+
         public CriarPedidoView()
         {
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
             _produtoRepository = LaloKernel.GetInstance<IProdutoRepository>();
 
+            itemsPedidoViewModel = new List<ItemPedidoViewModel>();
+
             InitializeComponent();
+
+            gridProdutos.AutoGenerateColumns = false;
+
             BindComboEntregas();
             BindComboProdutos();
             StartScreen();
@@ -173,14 +181,28 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnAdicionarProduto_Click(object sender, EventArgs e)
         {
-            var itemPedidoViewModel = new ItemPedidoViewModel();
-
             var produtoSelecionado = _produtoRepository.Find(Convert.ToInt32(cmbBoxProdutos.SelectedValue));
 
-            itemPedidoViewModel.IdProduto = produtoSelecionado.Id;
-            itemPedidoViewModel.NomeProduto = produtoSelecionado.Nome;
-            itemPedidoViewModel.Quantidade = Convert.ToInt32(txtBoxQuantidade.Text);
-            itemPedidoViewModel.PrecoTotal = Convert.ToDecimal(txtBoxValorTotal.Text);
+            var itemExiste = itemsPedidoViewModel.SingleOrDefault(x => x.IdProduto == produtoSelecionado.Id);
+
+            if (itemExiste != null)
+            {
+                itemExiste.Quantidade = itemExiste.Quantidade + Convert.ToInt32(txtBoxQuantidade.Text);
+                itemExiste.PrecoTotal = itemExiste.PrecoUnitario * itemExiste.Quantidade;
+            }
+            else
+            {
+                var itemViewModel = new ItemPedidoViewModel();
+                itemViewModel.IdProduto = produtoSelecionado.Id;
+                itemViewModel.NomeProduto = produtoSelecionado.Nome;
+                itemViewModel.Quantidade = Convert.ToInt32(txtBoxQuantidade.Text);
+                itemViewModel.PrecoUnitario = produtoSelecionado.PrecoUnitario;
+                itemViewModel.PrecoTotal = Convert.ToDecimal(txtBoxValorTotal.Text);
+                itemsPedidoViewModel.Add(itemViewModel);
+            }
+
+            gridProdutos.DataSource = null;
+            gridProdutos.DataSource = itemsPedidoViewModel;
         }
 
         private void txtBoxQuantidade_ValueChanged(object sender, EventArgs e)
@@ -190,6 +212,11 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
             if (Equals(cmbBoxProdutos.SelectedIndex, -1)) return;
             txtBoxValorTotal.Text = (produtoSelecionado.PrecoUnitario * quantidade).ToString();
+        }
+
+        private void cmbBoxProdutos_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            txtBoxQuantidade_ValueChanged(this, e);
         }
     }
 }

@@ -9,7 +9,7 @@
         public int Quantidade { get; set; }
 
         public decimal PrecoUnitario { get; set; }
-
+        
         public decimal PrecoTotal { get; set; }
     }
 }
