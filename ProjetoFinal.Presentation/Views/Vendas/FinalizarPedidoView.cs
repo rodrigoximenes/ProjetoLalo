@@ -2,6 +2,7 @@
 using ProjetoFinal.Domain.Model;
 using ProjetoFinal.Infrastructure.NinjectConfig;
 using ProjetoFinal.Presentation.ViewModel;
+using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -11,24 +12,31 @@ namespace ProjetoFinal.Presentation.Views.Vendas
     {
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IItemRepository _itemRepository;
+        private readonly IClienteRepository _clienteRepository;
 
         public Pedido _pedido;
         public Cliente _cliente;
-        public Endereco _endereco;
-        public Produto _produtos;
+        public IList<Item> _itens;
 
         public FinalizarPedidoView(PedidoViewModel pedidoViewModel)
         {
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
             _itemRepository = LaloKernel.GetInstance<IItemRepository>();
+            _clienteRepository = LaloKernel.GetInstance<IClienteRepository>();
 
             InitializeComponent();
             BindComboEntregas();
 
-            //this._endereco = endereco;
-            //this._pedido = pedido;
-            //this._cliente = cliente;
-            //this._produtos = produtos;
+            this._cliente.NomeCompleto = pedidoViewModel.NomeCliente;
+            this._cliente.Cpf = pedidoViewModel.CPF;
+            this._cliente.Endereco = pedidoViewModel.EnderecoCliente;
+            this._cliente.Telefone = pedidoViewModel.Telefone;
+
+            this._pedido.Cliente.Cpf = pedidoViewModel.CPF;
+            this._pedido.DataEntrega = pedidoViewModel.DataEntrega;
+            this._pedido.DataSolicitacao = pedidoViewModel.DataSolicitacao;
+            this._pedido.EnderecoEntrega = pedidoViewModel.EnderecoEntrega;
+            this._pedido.TipoEntrega = pedidoViewModel.TipoEntrega;
 
             txtBoxNome.Text = pedidoViewModel.NomeCliente;
             txtBoxFormaEntrega.Text = pedidoViewModel.TipoEntrega;
@@ -97,9 +105,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnFinalizarPedido_Click(object sender, System.EventArgs e)
         {
-            _pedido.Cliente.Endereco = "_endereco1";
-            _pedido.Cliente = _cliente;
-
+            _clienteRepository.Add(_cliente);
             _pedidoRepository.Add(_pedido);
 
             MessageBox.Show("Pedido Finalizado");

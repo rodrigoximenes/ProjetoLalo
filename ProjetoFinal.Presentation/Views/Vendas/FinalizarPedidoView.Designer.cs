@@ -31,28 +31,28 @@
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.grpBoxInfoGerais = new System.Windows.Forms.GroupBox();
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.lblEndereco = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblEntrega = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.txtBoxEndereco = new System.Windows.Forms.TextBox();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.txtBoxFormaEntrega = new System.Windows.Forms.TextBox();
             this.txtBoxNumeroPedido = new System.Windows.Forms.TextBox();
+            this.lblNumeroPedido = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.grpBoxPedido = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.txtBoxTroco = new System.Windows.Forms.TextBox();
-            this.txtBoxValorPedido = new System.Windows.Forms.TextBox();
-            this.cmbBoxFormaPagamento = new System.Windows.Forms.ComboBox();
-            this.txtBoxValorTotal = new System.Windows.Forms.TextBox();
-            this.txtBoxValorDesconto = new System.Windows.Forms.TextBox();
-            this.txtBoxValorRecebido = new System.Windows.Forms.TextBox();
-            this.lblEndereco = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblEntrega = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblNumeroPedido = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblTroco = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblValorRecebido = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblValorPedido = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxValorPedido = new System.Windows.Forms.TextBox();
+            this.cmbBoxFormaPagamento = new System.Windows.Forms.ComboBox();
             this.lblFormaPagamento = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxValorTotal = new System.Windows.Forms.TextBox();
             this.lblValor = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxValorDesconto = new System.Windows.Forms.TextBox();
             this.lblDesconto = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxValorRecebido = new System.Windows.Forms.TextBox();
             this.btnCancelar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnFinalizarPedido = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.tlpMain.SuspendLayout();
@@ -114,6 +114,39 @@
             this.tlpCliente.Size = new System.Drawing.Size(630, 68);
             this.tlpCliente.TabIndex = 0;
             // 
+            // lblEndereco
+            // 
+            this.lblEndereco.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEndereco.Location = new System.Drawing.Point(319, 42);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(56, 13);
+            this.lblEndereco.TabIndex = 2;
+            this.lblEndereco.Text = "Endereço:";
+            // 
+            // lblNome
+            // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNome.AutoSize = true;
+            this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNome.Location = new System.Drawing.Point(85, 8);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.Text = "Nome:";
+            // 
+            // lblEntrega
+            // 
+            this.lblEntrega.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEntrega.AutoSize = true;
+            this.lblEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEntrega.Location = new System.Drawing.Point(29, 42);
+            this.lblEntrega.Name = "lblEntrega";
+            this.lblEntrega.Size = new System.Drawing.Size(94, 13);
+            this.lblEntrega.TabIndex = 2;
+            this.lblEntrega.Text = "Forma de Entrega:";
+            // 
             // txtBoxEndereco
             // 
             this.txtBoxEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -149,6 +182,17 @@
             this.txtBoxNumeroPedido.Name = "txtBoxNumeroPedido";
             this.txtBoxNumeroPedido.Size = new System.Drawing.Size(120, 20);
             this.txtBoxNumeroPedido.TabIndex = 1;
+            // 
+            // lblNumeroPedido
+            // 
+            this.lblNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNumeroPedido.AutoSize = true;
+            this.lblNumeroPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNumeroPedido.Location = new System.Drawing.Point(443, 8);
+            this.lblNumeroPedido.Name = "lblNumeroPedido";
+            this.lblNumeroPedido.Size = new System.Drawing.Size(58, 13);
+            this.lblNumeroPedido.TabIndex = 3;
+            this.lblNumeroPedido.Text = "Nº Pedido:";
             // 
             // grpBoxPedido
             // 
@@ -204,94 +248,6 @@
             this.txtBoxTroco.Size = new System.Drawing.Size(86, 20);
             this.txtBoxTroco.TabIndex = 4;
             // 
-            // txtBoxValorPedido
-            // 
-            this.txtBoxValorPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxValorPedido.Location = new System.Drawing.Point(142, 17);
-            this.txtBoxValorPedido.Name = "txtBoxValorPedido";
-            this.txtBoxValorPedido.Size = new System.Drawing.Size(90, 20);
-            this.txtBoxValorPedido.TabIndex = 0;
-            // 
-            // cmbBoxFormaPagamento
-            // 
-            this.cmbBoxFormaPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbBoxFormaPagamento.FormattingEnabled = true;
-            this.cmbBoxFormaPagamento.Location = new System.Drawing.Point(516, 72);
-            this.cmbBoxFormaPagamento.Name = "cmbBoxFormaPagamento";
-            this.cmbBoxFormaPagamento.Size = new System.Drawing.Size(111, 21);
-            this.cmbBoxFormaPagamento.TabIndex = 5;
-            // 
-            // txtBoxValorTotal
-            // 
-            this.txtBoxValorTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxValorTotal.Enabled = false;
-            this.txtBoxValorTotal.Location = new System.Drawing.Point(516, 17);
-            this.txtBoxValorTotal.Name = "txtBoxValorTotal";
-            this.txtBoxValorTotal.Size = new System.Drawing.Size(111, 20);
-            this.txtBoxValorTotal.TabIndex = 2;
-            // 
-            // txtBoxValorDesconto
-            // 
-            this.txtBoxValorDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxValorDesconto.Location = new System.Drawing.Point(332, 17);
-            this.txtBoxValorDesconto.Name = "txtBoxValorDesconto";
-            this.txtBoxValorDesconto.Size = new System.Drawing.Size(86, 20);
-            this.txtBoxValorDesconto.TabIndex = 1;
-            this.txtBoxValorDesconto.Leave += new System.EventHandler(this.txtBoxValorDesconto_Leave);
-            // 
-            // txtBoxValorRecebido
-            // 
-            this.txtBoxValorRecebido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxValorRecebido.Location = new System.Drawing.Point(142, 73);
-            this.txtBoxValorRecebido.Name = "txtBoxValorRecebido";
-            this.txtBoxValorRecebido.Size = new System.Drawing.Size(90, 20);
-            this.txtBoxValorRecebido.TabIndex = 3;
-            this.txtBoxValorRecebido.Leave += new System.EventHandler(this.txtBoxValorRecebido_Leave);
-            // 
-            // lblEndereco
-            // 
-            this.lblEndereco.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblEndereco.AutoSize = true;
-            this.lblEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEndereco.Location = new System.Drawing.Point(319, 42);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(56, 13);
-            this.lblEndereco.TabIndex = 2;
-            this.lblEndereco.Text = "Endereço:";
-            // 
-            // lblNome
-            // 
-            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNome.AutoSize = true;
-            this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNome.Location = new System.Drawing.Point(85, 8);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
-            this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome:";
-            // 
-            // lblEntrega
-            // 
-            this.lblEntrega.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblEntrega.AutoSize = true;
-            this.lblEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEntrega.Location = new System.Drawing.Point(29, 42);
-            this.lblEntrega.Name = "lblEntrega";
-            this.lblEntrega.Size = new System.Drawing.Size(94, 13);
-            this.lblEntrega.TabIndex = 2;
-            this.lblEntrega.Text = "Forma de Entrega:";
-            // 
-            // lblNumeroPedido
-            // 
-            this.lblNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNumeroPedido.AutoSize = true;
-            this.lblNumeroPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNumeroPedido.Location = new System.Drawing.Point(443, 8);
-            this.lblNumeroPedido.Name = "lblNumeroPedido";
-            this.lblNumeroPedido.Size = new System.Drawing.Size(58, 13);
-            this.lblNumeroPedido.TabIndex = 3;
-            this.lblNumeroPedido.Text = "Nº Pedido:";
-            // 
             // lblTroco
             // 
             this.lblTroco.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -325,6 +281,24 @@
             this.lblValorPedido.TabIndex = 9;
             this.lblValorPedido.Text = "Valor do Pedido (R$):";
             // 
+            // txtBoxValorPedido
+            // 
+            this.txtBoxValorPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxValorPedido.Enabled = false;
+            this.txtBoxValorPedido.Location = new System.Drawing.Point(142, 17);
+            this.txtBoxValorPedido.Name = "txtBoxValorPedido";
+            this.txtBoxValorPedido.Size = new System.Drawing.Size(90, 20);
+            this.txtBoxValorPedido.TabIndex = 0;
+            // 
+            // cmbBoxFormaPagamento
+            // 
+            this.cmbBoxFormaPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbBoxFormaPagamento.FormattingEnabled = true;
+            this.cmbBoxFormaPagamento.Location = new System.Drawing.Point(516, 72);
+            this.cmbBoxFormaPagamento.Name = "cmbBoxFormaPagamento";
+            this.cmbBoxFormaPagamento.Size = new System.Drawing.Size(111, 21);
+            this.cmbBoxFormaPagamento.TabIndex = 5;
+            // 
             // lblFormaPagamento
             // 
             this.lblFormaPagamento.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -335,6 +309,15 @@
             this.lblFormaPagamento.Size = new System.Drawing.Size(64, 26);
             this.lblFormaPagamento.TabIndex = 13;
             this.lblFormaPagamento.Text = "Forma de Pagamento:";
+            // 
+            // txtBoxValorTotal
+            // 
+            this.txtBoxValorTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxValorTotal.Enabled = false;
+            this.txtBoxValorTotal.Location = new System.Drawing.Point(516, 17);
+            this.txtBoxValorTotal.Name = "txtBoxValorTotal";
+            this.txtBoxValorTotal.Size = new System.Drawing.Size(111, 20);
+            this.txtBoxValorTotal.TabIndex = 2;
             // 
             // lblValor
             // 
@@ -347,6 +330,15 @@
             this.lblValor.TabIndex = 15;
             this.lblValor.Text = "Valor Total (R$):";
             // 
+            // txtBoxValorDesconto
+            // 
+            this.txtBoxValorDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxValorDesconto.Location = new System.Drawing.Point(332, 17);
+            this.txtBoxValorDesconto.Name = "txtBoxValorDesconto";
+            this.txtBoxValorDesconto.Size = new System.Drawing.Size(86, 20);
+            this.txtBoxValorDesconto.TabIndex = 1;
+            this.txtBoxValorDesconto.Leave += new System.EventHandler(this.txtBoxValorDesconto_Leave);
+            // 
             // lblDesconto
             // 
             this.lblDesconto.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -357,6 +349,15 @@
             this.lblDesconto.Size = new System.Drawing.Size(73, 13);
             this.lblDesconto.TabIndex = 18;
             this.lblDesconto.Text = "Desconto (%):";
+            // 
+            // txtBoxValorRecebido
+            // 
+            this.txtBoxValorRecebido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxValorRecebido.Location = new System.Drawing.Point(142, 73);
+            this.txtBoxValorRecebido.Name = "txtBoxValorRecebido";
+            this.txtBoxValorRecebido.Size = new System.Drawing.Size(90, 20);
+            this.txtBoxValorRecebido.TabIndex = 3;
+            this.txtBoxValorRecebido.Leave += new System.EventHandler(this.txtBoxValorRecebido_Leave);
             // 
             // btnCancelar
             // 

@@ -75,8 +75,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         #endregion
 
-        #region Events
-
         private void chkBoxUsuarioPadrao_CheckedChanged(object sender, EventArgs e)
         {
             if (chkBoxUsuarioPadrao.Checked)
@@ -140,11 +138,9 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnConfirmarPedido_Click(object sender, EventArgs e)
         {
-            if (!Equals(VerifyPanel(), true)) return;
-
             try
             {
-                PedidoViewModel.EnderecoCliente = "endereco1";
+                PedidoViewModel.EnderecoCliente = txtBoxEndereco.Text;
                 PedidoViewModel.NomeCliente = txtBoxNome.Text;
                 PedidoViewModel.CPF = txtBoxCPF.Text;
                 PedidoViewModel.Telefone = txtBoxTelefone.Text;
@@ -164,8 +160,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 return;
             }
         }
-
-        #endregion
 
         private void btnAdicionarProduto_Click(object sender, EventArgs e)
         {
@@ -205,6 +199,19 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private void cmbBoxProdutos_SelectionChangeCommitted(object sender, EventArgs e)
         {
             txtBoxQuantidade_ValueChanged(this, e);
+        }
+
+        private void btnRetirarProduto_Click(object sender, EventArgs e)
+        {
+            var idProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[0].Cells[0].Value);
+
+            var produtoExcluir = PedidoViewModel.ItemsViewModel.SingleOrDefault(x => x.IdProduto == idProdutoSelecionado);
+
+            PedidoViewModel.ItemsViewModel.Remove(produtoExcluir);
+
+            gridProdutos.DataSource = null;
+            gridProdutos.DataSource = PedidoViewModel.ItemsViewModel;
+
         }
     }
 }

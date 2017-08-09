@@ -43,7 +43,7 @@
             this.PrecoUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancelar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.btnRetirarProduto = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnConfirmarPedido = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxQuantidade = new System.Windows.Forms.NumericUpDown();
@@ -63,10 +63,10 @@
             this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.chkBoxUsuarioPadrao = new System.Windows.Forms.CheckBox();
+            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.tlpMain.SuspendLayout();
             this.grpBoxProdutos.SuspendLayout();
             this.tlpProdutos.SuspendLayout();
@@ -249,7 +249,7 @@
             this.tlpButtons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tlpButtons.ColumnCount = 1;
             this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpButtons.Controls.Add(this.btnCancelar, 0, 0);
+            this.tlpButtons.Controls.Add(this.btnRetirarProduto, 0, 0);
             this.tlpButtons.Controls.Add(this.btnConfirmarPedido, 0, 2);
             this.tlpButtons.Location = new System.Drawing.Point(504, 58);
             this.tlpButtons.Margin = new System.Windows.Forms.Padding(0);
@@ -261,15 +261,16 @@
             this.tlpButtons.Size = new System.Drawing.Size(120, 84);
             this.tlpButtons.TabIndex = 12;
             // 
-            // btnCancelar
+            // btnRetirarProduto
             // 
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.Location = new System.Drawing.Point(3, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(114, 28);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnRetirarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRetirarProduto.Location = new System.Drawing.Point(3, 3);
+            this.btnRetirarProduto.Name = "btnRetirarProduto";
+            this.btnRetirarProduto.Size = new System.Drawing.Size(114, 28);
+            this.btnRetirarProduto.TabIndex = 0;
+            this.btnRetirarProduto.Text = "Retirar Produto";
+            this.btnRetirarProduto.UseVisualStyleBackColor = false;
+            this.btnRetirarProduto.Click += new System.EventHandler(this.btnRetirarProduto_Click);
             // 
             // btnConfirmarPedido
             // 
@@ -499,16 +500,6 @@
             this.lblTelefone.TabIndex = 3;
             this.lblTelefone.Text = "Telefone:";
             // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(507, 32);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(114, 33);
-            this.btnBuscarCliente.TabIndex = 4;
-            this.btnBuscarCliente.Text = "Buscar Cliente";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            // 
             // txtBoxNome
             // 
             this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -536,6 +527,16 @@
             this.chkBoxUsuarioPadrao.Text = "Usuário Padrão";
             this.chkBoxUsuarioPadrao.UseVisualStyleBackColor = true;
             this.chkBoxUsuarioPadrao.CheckedChanged += new System.EventHandler(this.chkBoxUsuarioPadrao_CheckedChanged);
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(507, 32);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(114, 33);
+            this.btnBuscarCliente.TabIndex = 4;
+            this.btnBuscarCliente.Text = "Buscar Cliente";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
             // 
             // CriarPedidoView
             // 
@@ -575,7 +576,6 @@
         private Components.LaloLabel lblNome;
         private Components.LaloLabel lblCPF;
         private Components.LaloLabel lblTelefone;
-        private Components.LaloPrimaryButton btnBuscarCliente;
         private System.Windows.Forms.TextBox txtBoxNome;
         private System.Windows.Forms.TextBox txtBoxCPF;
         private System.Windows.Forms.CheckBox chkBoxUsuarioPadrao;
@@ -594,7 +594,7 @@
         private System.Windows.Forms.DataGridView gridProdutos;
         private Components.LaloPrimaryButton btnConfirmarPedido;
         private System.Windows.Forms.TableLayoutPanel tlpButtons;
-        private Components.LaloPrimaryButton btnCancelar;
+        private Components.LaloPrimaryButton btnRetirarProduto;
         private Components.LaloPrimaryButton btnAdicionarProduto;
         private Components.LaloLabel lblQuantidade;
         private System.Windows.Forms.TextBox txtBoxValorTotal;
@@ -605,5 +605,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecoUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecoTotal;
+        private Components.LaloPrimaryButton btnBuscarCliente;
     }
 }
