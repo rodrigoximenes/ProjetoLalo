@@ -9,6 +9,7 @@ namespace ProjetoFinal.Infrastructure.Mapping
         {
             Property(x => x.Id).HasColumnName("Id");
             Property(x => x.IdProduto).HasColumnName("IdProduto");
+            Property(x => x.IdPedido).HasColumnName("IdPedido");
             Property(x => x.PrecoUnitario).HasColumnName("PrecoUnitario");
             Property(x => x.QuantidadeSolicitada).HasColumnName("QuantidadeSolicitada");
 

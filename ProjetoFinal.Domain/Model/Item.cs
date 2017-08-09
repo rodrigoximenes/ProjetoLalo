@@ -7,6 +7,7 @@
         /// </summary>
         public int Id { get; set; }
         public int IdProduto { get; set; }
+        public int IdPedido { get; set; }
         public int QuantidadeSolicitada { get; set; }
         public decimal PrecoUnitario { get; set; }
     }
