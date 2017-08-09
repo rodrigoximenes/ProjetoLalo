@@ -31,6 +31,7 @@
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.grpBoxDadosConsulta = new System.Windows.Forms.GroupBox();
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnSalvar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxTelefone = new System.Windows.Forms.TextBox();
             this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
@@ -46,7 +47,6 @@
             this.grpBoxDadosConsultaDetalhada = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.gridClientes = new System.Windows.Forms.DataGridView();
-            this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.tlpMain.SuspendLayout();
             this.grpBoxDadosConsulta.SuspendLayout();
             this.tlpCliente.SuspendLayout();
@@ -113,6 +113,17 @@
             this.tlpCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpCliente.Size = new System.Drawing.Size(630, 130);
             this.tlpCliente.TabIndex = 0;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.Location = new System.Drawing.Point(513, 89);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(111, 33);
+            this.btnExcluir.TabIndex = 0;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -266,25 +277,18 @@
             // 
             // gridClientes
             // 
+            this.gridClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlpProdutos.SetColumnSpan(this.gridClientes, 6);
             this.gridClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridClientes.Location = new System.Drawing.Point(3, 3);
+            this.gridClientes.MultiSelect = false;
             this.gridClientes.Name = "gridClientes";
+            this.gridClientes.ReadOnly = true;
+            this.gridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridClientes.Size = new System.Drawing.Size(624, 177);
             this.gridClientes.TabIndex = 0;
             this.gridClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellClick);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.Location = new System.Drawing.Point(513, 89);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(111, 33);
-            this.btnExcluir.TabIndex = 0;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // AdicionarClienteView
             // 
