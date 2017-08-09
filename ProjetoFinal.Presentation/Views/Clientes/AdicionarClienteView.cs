@@ -60,8 +60,17 @@ namespace ProjetoFinal.Presentation.Views.Clientes
                 cliente.Cpf = txtBoxCPF.Text;
                 cliente.Endereco = txtBoxEndereco.Text;
 
-                _clienteRepository.Add(cliente);
+                if (IdClienteSelecionado > 0)
+                {
+                    _clienteRepository.Update(cliente);
+                }
+                else
+                {
+                    _clienteRepository.Add(cliente);
+                }
+
                 MessageBox.Show("Cliente salvo com sucesso");
+                LoadCliente();
             }
             catch (Exception)
             {

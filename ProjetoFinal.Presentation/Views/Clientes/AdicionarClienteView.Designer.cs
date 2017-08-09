@@ -120,7 +120,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(513, 89);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(111, 33);
-            this.btnExcluir.TabIndex = 0;
+            this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);

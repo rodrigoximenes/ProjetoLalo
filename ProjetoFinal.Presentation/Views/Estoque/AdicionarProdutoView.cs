@@ -76,7 +76,7 @@ namespace ProjetoFinal.Presentation.Views.Estoque
 
                 LoadProdutos();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Erro ao tentar excluir o produto.");
             }
