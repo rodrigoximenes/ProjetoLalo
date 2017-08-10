@@ -32,13 +32,6 @@
             this.grpBoxResultados = new System.Windows.Forms.GroupBox();
             this.tlpResultados = new System.Windows.Forms.TableLayoutPanel();
             this.gridPedidos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EnderecoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Atendente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBoxConsultaPedidos = new System.Windows.Forms.GroupBox();
             this.tlpConsulta = new System.Windows.Forms.TableLayoutPanel();
             this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
@@ -54,6 +47,14 @@
             this.txtBoxNomeCliente = new System.Windows.Forms.TextBox();
             this.btnLimparFiltros = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnConsultar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EnderecoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Atendente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpMain.SuspendLayout();
             this.grpBoxResultados.SuspendLayout();
             this.tlpResultados.SuspendLayout();
@@ -110,6 +111,7 @@
             this.gridPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
+            this.IdCliente,
             this.EnderecoEntrega,
             this.Cliente,
             this.TipoEntrega,
@@ -126,57 +128,6 @@
             this.gridPedidos.Size = new System.Drawing.Size(624, 145);
             this.gridPedidos.TabIndex = 0;
             this.gridPedidos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPedidos_CellClick);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // EnderecoEntrega
-            // 
-            this.EnderecoEntrega.DataPropertyName = "EnderecoEntrega";
-            this.EnderecoEntrega.HeaderText = "Endereço Entrega";
-            this.EnderecoEntrega.Name = "EnderecoEntrega";
-            this.EnderecoEntrega.ReadOnly = true;
-            this.EnderecoEntrega.Visible = false;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "Cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            // 
-            // TipoEntrega
-            // 
-            this.TipoEntrega.DataPropertyName = "TipoEntrega";
-            this.TipoEntrega.HeaderText = "Tipo Entrega";
-            this.TipoEntrega.Name = "TipoEntrega";
-            this.TipoEntrega.ReadOnly = true;
-            // 
-            // DataSolicitacao
-            // 
-            this.DataSolicitacao.DataPropertyName = "DataSolicitacao";
-            this.DataSolicitacao.HeaderText = "Data Solicitação";
-            this.DataSolicitacao.Name = "DataSolicitacao";
-            this.DataSolicitacao.ReadOnly = true;
-            // 
-            // DataEntrega
-            // 
-            this.DataEntrega.DataPropertyName = "DataEntrega";
-            this.DataEntrega.HeaderText = "Data Entrega";
-            this.DataEntrega.Name = "DataEntrega";
-            this.DataEntrega.ReadOnly = true;
-            // 
-            // Atendente
-            // 
-            this.Atendente.DataPropertyName = "Atendente";
-            this.Atendente.HeaderText = "Atendente";
-            this.Atendente.Name = "Atendente";
-            this.Atendente.ReadOnly = true;
             // 
             // grpBoxConsultaPedidos
             // 
@@ -358,6 +309,65 @@
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // IdCliente
+            // 
+            this.IdCliente.DataPropertyName = "IdCliente";
+            this.IdCliente.HeaderText = "IdCliente";
+            this.IdCliente.Name = "IdCliente";
+            this.IdCliente.ReadOnly = true;
+            this.IdCliente.Visible = false;
+            // 
+            // EnderecoEntrega
+            // 
+            this.EnderecoEntrega.DataPropertyName = "EnderecoEntrega";
+            this.EnderecoEntrega.HeaderText = "Endereço Entrega";
+            this.EnderecoEntrega.Name = "EnderecoEntrega";
+            this.EnderecoEntrega.ReadOnly = true;
+            this.EnderecoEntrega.Visible = false;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            // 
+            // TipoEntrega
+            // 
+            this.TipoEntrega.DataPropertyName = "TipoEntrega";
+            this.TipoEntrega.HeaderText = "Tipo Entrega";
+            this.TipoEntrega.Name = "TipoEntrega";
+            this.TipoEntrega.ReadOnly = true;
+            // 
+            // DataSolicitacao
+            // 
+            this.DataSolicitacao.DataPropertyName = "DataSolicitacao";
+            this.DataSolicitacao.HeaderText = "Data Solicitação";
+            this.DataSolicitacao.Name = "DataSolicitacao";
+            this.DataSolicitacao.ReadOnly = true;
+            // 
+            // DataEntrega
+            // 
+            this.DataEntrega.DataPropertyName = "DataEntrega";
+            this.DataEntrega.HeaderText = "Data Entrega";
+            this.DataEntrega.Name = "DataEntrega";
+            this.DataEntrega.ReadOnly = true;
+            // 
+            // Atendente
+            // 
+            this.Atendente.DataPropertyName = "Atendente";
+            this.Atendente.HeaderText = "Atendente";
+            this.Atendente.Name = "Atendente";
+            this.Atendente.ReadOnly = true;
+            // 
             // GerenciarPedidosView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,6 +411,7 @@
         private Components.LaloLabel lblNomeCliente;
         private System.Windows.Forms.TextBox txtBoxNomeCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn EnderecoEntrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoEntrega;

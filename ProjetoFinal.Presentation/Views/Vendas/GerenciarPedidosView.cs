@@ -10,6 +10,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
     {
         public int IdPedidoSelecionado { get; set; }
         private readonly IPedidoRepository _pedidoRepository;
+        private readonly IItemRepository _itemRepository;
 
         public GerenciarPedidosView()
         {

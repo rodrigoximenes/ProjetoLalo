@@ -11,6 +11,8 @@ namespace ProjetoFinal.Presentation.ViewModel
 
         public string CPF { get; set; }
 
+        public string Email { get; set; }
+
         public string Telefone { get; set; }
 
         public string FormaEntrega { get; set; }
@@ -31,7 +33,7 @@ namespace ProjetoFinal.Presentation.ViewModel
 
         public string TipoEntrega { get; set; }
 
-        public List<ItemPedidoViewModel> ItemsViewModel { get; set; }
+        public IList<ItemPedidoViewModel> ItemsViewModel { get; set; }
 
         public PedidoViewModel()
         {

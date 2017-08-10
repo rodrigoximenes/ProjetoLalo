@@ -89,6 +89,10 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 txtBoxCPF.Text = "CPF Padrão";
                 txtBoxCPF.Enabled = false;
 
+
+                txtBoxEmail.Text = "Email Padrão";
+                txtBoxEmail.Enabled = false;
+
                 btnBuscarCliente.Enabled = false;
             }
             else
@@ -101,6 +105,9 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
                 txtBoxCPF.Text = string.Empty;
                 txtBoxCPF.Enabled = true;
+
+                txtBoxEmail.Text = string.Empty;
+                txtBoxEmail.Enabled = true;
 
                 btnBuscarCliente.Enabled = true;
             }
@@ -145,6 +152,8 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 PedidoViewModel.NomeCliente = txtBoxNome.Text;
                 PedidoViewModel.CPF = txtBoxCPF.Text;
                 PedidoViewModel.Telefone = txtBoxTelefone.Text;
+                PedidoViewModel.Email = txtBoxEmail.Text;
+
 
                 PedidoViewModel.DataEntrega = DateTime.Parse(dtTmPkrDataEntrega.Text);
                 PedidoViewModel.DataSolicitacao = DateTime.Now;
@@ -240,5 +249,16 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         #endregion
 
+        private void gridProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //var idProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[0].Cells[1].Value);
+
+            //var produto = _pedidoRepository.Find(idProdutoSelecionado);
+
+            //txtBoxNome.Text = produto.Nome;
+            //if (Equals(usuario.Perfil, "Admin")) cmbBoxPerfil.SelectedIndex = 0;
+            //if (Equals(usuario.Perfil, "Vendedor")) cmbBoxPerfil.SelectedIndex = 1;
+            //if (Equals(usuario.Perfil, "Gerente")) cmbBoxPerfil.SelectedIndex = 2;
+        }
     }
 }

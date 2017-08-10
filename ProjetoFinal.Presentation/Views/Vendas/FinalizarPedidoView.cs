@@ -13,15 +13,18 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IItemRepository _itemRepository;
         private readonly IClienteRepository _clienteRepository;
+        public PedidoViewModel _pedidoViewModel { get; set; }
 
         public Pedido _pedido = new Pedido();
         public Cliente _cliente = new Cliente();
+        public Item _itens = new Item();
 
         public FinalizarPedidoView(PedidoViewModel pedidoViewModel)
         {
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
             _itemRepository = LaloKernel.GetInstance<IItemRepository>();
             _clienteRepository = LaloKernel.GetInstance<IClienteRepository>();
+            this._pedidoViewModel = pedidoViewModel;
 
             InitializeComponent();
             BindComboEntregas();
@@ -30,6 +33,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             this._cliente.Cpf = pedidoViewModel.CPF;
             this._cliente.Endereco = pedidoViewModel.EnderecoCliente;
             this._cliente.Telefone = pedidoViewModel.Telefone;
+            this._cliente.Email = pedidoViewModel.Email;
 
             this._pedido.Cliente = _cliente;
             this._pedido.DataEntrega = pedidoViewModel.DataEntrega;
@@ -41,6 +45,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             txtBoxFormaEntrega.Text = pedidoViewModel.TipoEntrega;
             txtBoxEndereco.Text = pedidoViewModel.EnderecoEntrega;
             txtBoxValorPedido.Text = pedidoViewModel.getValorTotal().ToString();
+            txtBoxEmail.Text = pedidoViewModel.Email;
         }
 
         #region
@@ -105,8 +110,19 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private void btnFinalizarPedido_Click(object sender, System.EventArgs e)
         {
             if (Equals(txtBoxValorRecebido.Text, null)) return;
-            _clienteRepository.Add(_cliente);
+
+            if(!Equals(_cliente.NomeCompleto,"Usuário Padrão")) _clienteRepository.Add(_cliente);
+
             _pedidoRepository.Add(_pedido);
+        
+            foreach (var item in _pedidoViewModel.ItemsViewModel)
+            {
+                _itens.IdProduto = item.IdProduto;
+                _itens.PrecoUnitario = item.PrecoUnitario;
+                _itens.QuantidadeSolicitada = item.Quantidade;
+
+                _itemRepository.Add(_itens);
+            }
 
             MessageBox.Show("Pedido Finalizado");
         }
