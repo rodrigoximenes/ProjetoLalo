@@ -31,21 +31,21 @@
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.grpBoxUsuarios = new System.Windows.Forms.GroupBox();
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxSenha = new System.Windows.Forms.TextBox();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblPerfil = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblSenha = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.cmbBoxPerfil = new System.Windows.Forms.ComboBox();
+            this.btnSalvar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.btnNovo = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.grpBoxUsuariosGrid = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.gridUsuarios = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblPerfil = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblSenha = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.btnSalvar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.btnNovo = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.tlpMain.SuspendLayout();
             this.grpBoxUsuarios.SuspendLayout();
             this.tlpCliente.SuspendLayout();
@@ -109,6 +109,18 @@
             this.tlpCliente.Size = new System.Drawing.Size(630, 130);
             this.tlpCliente.TabIndex = 0;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.Location = new System.Drawing.Point(513, 95);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(111, 32);
+            this.btnExcluir.TabIndex = 5;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // txtBoxSenha
             // 
             this.txtBoxSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -125,6 +137,39 @@
             this.txtBoxNome.Size = new System.Drawing.Size(191, 20);
             this.txtBoxNome.TabIndex = 0;
             // 
+            // lblNome
+            // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNome.AutoSize = true;
+            this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNome.Location = new System.Drawing.Point(167, 15);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.Text = "Nome:";
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPerfil.Location = new System.Drawing.Point(172, 58);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(33, 13);
+            this.lblPerfil.TabIndex = 7;
+            this.lblPerfil.Text = "Perfil:";
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSenha.Location = new System.Drawing.Point(164, 101);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(41, 13);
+            this.lblSenha.TabIndex = 1;
+            this.lblSenha.Text = "Senha:";
+            // 
             // cmbBoxPerfil
             // 
             this.cmbBoxPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -134,6 +179,28 @@
             this.cmbBoxPerfil.Name = "cmbBoxPerfil";
             this.cmbBoxPerfil.Size = new System.Drawing.Size(191, 21);
             this.cmbBoxPerfil.TabIndex = 1;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.Location = new System.Drawing.Point(513, 46);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(114, 33);
+            this.btnSalvar.TabIndex = 4;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovo.Location = new System.Drawing.Point(513, 3);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(111, 33);
+            this.btnNovo.TabIndex = 3;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // grpBoxUsuariosGrid
             // 
@@ -190,6 +257,7 @@
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             // 
             // Nome
             // 
@@ -204,73 +272,6 @@
             this.Perfil.HeaderText = "Perfil";
             this.Perfil.Name = "Perfil";
             this.Perfil.ReadOnly = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.Location = new System.Drawing.Point(513, 95);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(111, 32);
-            this.btnExcluir.TabIndex = 5;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // lblNome
-            // 
-            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNome.AutoSize = true;
-            this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNome.Location = new System.Drawing.Point(167, 15);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
-            this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome:";
-            // 
-            // lblPerfil
-            // 
-            this.lblPerfil.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblPerfil.AutoSize = true;
-            this.lblPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPerfil.Location = new System.Drawing.Point(172, 58);
-            this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(33, 13);
-            this.lblPerfil.TabIndex = 7;
-            this.lblPerfil.Text = "Perfil:";
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSenha.Location = new System.Drawing.Point(164, 101);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(41, 13);
-            this.lblSenha.TabIndex = 1;
-            this.lblSenha.Text = "Senha:";
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.Location = new System.Drawing.Point(513, 46);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(114, 33);
-            this.btnSalvar.TabIndex = 4;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.Location = new System.Drawing.Point(513, 3);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(111, 33);
-            this.btnNovo.TabIndex = 3;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = false;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // AdicionarUsuarioView
             // 
