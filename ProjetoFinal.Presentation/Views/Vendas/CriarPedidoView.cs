@@ -215,5 +215,26 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             gridProdutos.DataSource = PedidoViewModel.ItemsViewModel;
 
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            var produtoSelecionado = _produtoRepository.Find(Convert.ToInt32(cmbBoxProdutos.SelectedValue));
+            var itemExiste = PedidoViewModel.ItemsViewModel.SingleOrDefault(x => x.IdProduto == produtoSelecionado.Id);
+
+            if (Equals(gridProdutos.SelectedRows.Count, 0)) return;
+
+            if (itemExiste != null)
+            {
+                itemExiste.Quantidade = Convert.ToInt32(txtBoxQuantidade.Text);
+                itemExiste.PrecoTotal = itemExiste.PrecoUnitario * itemExiste.Quantidade;
+            }
+            else
+            {
+                return;
+            }
+
+            gridProdutos.DataSource = null;
+            gridProdutos.DataSource = PedidoViewModel.ItemsViewModel;
+        }
     }
 }
