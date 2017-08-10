@@ -3,13 +3,6 @@ using ProjetoFinal.Presentation.Views.Estoque;
 using ProjetoFinal.Presentation.Views.Usuarios;
 using ProjetoFinal.Presentation.Views.Vendas;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoFinal.Presentation.Views
@@ -20,24 +13,12 @@ namespace ProjetoFinal.Presentation.Views
         {
             InitializeComponent();
         }
+
         #region PrivateMethods
 
-        private bool VerifyPanel()
+        private void VerifyPanel()
         {
-            if (Equals(pnlMain.Controls.Count, 1))
-            {
-                DialogResult dialogResult =
-                    MessageBox.Show("Há outra página aberta. Deseja continuar?", "Abrir outra página", MessageBoxButtons.OKCancel);
-                if (dialogResult == DialogResult.OK)
-                {
-                    pnlMain.Controls.Clear();
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            return true;
+            pnlMain.Controls.Clear();
         }
 
         #endregion
@@ -45,8 +26,7 @@ namespace ProjetoFinal.Presentation.Views
         #region Events
         private void btnCriarPedido_Click(object sender, EventArgs e)
         {
-            if (!Equals(VerifyPanel(), true)) return;
-
+            VerifyPanel();
             var form = new CriarPedidoView();
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
@@ -57,8 +37,7 @@ namespace ProjetoFinal.Presentation.Views
 
         private void btnGerenciarPedido_Click(object sender, EventArgs e)
         {
-            if (!Equals(VerifyPanel(), true)) return;        
-            
+            VerifyPanel();
             var form = new GerenciarPedidosView();
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
@@ -74,8 +53,7 @@ namespace ProjetoFinal.Presentation.Views
 
         private void btnAdicionarCliente_Click(object sender, EventArgs e)
         {
-            if (!Equals(VerifyPanel(), true)) return;
-
+            VerifyPanel();
             var form = new AdicionarClienteView();
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
@@ -86,8 +64,7 @@ namespace ProjetoFinal.Presentation.Views
 
         private void btnAdicionarProduto_Click(object sender, EventArgs e)
         {
-            if (!Equals(VerifyPanel(), true)) return;
-
+            VerifyPanel();
             var form = new AdicionarProdutoView();
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
@@ -98,8 +75,7 @@ namespace ProjetoFinal.Presentation.Views
 
         private void btnAdicionarUsuário_Click(object sender, EventArgs e)
         {
-            if (!Equals(VerifyPanel(), true)) return;
-
+            VerifyPanel();
             var form = new AdicionarUsuarioView();
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
