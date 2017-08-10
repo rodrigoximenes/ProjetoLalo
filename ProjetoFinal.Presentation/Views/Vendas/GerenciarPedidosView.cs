@@ -99,9 +99,13 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
             var pedido = _pedidoRepository.Find(IdPedidoSelecionado);
 
-            txtBoxNomeCliente.Text = pedido.Cliente.NomeCompleto;
+            var cliente = pedido.Cliente;
+
+            txtBoxNomeCliente.Text = cliente.NomeCompleto;
             txtBoxNumeroPedido.Text = pedido.Id.ToString();
-            dtTmPkrDataEntrega.Text = pedido.DataEntrega.ToString();
+            dtTmPkrDataEntrega.Text = pedido.DataEntrega.ToShortDateString();
+            dtTmPkrDataRegistro.Text = pedido.DataSolicitacao.ToShortDateString();
+
         }
 
         #endregion
