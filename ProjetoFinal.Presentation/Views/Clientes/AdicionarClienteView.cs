@@ -63,7 +63,7 @@ namespace ProjetoFinal.Presentation.Views.Clientes
                 if (IdClienteSelecionado > 0)
                 {
                     var clienteAdd = cliente;
-                    IdClienteSelecionado = Convert.ToInt32(gridClientes.SelectedRows[0].Cells[1].Value);
+                    IdClienteSelecionado = Convert.ToInt32(gridClientes.SelectedRows[0].Cells[0].Value);
                     _clienteRepository.Update(clienteAdd, IdClienteSelecionado);
                 }
                 else
