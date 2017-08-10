@@ -43,6 +43,10 @@
             this.grpBoxProdutosGrid = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.gridProdutos = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecoUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpMain.SuspendLayout();
             this.grpBoxProdutos.SuspendLayout();
             this.tlpCliente.SuspendLayout();
@@ -231,6 +235,11 @@
             // 
             this.gridProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Nome,
+            this.PrecoUnitario,
+            this.Quantidade});
             this.tlpProdutos.SetColumnSpan(this.gridProdutos, 6);
             this.gridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridProdutos.Location = new System.Drawing.Point(3, 3);
@@ -241,6 +250,35 @@
             this.gridProdutos.Size = new System.Drawing.Size(624, 177);
             this.gridProdutos.TabIndex = 0;
             this.gridProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProdutos_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // PrecoUnitario
+            // 
+            this.PrecoUnitario.DataPropertyName = "PrecoUnitario";
+            this.PrecoUnitario.HeaderText = "Preço Unitário";
+            this.PrecoUnitario.Name = "PrecoUnitario";
+            this.PrecoUnitario.ReadOnly = true;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.DataPropertyName = "Quantidade";
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.ReadOnly = true;
             // 
             // AdicionarProdutoView
             // 
@@ -280,5 +318,9 @@
         private Components.LaloPrimaryButton btnExcluir;
         private Components.LaloLabel lblQuantidade;
         private System.Windows.Forms.TextBox txtBoxPrecoUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecoUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
     }
 }
