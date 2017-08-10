@@ -65,7 +65,9 @@ namespace ProjetoFinal.Presentation.Views.Estoque
 
                 if (IdProdutoSelecionado > 0)
                 {
-                    _produtoRepository.Update(produto);
+                    var produtoAdd = produto;
+                    IdProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[0].Cells[1].Value);
+                    _produtoRepository.Update(produtoAdd, IdProdutoSelecionado);
                 }
                 else
                 {

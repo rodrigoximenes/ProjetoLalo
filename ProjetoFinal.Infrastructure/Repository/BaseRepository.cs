@@ -53,11 +53,10 @@ namespace ProjetoFinal.Infrastructure.Repository
             }
         }
 
-        public void Update(TEntity entity)
+        public void Update(TEntity _entityAdd, int _entityRemove)
         {
-            //_context.Entry<TEntity>(entity).State = System.Data.Entity.EntityState.Modified;
-
-            _context.Set<TEntity>().Attach(entity);
+            Add(_entityAdd);
+            Delete(_entityRemove);
             _context.SaveChanges();
         }
     }

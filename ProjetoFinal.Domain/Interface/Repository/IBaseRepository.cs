@@ -9,7 +9,7 @@ namespace ProjetoFinal.Domain.Interface.Repository
 
         void Delete(int id);
 
-        void Update(TEntity entity);
+        void Update(TEntity entityAdd, int entityRemove);
 
         TEntity Find(int id);
 

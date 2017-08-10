@@ -72,7 +72,9 @@ namespace ProjetoFinal.Presentation.Views.Usuarios
 
                 if (IdUsuarioSelecionado > 0)
                 {
-                    _usuarioRepository.Update(usuario);
+                    var usuarioAdd = usuario;
+                    IdUsuarioSelecionado = Convert.ToInt32(gridUsuarios.SelectedRows[0].Cells[1].Value);
+                    _usuarioRepository.Update(usuarioAdd, IdUsuarioSelecionado);
                 }
                 else
                 {
