@@ -29,7 +29,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private void LoadPedidos()
         {
             gridPedidos.DataSource = _pedidoRepository.FindAll();
-            CleanFields();
+            ClearFields();
 
         }
 
@@ -59,7 +59,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             dtTmPkrDataRegistro.Format = DateTimePickerFormat.Short;
         }
 
-        private void CleanFields()
+        private void ClearFields()
         {
             IdPedidoSelecionado = 0;
             txtBoxNumeroPedido.Text = string.Empty;
@@ -85,7 +85,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnLimparFiltros_Click(object sender, EventArgs e)
         {
-            CleanFields();
+            ClearFields();
         }
 
         private void btnConsultarPedido_Click(object sender, EventArgs e)
@@ -99,15 +99,31 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
             var pedido = _pedidoRepository.Find(IdPedidoSelecionado);
 
-            var cliente = pedido.Cliente;
+            //var cliente = pedido.Cliente;
 
-            txtBoxNomeCliente.Text = cliente.NomeCompleto;
-            txtBoxNumeroPedido.Text = pedido.Id.ToString();
-            dtTmPkrDataEntrega.Text = pedido.DataEntrega.ToShortDateString();
-            dtTmPkrDataRegistro.Text = pedido.DataSolicitacao.ToShortDateString();
+            //txtBoxNomeCliente.Text = cliente.NomeCompleto;
+            //txtBoxNumeroPedido.Text = pedido.Id.ToString();
+            //dtTmPkrDataEntrega.Text = pedido.DataEntrega.ToShortDateString();
+            //dtTmPkrDataRegistro.Text = pedido.DataSolicitacao.ToShortDateString();
 
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                IdPedidoSelecionado = Convert.ToInt32(gridPedidos.SelectedRows[0].Cells[0].Value);
+                _pedidoRepository.Delete(IdPedidoSelecionado);
+                MessageBox.Show("Pedido excluído com sucesso.");
+                LoadPedidos();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Pedido não pode ser excluído.");
+            }
+            
         }
 
         #endregion
+       
     }
 }
