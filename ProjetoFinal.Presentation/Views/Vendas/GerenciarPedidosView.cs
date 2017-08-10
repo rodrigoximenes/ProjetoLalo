@@ -114,7 +114,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             {
                 IdPedidoSelecionado = Convert.ToInt32(gridPedidos.SelectedRows[0].Cells[0].Value);
                 _pedidoRepository.Delete(IdPedidoSelecionado);
-                MessageBox.Show("Pedido excluído com sucesso.");
                 LoadPedidos();
             }
             catch (Exception)

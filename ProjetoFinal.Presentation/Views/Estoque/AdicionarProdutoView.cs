@@ -89,12 +89,9 @@ namespace ProjetoFinal.Presentation.Views.Estoque
             try
             {
                 _produtoRepository.Delete(IdProdutoSelecionado);
-
-                MessageBox.Show("Produto excluído com sucesso");
-
                 LoadProdutos();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Erro ao tentar excluir o produto.");
             }

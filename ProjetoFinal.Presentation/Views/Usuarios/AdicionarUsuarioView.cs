@@ -101,9 +101,6 @@ namespace ProjetoFinal.Presentation.Views.Usuarios
             try
             {
                 _usuarioRepository.Delete(IdUsuarioSelecionado);
-
-                MessageBox.Show("Cliente excluído com sucesso");
-
                 LoadUsuario();
             }
             catch (Exception ex)
