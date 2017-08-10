@@ -151,6 +151,7 @@
             // 
             this.txtBoxEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpCliente.SetColumnSpan(this.txtBoxEndereco, 2);
+            this.txtBoxEndereco.Enabled = false;
             this.txtBoxEndereco.Location = new System.Drawing.Point(381, 38);
             this.txtBoxEndereco.Name = "txtBoxEndereco";
             this.txtBoxEndereco.Size = new System.Drawing.Size(246, 20);

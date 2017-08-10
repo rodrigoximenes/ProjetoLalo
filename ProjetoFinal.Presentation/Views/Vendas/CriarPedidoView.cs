@@ -75,17 +75,18 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         #endregion
 
+        #region Events
         private void chkBoxUsuarioPadrao_CheckedChanged(object sender, EventArgs e)
         {
             if (chkBoxUsuarioPadrao.Checked)
             {
-                txtBoxNome.Text = "Usuário Fantasma";
+                txtBoxNome.Text = "Usuário Padrão";
                 txtBoxNome.Enabled = false;
 
-                txtBoxTelefone.Text = string.Empty;
+                txtBoxTelefone.Text = "Telefone Padrão";
                 txtBoxTelefone.Enabled = false;
 
-                txtBoxCPF.Text = string.Empty;
+                txtBoxCPF.Text = "CPF Padrão";
                 txtBoxCPF.Enabled = false;
 
                 btnBuscarCliente.Enabled = false;
@@ -110,7 +111,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             if (Equals(cmbBoxFormaEntrega.SelectedIndex, 0))
             {
                 txtBoxEndereco.Enabled = false;
-                txtBoxEndereco.Text = string.Empty;
+                txtBoxEndereco.Text = "Não há endereço para entrega imediata";
 
                 dtTmPkrDataEntrega.Enabled = false;
                 dtTmPkrDataEntrega.Text = string.Empty;
@@ -147,7 +148,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
                 PedidoViewModel.DataEntrega = DateTime.Parse(dtTmPkrDataEntrega.Text);
                 PedidoViewModel.DataSolicitacao = DateTime.Now;
-                PedidoViewModel.TipoEntrega = cmbBoxFormaEntrega.SelectedText;
+                PedidoViewModel.TipoEntrega = cmbBoxFormaEntrega.SelectedItem.ToString();
                 PedidoViewModel.EnderecoEntrega = txtBoxEndereco.Text;
 
                 var form = new FinalizarPedidoView(PedidoViewModel);
@@ -236,5 +237,8 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             gridProdutos.DataSource = null;
             gridProdutos.DataSource = PedidoViewModel.ItemsViewModel;
         }
+
+        #endregion
+
     }
 }
