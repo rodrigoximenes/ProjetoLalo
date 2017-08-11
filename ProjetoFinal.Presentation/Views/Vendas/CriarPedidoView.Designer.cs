@@ -32,9 +32,6 @@
             this.grpBoxProdutos = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.txtBoxValorTotal = new System.Windows.Forms.TextBox();
-            this.lblValor = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblQuantidade = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblProduto = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.cmbBoxProdutos = new System.Windows.Forms.ComboBox();
             this.gridProdutos = new System.Windows.Forms.DataGridView();
             this.IdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,31 +40,34 @@
             this.PrecoUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.btnConfirmarPedido = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.btnRetirarProduto = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxQuantidade = new System.Windows.Forms.NumericUpDown();
             this.grpBoxInfoEntrega = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblEndereco = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblDataEntrega = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.btnAdicionarEndereco = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxEndereco = new System.Windows.Forms.TextBox();
             this.chkBoxTrocaEndereco = new System.Windows.Forms.CheckBox();
-            this.lblTipoCompra = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.dtTmPkrDataEntrega = new System.Windows.Forms.DateTimePicker();
             this.cmbBoxFormaEntrega = new System.Windows.Forms.ComboBox();
             this.grpBoxInfoCliente = new System.Windows.Forms.GroupBox();
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
             this.txtBoxTelefone = new System.Windows.Forms.TextBox();
-            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.chkBoxUsuarioPadrao = new System.Windows.Forms.CheckBox();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
+            this.lblValor = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblQuantidade = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblProduto = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.btnConfirmarPedido = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.btnRetirarProduto = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.lblEndereco = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblDataEntrega = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.btnAdicionarEndereco = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.lblTipoCompra = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.lblEmail = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.tlpMain.SuspendLayout();
             this.grpBoxProdutos.SuspendLayout();
@@ -146,39 +146,6 @@
             this.txtBoxValorTotal.Name = "txtBoxValorTotal";
             this.txtBoxValorTotal.Size = new System.Drawing.Size(103, 20);
             this.txtBoxValorTotal.TabIndex = 2;
-            // 
-            // lblValor
-            // 
-            this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblValor.AutoSize = true;
-            this.lblValor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblValor.Location = new System.Drawing.Point(303, 14);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(84, 13);
-            this.lblValor.TabIndex = 15;
-            this.lblValor.Text = "Valor Total (R$):";
-            // 
-            // lblQuantidade
-            // 
-            this.lblQuantidade.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblQuantidade.Location = new System.Drawing.Point(161, 14);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(65, 13);
-            this.lblQuantidade.TabIndex = 13;
-            this.lblQuantidade.Text = "Quantidade:";
-            // 
-            // lblProduto
-            // 
-            this.lblProduto.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblProduto.AutoSize = true;
-            this.lblProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblProduto.Location = new System.Drawing.Point(4, 14);
-            this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(47, 13);
-            this.lblProduto.TabIndex = 9;
-            this.lblProduto.Text = "Produto:";
             // 
             // cmbBoxProdutos
             // 
@@ -264,42 +231,6 @@
             this.tlpButtons.Size = new System.Drawing.Size(120, 101);
             this.tlpButtons.TabIndex = 12;
             // 
-            // btnConfirmarPedido
-            // 
-            this.btnConfirmarPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnConfirmarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmarPedido.Location = new System.Drawing.Point(3, 63);
-            this.btnConfirmarPedido.Name = "btnConfirmarPedido";
-            this.btnConfirmarPedido.Size = new System.Drawing.Size(114, 35);
-            this.btnConfirmarPedido.TabIndex = 2;
-            this.btnConfirmarPedido.Text = "Confirmar Pedido";
-            this.btnConfirmarPedido.UseVisualStyleBackColor = false;
-            this.btnConfirmarPedido.Click += new System.EventHandler(this.btnConfirmarPedido_Click);
-            // 
-            // btnRetirarProduto
-            // 
-            this.btnRetirarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRetirarProduto.Location = new System.Drawing.Point(3, 3);
-            this.btnRetirarProduto.Name = "btnRetirarProduto";
-            this.btnRetirarProduto.Size = new System.Drawing.Size(114, 27);
-            this.btnRetirarProduto.TabIndex = 1;
-            this.btnRetirarProduto.Text = "Retirar Produto";
-            this.btnRetirarProduto.UseVisualStyleBackColor = false;
-            this.btnRetirarProduto.Click += new System.EventHandler(this.btnRetirarProduto_Click);
-            // 
-            // btnAdicionarProduto
-            // 
-            this.btnAdicionarProduto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAdicionarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarProduto.Location = new System.Drawing.Point(508, 4);
-            this.btnAdicionarProduto.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
-            this.btnAdicionarProduto.Name = "btnAdicionarProduto";
-            this.btnAdicionarProduto.Size = new System.Drawing.Size(114, 33);
-            this.btnAdicionarProduto.TabIndex = 3;
-            this.btnAdicionarProduto.Text = "Adicionar Produto";
-            this.btnAdicionarProduto.UseVisualStyleBackColor = false;
-            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
-            // 
             // txtBoxQuantidade
             // 
             this.txtBoxQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -345,38 +276,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(630, 78);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // lblEndereco
-            // 
-            this.lblEndereco.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblEndereco.AutoSize = true;
-            this.lblEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEndereco.Location = new System.Drawing.Point(67, 50);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(56, 13);
-            this.lblEndereco.TabIndex = 2;
-            this.lblEndereco.Text = "Endereço:";
-            // 
-            // lblDataEntrega
-            // 
-            this.lblDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblDataEntrega.AutoSize = true;
-            this.lblDataEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDataEntrega.Location = new System.Drawing.Point(287, 11);
-            this.lblDataEntrega.Name = "lblDataEntrega";
-            this.lblDataEntrega.Size = new System.Drawing.Size(88, 13);
-            this.lblDataEntrega.TabIndex = 1;
-            this.lblDataEntrega.Text = "Data de Entrega:";
-            // 
-            // btnAdicionarEndereco
-            // 
-            this.btnAdicionarEndereco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarEndereco.Location = new System.Drawing.Point(507, 39);
-            this.btnAdicionarEndereco.Name = "btnAdicionarEndereco";
-            this.btnAdicionarEndereco.Size = new System.Drawing.Size(114, 33);
-            this.btnAdicionarEndereco.TabIndex = 4;
-            this.btnAdicionarEndereco.Text = "Adicionar Endereço";
-            this.btnAdicionarEndereco.UseVisualStyleBackColor = false;
-            // 
             // txtBoxEndereco
             // 
             this.txtBoxEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -397,17 +296,6 @@
             this.chkBoxTrocaEndereco.Text = "Trocar Endereço";
             this.chkBoxTrocaEndereco.UseVisualStyleBackColor = true;
             // 
-            // lblTipoCompra
-            // 
-            this.lblTipoCompra.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTipoCompra.AutoSize = true;
-            this.lblTipoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTipoCompra.Location = new System.Drawing.Point(29, 11);
-            this.lblTipoCompra.Name = "lblTipoCompra";
-            this.lblTipoCompra.Size = new System.Drawing.Size(94, 13);
-            this.lblTipoCompra.TabIndex = 9;
-            this.lblTipoCompra.Text = "Forma de Entrega:";
-            // 
             // dtTmPkrDataEntrega
             // 
             this.dtTmPkrDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -419,6 +307,7 @@
             // cmbBoxFormaEntrega
             // 
             this.cmbBoxFormaEntrega.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbBoxFormaEntrega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxFormaEntrega.FormattingEnabled = true;
             this.cmbBoxFormaEntrega.Location = new System.Drawing.Point(129, 7);
             this.cmbBoxFormaEntrega.Name = "cmbBoxFormaEntrega";
@@ -472,6 +361,154 @@
             this.txtBoxTelefone.Size = new System.Drawing.Size(120, 20);
             this.txtBoxTelefone.TabIndex = 1;
             // 
+            // txtBoxNome
+            // 
+            this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxNome.Location = new System.Drawing.Point(129, 4);
+            this.txtBoxNome.Name = "txtBoxNome";
+            this.txtBoxNome.Size = new System.Drawing.Size(120, 20);
+            this.txtBoxNome.TabIndex = 0;
+            // 
+            // txtBoxCPF
+            // 
+            this.txtBoxCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxCPF.Location = new System.Drawing.Point(129, 38);
+            this.txtBoxCPF.Name = "txtBoxCPF";
+            this.txtBoxCPF.Size = new System.Drawing.Size(120, 20);
+            this.txtBoxCPF.TabIndex = 3;
+            // 
+            // chkBoxUsuarioPadrao
+            // 
+            this.chkBoxUsuarioPadrao.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.chkBoxUsuarioPadrao.AutoSize = true;
+            this.chkBoxUsuarioPadrao.Location = new System.Drawing.Point(507, 6);
+            this.chkBoxUsuarioPadrao.Name = "chkBoxUsuarioPadrao";
+            this.chkBoxUsuarioPadrao.Size = new System.Drawing.Size(99, 17);
+            this.chkBoxUsuarioPadrao.TabIndex = 2;
+            this.chkBoxUsuarioPadrao.Text = "Usuário Padrão";
+            this.chkBoxUsuarioPadrao.UseVisualStyleBackColor = true;
+            this.chkBoxUsuarioPadrao.CheckedChanged += new System.EventHandler(this.chkBoxUsuarioPadrao_CheckedChanged);
+            // 
+            // txtBoxEmail
+            // 
+            this.txtBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxEmail.Location = new System.Drawing.Point(381, 38);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Size = new System.Drawing.Size(120, 20);
+            this.txtBoxEmail.TabIndex = 4;
+            // 
+            // lblValor
+            // 
+            this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValor.AutoSize = true;
+            this.lblValor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblValor.Location = new System.Drawing.Point(303, 14);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(84, 13);
+            this.lblValor.TabIndex = 15;
+            this.lblValor.Text = "Valor Total (R$):";
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblQuantidade.Location = new System.Drawing.Point(161, 14);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(65, 13);
+            this.lblQuantidade.TabIndex = 13;
+            this.lblQuantidade.Text = "Quantidade:";
+            // 
+            // lblProduto
+            // 
+            this.lblProduto.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblProduto.AutoSize = true;
+            this.lblProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblProduto.Location = new System.Drawing.Point(4, 14);
+            this.lblProduto.Name = "lblProduto";
+            this.lblProduto.Size = new System.Drawing.Size(47, 13);
+            this.lblProduto.TabIndex = 9;
+            this.lblProduto.Text = "Produto:";
+            // 
+            // btnConfirmarPedido
+            // 
+            this.btnConfirmarPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnConfirmarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmarPedido.Location = new System.Drawing.Point(3, 63);
+            this.btnConfirmarPedido.Name = "btnConfirmarPedido";
+            this.btnConfirmarPedido.Size = new System.Drawing.Size(114, 35);
+            this.btnConfirmarPedido.TabIndex = 2;
+            this.btnConfirmarPedido.Text = "Confirmar Pedido";
+            this.btnConfirmarPedido.UseVisualStyleBackColor = false;
+            this.btnConfirmarPedido.Click += new System.EventHandler(this.btnConfirmarPedido_Click);
+            // 
+            // btnRetirarProduto
+            // 
+            this.btnRetirarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRetirarProduto.Location = new System.Drawing.Point(3, 3);
+            this.btnRetirarProduto.Name = "btnRetirarProduto";
+            this.btnRetirarProduto.Size = new System.Drawing.Size(114, 27);
+            this.btnRetirarProduto.TabIndex = 1;
+            this.btnRetirarProduto.Text = "Retirar Produto";
+            this.btnRetirarProduto.UseVisualStyleBackColor = false;
+            this.btnRetirarProduto.Click += new System.EventHandler(this.btnRetirarProduto_Click);
+            // 
+            // btnAdicionarProduto
+            // 
+            this.btnAdicionarProduto.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAdicionarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarProduto.Location = new System.Drawing.Point(508, 4);
+            this.btnAdicionarProduto.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnAdicionarProduto.Name = "btnAdicionarProduto";
+            this.btnAdicionarProduto.Size = new System.Drawing.Size(114, 33);
+            this.btnAdicionarProduto.TabIndex = 3;
+            this.btnAdicionarProduto.Text = "Adicionar Produto";
+            this.btnAdicionarProduto.UseVisualStyleBackColor = false;
+            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
+            // 
+            // lblEndereco
+            // 
+            this.lblEndereco.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEndereco.Location = new System.Drawing.Point(67, 50);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(56, 13);
+            this.lblEndereco.TabIndex = 2;
+            this.lblEndereco.Text = "Endereço:";
+            // 
+            // lblDataEntrega
+            // 
+            this.lblDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDataEntrega.AutoSize = true;
+            this.lblDataEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDataEntrega.Location = new System.Drawing.Point(287, 11);
+            this.lblDataEntrega.Name = "lblDataEntrega";
+            this.lblDataEntrega.Size = new System.Drawing.Size(88, 13);
+            this.lblDataEntrega.TabIndex = 1;
+            this.lblDataEntrega.Text = "Data de Entrega:";
+            // 
+            // btnAdicionarEndereco
+            // 
+            this.btnAdicionarEndereco.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarEndereco.Location = new System.Drawing.Point(507, 39);
+            this.btnAdicionarEndereco.Name = "btnAdicionarEndereco";
+            this.btnAdicionarEndereco.Size = new System.Drawing.Size(114, 33);
+            this.btnAdicionarEndereco.TabIndex = 4;
+            this.btnAdicionarEndereco.Text = "Adicionar Endereço";
+            this.btnAdicionarEndereco.UseVisualStyleBackColor = false;
+            // 
+            // lblTipoCompra
+            // 
+            this.lblTipoCompra.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTipoCompra.AutoSize = true;
+            this.lblTipoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTipoCompra.Location = new System.Drawing.Point(29, 11);
+            this.lblTipoCompra.Name = "lblTipoCompra";
+            this.lblTipoCompra.Size = new System.Drawing.Size(94, 13);
+            this.lblTipoCompra.TabIndex = 9;
+            this.lblTipoCompra.Text = "Forma de Entrega:";
+            // 
             // lblNome
             // 
             this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -514,42 +551,7 @@
             this.btnBuscarCliente.TabIndex = 5;
             this.btnBuscarCliente.Text = "Buscar Cliente";
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            // 
-            // txtBoxNome
-            // 
-            this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxNome.Location = new System.Drawing.Point(129, 4);
-            this.txtBoxNome.Name = "txtBoxNome";
-            this.txtBoxNome.Size = new System.Drawing.Size(120, 20);
-            this.txtBoxNome.TabIndex = 0;
-            // 
-            // txtBoxCPF
-            // 
-            this.txtBoxCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxCPF.Location = new System.Drawing.Point(129, 38);
-            this.txtBoxCPF.Name = "txtBoxCPF";
-            this.txtBoxCPF.Size = new System.Drawing.Size(120, 20);
-            this.txtBoxCPF.TabIndex = 3;
-            // 
-            // chkBoxUsuarioPadrao
-            // 
-            this.chkBoxUsuarioPadrao.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.chkBoxUsuarioPadrao.AutoSize = true;
-            this.chkBoxUsuarioPadrao.Location = new System.Drawing.Point(507, 6);
-            this.chkBoxUsuarioPadrao.Name = "chkBoxUsuarioPadrao";
-            this.chkBoxUsuarioPadrao.Size = new System.Drawing.Size(99, 17);
-            this.chkBoxUsuarioPadrao.TabIndex = 2;
-            this.chkBoxUsuarioPadrao.Text = "Usuário Padrão";
-            this.chkBoxUsuarioPadrao.UseVisualStyleBackColor = true;
-            this.chkBoxUsuarioPadrao.CheckedChanged += new System.EventHandler(this.chkBoxUsuarioPadrao_CheckedChanged);
-            // 
-            // txtBoxEmail
-            // 
-            this.txtBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxEmail.Location = new System.Drawing.Point(381, 38);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(120, 20);
-            this.txtBoxEmail.TabIndex = 4;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // lblEmail
             // 

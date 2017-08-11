@@ -73,6 +73,23 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             return true;
         }
 
+        private bool VerificaCampos()
+        {
+            if (Equals(PedidoViewModel.ItemsViewModel.Count, 0)
+                || Equals(cmbBoxFormaEntrega.SelectedIndex, -1)
+                || string.IsNullOrEmpty(txtBoxCPF.Text)
+                || string.IsNullOrEmpty(txtBoxEmail.Text)
+                || string.IsNullOrEmpty(txtBoxNome.Text)
+                || string.IsNullOrEmpty(txtBoxTelefone.Text)
+                || string.IsNullOrEmpty(txtBoxEndereco.Text))
+            {
+                MessageBox.Show("Necessário preencher todos os campos do pedido.");
+                return false;
+            }
+
+            return true;
+        }
+
         #endregion
 
         #region Events
@@ -147,7 +164,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private void btnConfirmarPedido_Click(object sender, EventArgs e)
         {
 
-            if (Equals(PedidoViewModel.ItemsViewModel.Count, 0)) return;
+            if (Equals(VerificaCampos(), false)) return;
 
             try
             {
@@ -241,7 +258,12 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             //if (Equals(usuario.Perfil, "Gerente")) cmbBoxPerfil.SelectedIndex = 2;
         }
 
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
+
 
     }
 }
