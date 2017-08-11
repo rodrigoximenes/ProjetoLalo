@@ -1,10 +1,6 @@
 ﻿using ProjetoFinal.Infrastructure.Context;
-using ProjetoFinal.Presentation.Views;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoFinal.Presentation
@@ -18,7 +14,7 @@ namespace ProjetoFinal.Presentation
         static void Main()
         {
             Database.SetInitializer<LaloContext>(null);
-
+            AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Directory.GetCurrentDirectory());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
