@@ -7,6 +7,8 @@ namespace ProjetoFinal.Presentation.ViewModel
     {
         public int IdPedido { get; set; }
 
+        public int IdCliente { get; set; }
+
         public string NomeCliente { get; set; }
 
         public string CPF { get; set; }
@@ -34,6 +36,7 @@ namespace ProjetoFinal.Presentation.ViewModel
         public string TipoEntrega { get; set; }
 
         public IList<ItemPedidoViewModel> ItemsViewModel { get; set; }
+        public int IdAtendente { get; set; }
 
         public PedidoViewModel()
         {

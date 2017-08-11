@@ -9,19 +9,22 @@ namespace ProjetoFinal.Infrastructure.Repository
     public class UsuarioRepository : BaseRepository<Usuario>, IUsuarioRepository
     {
         private LaloContext _context;
+        private Usuario _usuarioLogado;
 
         public UsuarioRepository(LaloContext context) : base(context)
         {
             _context = context;
         }
 
-        public bool AutenticaUsuario(string Login, string Senha)
+        public Usuario AutenticaUsuario(string Login, string Senha)
         {
-            var validaLogin = _context.Usuario.Where(x => x.Nome == Login && x.Senha == Senha).SingleOrDefault() ;
+            _usuarioLogado = _context.Usuario.Where(x => x.Nome == Login && x.Senha == Senha).SingleOrDefault();
+            return _usuarioLogado;
+        }
 
-            if (Equals(validaLogin, null)) return false;
-
-            return true;
+        public Usuario ObterUsuarioLogado()
+        {
+            return _usuarioLogado;
         }
     }
 }

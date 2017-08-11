@@ -108,12 +108,20 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             //dtTmPkrDataRegistro.Text = pedido.DataSolicitacao.ToShortDateString();
 
         }
+
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
             {
                 IdPedidoSelecionado = Convert.ToInt32(gridPedidos.SelectedRows[0].Cells[0].Value);
+
+                var itens = _itemRepository.ListarItensPorIdPedido(IdPedidoSelecionado);
+
+                foreach (var item in itens)
+                    _itemRepository.Delete(item.Id);
+
                 _pedidoRepository.Delete(IdPedidoSelecionado);
+
                 LoadPedidos();
             }
             catch (Exception)

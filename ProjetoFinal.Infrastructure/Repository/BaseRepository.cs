@@ -23,6 +23,8 @@ namespace ProjetoFinal.Infrastructure.Repository
 
         public void Delete(int id)
         {
+            _context = new LaloContext();
+
             var entity = Find(id);
 
             _context.Set<TEntity>().Remove(entity);

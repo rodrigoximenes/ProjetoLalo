@@ -29,17 +29,18 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             InitializeComponent();
             BindComboEntregas();
 
-            this._cliente.NomeCompleto = pedidoViewModel.NomeCliente;
-            this._cliente.Cpf = pedidoViewModel.CPF;
-            this._cliente.Endereco = pedidoViewModel.EnderecoCliente;
-            this._cliente.Telefone = pedidoViewModel.Telefone;
-            this._cliente.Email = pedidoViewModel.Email;
+            _cliente.NomeCompleto = pedidoViewModel.NomeCliente;
+            _cliente.Cpf = pedidoViewModel.CPF;
+            _cliente.Endereco = pedidoViewModel.EnderecoCliente;
+            _cliente.Telefone = pedidoViewModel.Telefone;
+            _cliente.Email = pedidoViewModel.Email;
 
-            this._pedido.Cliente = _cliente;
-            this._pedido.DataEntrega = pedidoViewModel.DataEntrega;
-            this._pedido.DataSolicitacao = pedidoViewModel.DataSolicitacao;
-            this._pedido.EnderecoEntrega = pedidoViewModel.EnderecoEntrega;
-            this._pedido.TipoEntrega = pedidoViewModel.TipoEntrega;
+            _pedido.DataEntrega = pedidoViewModel.DataEntrega;
+            _pedido.DataSolicitacao = pedidoViewModel.DataSolicitacao;
+            _pedido.EnderecoEntrega = pedidoViewModel.EnderecoEntrega;
+            _pedido.TipoEntrega = pedidoViewModel.TipoEntrega;
+            _pedido.IdAtendente = pedidoViewModel.IdAtendente;
+            _pedido.IdCliente = pedidoViewModel.IdCliente;
 
             txtBoxNome.Text = pedidoViewModel.NomeCliente;
             txtBoxFormaEntrega.Text = pedidoViewModel.TipoEntrega;

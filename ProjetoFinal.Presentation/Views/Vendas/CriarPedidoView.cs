@@ -14,6 +14,8 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private IList<Item> ItemLista;
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IProdutoRepository _produtoRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IClienteRepository _clienteRepository;
 
         public PedidoViewModel PedidoViewModel { get; set; }
 
@@ -21,6 +23,8 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         {
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
             _produtoRepository = LaloKernel.GetInstance<IProdutoRepository>();
+            _usuarioRepository = LaloKernel.GetInstance<IUsuarioRepository>();
+            _clienteRepository = LaloKernel.GetInstance<IClienteRepository>();
 
             PedidoViewModel = new PedidoViewModel();
 
@@ -97,17 +101,22 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         {
             if (chkBoxUsuarioPadrao.Checked)
             {
-                txtBoxNome.Text = "Usuário Padrão";
+                var clientePadrao = _clienteRepository.Find(9);
+
+                PedidoViewModel.IdCliente = clientePadrao.Id;
+                PedidoViewModel.NomeCliente = clientePadrao.NomeCompleto;
+
+                txtBoxNome.Text = clientePadrao.NomeCompleto;
                 txtBoxNome.Enabled = false;
 
-                txtBoxTelefone.Text = "Telefone Padrão";
+                txtBoxTelefone.Text = clientePadrao.Telefone;
                 txtBoxTelefone.Enabled = false;
 
-                txtBoxCPF.Text = "CPF Padrão";
+                txtBoxCPF.Text = clientePadrao.Cpf;
                 txtBoxCPF.Enabled = false;
 
 
-                txtBoxEmail.Text = "Email Padrão";
+                txtBoxEmail.Text = clientePadrao.Email;
                 txtBoxEmail.Enabled = false;
 
                 btnBuscarCliente.Enabled = false;
@@ -173,7 +182,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 PedidoViewModel.CPF = txtBoxCPF.Text;
                 PedidoViewModel.Telefone = txtBoxTelefone.Text;
                 PedidoViewModel.Email = txtBoxEmail.Text;
-
+                PedidoViewModel.IdAtendente = _usuarioRepository.ObterUsuarioLogado().Id;
 
                 PedidoViewModel.DataEntrega = DateTime.Parse(dtTmPkrDataEntrega.Text);
                 PedidoViewModel.DataSolicitacao = DateTime.Now;

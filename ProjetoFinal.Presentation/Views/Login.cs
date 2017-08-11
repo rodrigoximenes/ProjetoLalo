@@ -22,7 +22,7 @@ namespace ProjetoFinal.Presentation
 
         private void btnLogar_Click(object sender, System.EventArgs e)
         {
-            if(Equals(_usuarioRepository.AutenticaUsuario(txtBoxLogin.Text, txtBoxSenha.Text),true))
+            if (!Equals(_usuarioRepository.AutenticaUsuario(txtBoxLogin.Text, txtBoxSenha.Text), null))
             {
                 Main menu = new Main();
                 menu.ShowDialog();

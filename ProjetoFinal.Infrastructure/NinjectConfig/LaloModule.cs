@@ -13,7 +13,7 @@ namespace ProjetoFinal.Infrastructure.NinjectConfig
             Bind<LaloContext>().ToSelf().InTransientScope();
 
             //Repositorio
-            this.Bind<IUsuarioRepository>().To<UsuarioRepository>();
+            this.Bind<IUsuarioRepository>().To<UsuarioRepository>().InSingletonScope();
             this.Bind<IProdutoRepository>().To<ProdutoRepository>();
             this.Bind<IPedidoRepository>().To<PedidoRepository>();
             this.Bind<IClienteRepository>().To<ClienteRepository>();
