@@ -261,9 +261,9 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
 
+
         }
+
         #endregion
-
-
     }
 }
