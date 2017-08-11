@@ -179,7 +179,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
             if (itemExiste != null)
             {
-                itemExiste.Quantidade = itemExiste.Quantidade + Convert.ToInt32(txtBoxQuantidade.Text);
+                itemExiste.Quantidade = Convert.ToInt32(txtBoxQuantidade.Text);
                 itemExiste.PrecoTotal = itemExiste.PrecoUnitario * itemExiste.Quantidade;
             }
             else
@@ -226,29 +226,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            var produtoSelecionado = _produtoRepository.Find(Convert.ToInt32(cmbBoxProdutos.SelectedValue));
-            var itemExiste = PedidoViewModel.ItemsViewModel.SingleOrDefault(x => x.IdProduto == produtoSelecionado.Id);
-
-            if (Equals(gridProdutos.SelectedRows.Count, 0)) return;
-
-            if (itemExiste != null)
-            {
-                itemExiste.Quantidade = Convert.ToInt32(txtBoxQuantidade.Text);
-                itemExiste.PrecoTotal = itemExiste.PrecoUnitario * itemExiste.Quantidade;
-            }
-            else
-            {
-                return;
-            }
-
-            gridProdutos.DataSource = null;
-            gridProdutos.DataSource = PedidoViewModel.ItemsViewModel;
-        }
-
-        #endregion
-
         private void gridProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //var idProdutoSelecionado = Convert.ToInt32(gridProdutos.SelectedRows[0].Cells[1].Value);
@@ -260,5 +237,9 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             //if (Equals(usuario.Perfil, "Vendedor")) cmbBoxPerfil.SelectedIndex = 1;
             //if (Equals(usuario.Perfil, "Gerente")) cmbBoxPerfil.SelectedIndex = 2;
         }
+
+        #endregion
+
+
     }
 }

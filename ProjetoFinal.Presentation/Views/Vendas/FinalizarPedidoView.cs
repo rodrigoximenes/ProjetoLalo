@@ -2,6 +2,7 @@
 using ProjetoFinal.Domain.Model;
 using ProjetoFinal.Infrastructure.NinjectConfig;
 using ProjetoFinal.Presentation.ViewModel;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -111,20 +112,31 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         {
             if (Equals(txtBoxValorRecebido.Text, null)) return;
 
-            if(!Equals(_cliente.NomeCompleto,"Usuário Padrão")) _clienteRepository.Add(_cliente);
-
-            _pedidoRepository.Add(_pedido);
-        
-            foreach (var item in _pedidoViewModel.ItemsViewModel)
+            try
             {
-                _itens.IdProduto = item.IdProduto;
-                _itens.PrecoUnitario = item.PrecoUnitario;
-                _itens.QuantidadeSolicitada = item.Quantidade;
+                if (!Equals(_cliente.NomeCompleto, "Usuário Padrão")) _clienteRepository.Add(_cliente);
 
-                _itemRepository.Add(_itens);
+                _pedidoRepository.Add(_pedido);
+
+                foreach (var item in _pedidoViewModel.ItemsViewModel)
+                {
+                    _itens.IdProduto = item.IdProduto;
+                    _itens.PrecoUnitario = item.PrecoUnitario;
+                    _itens.QuantidadeSolicitada = item.Quantidade;
+
+                    _itemRepository.Add(_itens);
+                }
+
+                MessageBox.Show("Pedido Finalizado");
+                this.Close();
+                
             }
+            catch (Exception)
+            {
 
-            MessageBox.Show("Pedido Finalizado");
+                MessageBox.Show("Pedido não finalizado");
+            }
+            
         }
 
         #endregion

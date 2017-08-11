@@ -45,7 +45,6 @@
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
             this.btnConfirmarPedido = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnRetirarProduto = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.btnEditar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxQuantidade = new System.Windows.Forms.NumericUpDown();
             this.grpBoxInfoEntrega = new System.Windows.Forms.GroupBox();
@@ -254,14 +253,13 @@
             this.tlpButtons.ColumnCount = 1;
             this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpButtons.Controls.Add(this.btnConfirmarPedido, 0, 2);
-            this.tlpButtons.Controls.Add(this.btnRetirarProduto, 0, 1);
-            this.tlpButtons.Controls.Add(this.btnEditar, 0, 0);
+            this.tlpButtons.Controls.Add(this.btnRetirarProduto, 0, 0);
             this.tlpButtons.Location = new System.Drawing.Point(504, 41);
             this.tlpButtons.Margin = new System.Windows.Forms.Padding(0);
             this.tlpButtons.Name = "tlpButtons";
             this.tlpButtons.RowCount = 3;
             this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpButtons.Size = new System.Drawing.Size(120, 101);
             this.tlpButtons.TabIndex = 12;
@@ -270,9 +268,9 @@
             // 
             this.btnConfirmarPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnConfirmarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmarPedido.Location = new System.Drawing.Point(3, 69);
+            this.btnConfirmarPedido.Location = new System.Drawing.Point(3, 63);
             this.btnConfirmarPedido.Name = "btnConfirmarPedido";
-            this.btnConfirmarPedido.Size = new System.Drawing.Size(114, 29);
+            this.btnConfirmarPedido.Size = new System.Drawing.Size(114, 35);
             this.btnConfirmarPedido.TabIndex = 2;
             this.btnConfirmarPedido.Text = "Confirmar Pedido";
             this.btnConfirmarPedido.UseVisualStyleBackColor = false;
@@ -281,24 +279,13 @@
             // btnRetirarProduto
             // 
             this.btnRetirarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRetirarProduto.Location = new System.Drawing.Point(3, 36);
+            this.btnRetirarProduto.Location = new System.Drawing.Point(3, 3);
             this.btnRetirarProduto.Name = "btnRetirarProduto";
             this.btnRetirarProduto.Size = new System.Drawing.Size(114, 27);
             this.btnRetirarProduto.TabIndex = 1;
             this.btnRetirarProduto.Text = "Retirar Produto";
             this.btnRetirarProduto.UseVisualStyleBackColor = false;
             this.btnRetirarProduto.Click += new System.EventHandler(this.btnRetirarProduto_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Location = new System.Drawing.Point(3, 3);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(114, 27);
-            this.btnEditar.TabIndex = 0;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAdicionarProduto
             // 
@@ -643,7 +630,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecoUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecoTotal;
         private Components.LaloPrimaryButton btnBuscarCliente;
-        private Components.LaloPrimaryButton btnEditar;
         private System.Windows.Forms.TextBox txtBoxEmail;
         private Components.LaloLabel lblEmail;
     }
