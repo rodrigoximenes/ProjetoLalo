@@ -15,6 +15,7 @@ namespace ProjetoFinal.Presentation
         {
             Database.SetInitializer<LaloContext>(null);
             AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Directory.GetCurrentDirectory());
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
