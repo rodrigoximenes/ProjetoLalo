@@ -30,7 +30,7 @@ namespace ProjetoFinal.Presentation
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("Usuário e senha errados.", "", MessageBoxButtons.OK);
+                DialogResult dialogResult = MessageBox.Show("Usuário e senha inválidos.", "", MessageBoxButtons.OK);
                 if (dialogResult == DialogResult.OK) return;
             }
         }
