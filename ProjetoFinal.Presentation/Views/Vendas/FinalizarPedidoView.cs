@@ -58,6 +58,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             entregasList.Add("À Vista");
             entregasList.Add("Agendada");
             cmbBoxFormaPagamento.DataSource = entregasList;
+            cmbBoxFormaPagamento.SelectedIndex = -1;
         }
 
         private void CalculoValorTotal()
@@ -110,7 +111,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnFinalizarPedido_Click(object sender, System.EventArgs e)
         {
-            if (Equals(txtBoxValorRecebido.Text, null)) return;
+            if (Equals(VerificarCampos(), false)) return;
 
             try
             {
@@ -137,6 +138,14 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 MessageBox.Show("Pedido não finalizado");
             }
             
+        }
+
+        private bool VerificarCampos()
+        {
+            if (string.IsNullOrEmpty(txtBoxValorRecebido.Text) ||
+                cmbBoxFormaPagamento.SelectedIndex == -1) return false;
+
+            return true;
         }
 
         #endregion

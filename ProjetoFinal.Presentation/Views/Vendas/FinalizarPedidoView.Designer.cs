@@ -43,18 +43,18 @@
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.txtBoxTroco = new System.Windows.Forms.TextBox();
             this.lblTroco = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblValorRecebido = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblValorPedido = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.txtBoxValorPedido = new System.Windows.Forms.TextBox();
             this.cmbBoxFormaPagamento = new System.Windows.Forms.ComboBox();
             this.lblFormaPagamento = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.txtBoxValorTotal = new System.Windows.Forms.TextBox();
             this.lblValor = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.txtBoxValorDesconto = new System.Windows.Forms.TextBox();
-            this.lblDesconto = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.txtBoxValorRecebido = new System.Windows.Forms.TextBox();
             this.btnCancelar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnFinalizarPedido = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.txtBoxValorDesconto = new System.Windows.Forms.TextBox();
+            this.lblDesconto = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblValorRecebido = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxValorRecebido = new System.Windows.Forms.TextBox();
             this.tlpMain.SuspendLayout();
             this.grpBoxInfoGerais.SuspendLayout();
             this.tlpCliente.SuspendLayout();
@@ -260,17 +260,6 @@
             this.lblTroco.TabIndex = 22;
             this.lblTroco.Text = "Troco (R$):";
             // 
-            // lblValorRecebido
-            // 
-            this.lblValorRecebido.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblValorRecebido.AutoSize = true;
-            this.lblValorRecebido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblValorRecebido.Location = new System.Drawing.Point(231, 20);
-            this.lblValorRecebido.Name = "lblValorRecebido";
-            this.lblValorRecebido.Size = new System.Drawing.Size(106, 13);
-            this.lblValorRecebido.TabIndex = 21;
-            this.lblValorRecebido.Text = "Valor Recebido (R$):";
-            // 
             // lblValorPedido
             // 
             this.lblValorPedido.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -294,6 +283,7 @@
             // cmbBoxFormaPagamento
             // 
             this.cmbBoxFormaPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbBoxFormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxFormaPagamento.FormattingEnabled = true;
             this.cmbBoxFormaPagamento.Location = new System.Drawing.Point(519, 72);
             this.cmbBoxFormaPagamento.Name = "cmbBoxFormaPagamento";
@@ -331,35 +321,6 @@
             this.lblValor.TabIndex = 15;
             this.lblValor.Text = "Valor Total (R$):";
             // 
-            // txtBoxValorDesconto
-            // 
-            this.txtBoxValorDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxValorDesconto.Location = new System.Drawing.Point(143, 73);
-            this.txtBoxValorDesconto.Name = "txtBoxValorDesconto";
-            this.txtBoxValorDesconto.Size = new System.Drawing.Size(82, 20);
-            this.txtBoxValorDesconto.TabIndex = 3;
-            this.txtBoxValorDesconto.Leave += new System.EventHandler(this.txtBoxValorDesconto_Leave);
-            // 
-            // lblDesconto
-            // 
-            this.lblDesconto.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblDesconto.AutoSize = true;
-            this.lblDesconto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDesconto.Location = new System.Drawing.Point(64, 76);
-            this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(73, 13);
-            this.lblDesconto.TabIndex = 18;
-            this.lblDesconto.Text = "Desconto (%):";
-            // 
-            // txtBoxValorRecebido
-            // 
-            this.txtBoxValorRecebido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxValorRecebido.Location = new System.Drawing.Point(343, 17);
-            this.txtBoxValorRecebido.Name = "txtBoxValorRecebido";
-            this.txtBoxValorRecebido.Size = new System.Drawing.Size(80, 20);
-            this.txtBoxValorRecebido.TabIndex = 1;
-            this.txtBoxValorRecebido.Leave += new System.EventHandler(this.txtBoxValorRecebido_Leave);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -384,6 +345,46 @@
             this.btnFinalizarPedido.Text = "Finalizar Pedido";
             this.btnFinalizarPedido.UseVisualStyleBackColor = false;
             this.btnFinalizarPedido.Click += new System.EventHandler(this.btnFinalizarPedido_Click);
+            // 
+            // txtBoxValorDesconto
+            // 
+            this.txtBoxValorDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxValorDesconto.Location = new System.Drawing.Point(143, 73);
+            this.txtBoxValorDesconto.Name = "txtBoxValorDesconto";
+            this.txtBoxValorDesconto.Size = new System.Drawing.Size(82, 20);
+            this.txtBoxValorDesconto.TabIndex = 3;
+            this.txtBoxValorDesconto.Leave += new System.EventHandler(this.txtBoxValorDesconto_Leave);
+            // 
+            // lblDesconto
+            // 
+            this.lblDesconto.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDesconto.AutoSize = true;
+            this.lblDesconto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDesconto.Location = new System.Drawing.Point(64, 76);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(73, 13);
+            this.lblDesconto.TabIndex = 18;
+            this.lblDesconto.Text = "Desconto (%):";
+            // 
+            // lblValorRecebido
+            // 
+            this.lblValorRecebido.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValorRecebido.AutoSize = true;
+            this.lblValorRecebido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblValorRecebido.Location = new System.Drawing.Point(231, 20);
+            this.lblValorRecebido.Name = "lblValorRecebido";
+            this.lblValorRecebido.Size = new System.Drawing.Size(106, 13);
+            this.lblValorRecebido.TabIndex = 21;
+            this.lblValorRecebido.Text = "Valor Recebido (R$):";
+            // 
+            // txtBoxValorRecebido
+            // 
+            this.txtBoxValorRecebido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxValorRecebido.Location = new System.Drawing.Point(343, 17);
+            this.txtBoxValorRecebido.Name = "txtBoxValorRecebido";
+            this.txtBoxValorRecebido.Size = new System.Drawing.Size(80, 20);
+            this.txtBoxValorRecebido.TabIndex = 1;
+            this.txtBoxValorRecebido.Leave += new System.EventHandler(this.txtBoxValorRecebido_Leave);
             // 
             // FinalizarPedidoView
             // 

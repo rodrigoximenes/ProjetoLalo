@@ -146,6 +146,9 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnConfirmarPedido_Click(object sender, EventArgs e)
         {
+
+            if (Equals(PedidoViewModel.ItemsViewModel.Count, 0)) return;
+
             try
             {
                 PedidoViewModel.EnderecoCliente = txtBoxEndereco.Text;
@@ -239,7 +242,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         }
 
         #endregion
-
 
     }
 }
