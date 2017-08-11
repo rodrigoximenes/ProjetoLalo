@@ -18,7 +18,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         public Pedido _pedido = new Pedido();
         public Cliente _cliente = new Cliente();
-        public Item _itens = new Item();
 
         public FinalizarPedidoView(PedidoViewModel pedidoViewModel)
         {
@@ -119,13 +118,15 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
                 _pedidoRepository.Add(_pedido);
 
-                foreach (var item in _pedidoViewModel.ItemsViewModel)
+                foreach (var itemViewModel in _pedidoViewModel.ItemsViewModel)
                 {
-                    _itens.IdProduto = item.IdProduto;
-                    _itens.PrecoUnitario = item.PrecoUnitario;
-                    _itens.QuantidadeSolicitada = item.Quantidade;
+                    var item = new Item();
+                    item.IdPedido = itemViewModel.IdPedido;
+                    item.IdProduto = itemViewModel.IdProduto;
+                    item.PrecoUnitario = itemViewModel.PrecoUnitario;
+                    item.QuantidadeSolicitada = itemViewModel.Quantidade;
 
-                    _itemRepository.Add(_itens);
+                    _itemRepository.Add(item);
                 }
 
                 MessageBox.Show("Pedido Finalizado");

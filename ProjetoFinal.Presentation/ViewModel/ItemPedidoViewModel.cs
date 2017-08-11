@@ -2,6 +2,7 @@
 {
     public class ItemPedidoViewModel
     {
+        public int IdPedido { get; set; }
         public int IdProduto { get; set; }
 
         public string NomeProduto { get; set; }

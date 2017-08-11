@@ -13,6 +13,7 @@ namespace ProjetoFinal.Infrastructure.Mapping
             Property(x => x.EnderecoEntrega).HasColumnName("EnderecoEntrega");
             Property(x => x.TipoEntrega).HasColumnName("TipoEntrega");
             Property(x => x.IdCliente).HasColumnName("IdCliente");
+            Property(x => x.IdAtendente).HasColumnName("IdAtendente");
 
             Ignore(x => x.Itens);
             Ignore(x => x.Atendente);
