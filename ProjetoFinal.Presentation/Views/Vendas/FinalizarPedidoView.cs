@@ -122,7 +122,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 foreach (var itemViewModel in _pedidoViewModel.ItemsViewModel)
                 {
                     var item = new Item();
-                    item.IdPedido = itemViewModel.IdPedido;
+                    item.IdPedido = _pedido.Id;
                     item.IdProduto = itemViewModel.IdProduto;
                     item.PrecoUnitario = itemViewModel.PrecoUnitario;
                     item.QuantidadeSolicitada = itemViewModel.Quantidade;
