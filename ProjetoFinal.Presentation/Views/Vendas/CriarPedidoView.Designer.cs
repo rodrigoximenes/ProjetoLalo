@@ -59,16 +59,16 @@
             this.cmbBoxFormaEntrega = new System.Windows.Forms.ComboBox();
             this.grpBoxInfoCliente = new System.Windows.Forms.GroupBox();
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBoxTelefone = new System.Windows.Forms.TextBox();
-            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.txtBoxNome = new System.Windows.Forms.TextBox();
-            this.txtBoxCPF = new System.Windows.Forms.TextBox();
-            this.chkBoxUsuarioPadrao = new System.Windows.Forms.CheckBox();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxNome = new System.Windows.Forms.TextBox();
+            this.txtBoxCPF = new System.Windows.Forms.TextBox();
+            this.btnBuscarCliente = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.txtBoxTelefone = new System.Windows.Forms.TextBox();
+            this.chkBoxUsuarioPadrao = new System.Windows.Forms.CheckBox();
+            this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.tlpMain.SuspendLayout();
             this.grpBoxProdutos.SuspendLayout();
             this.tlpProdutos.SuspendLayout();
@@ -271,7 +271,7 @@
             this.btnConfirmarPedido.Location = new System.Drawing.Point(3, 63);
             this.btnConfirmarPedido.Name = "btnConfirmarPedido";
             this.btnConfirmarPedido.Size = new System.Drawing.Size(114, 35);
-            this.btnConfirmarPedido.TabIndex = 2;
+            this.btnConfirmarPedido.TabIndex = 1;
             this.btnConfirmarPedido.Text = "Confirmar Pedido";
             this.btnConfirmarPedido.UseVisualStyleBackColor = false;
             this.btnConfirmarPedido.Click += new System.EventHandler(this.btnConfirmarPedido_Click);
@@ -282,7 +282,7 @@
             this.btnRetirarProduto.Location = new System.Drawing.Point(3, 3);
             this.btnRetirarProduto.Name = "btnRetirarProduto";
             this.btnRetirarProduto.Size = new System.Drawing.Size(114, 27);
-            this.btnRetirarProduto.TabIndex = 1;
+            this.btnRetirarProduto.TabIndex = 0;
             this.btnRetirarProduto.Text = "Retirar Produto";
             this.btnRetirarProduto.UseVisualStyleBackColor = false;
             this.btnRetirarProduto.Click += new System.EventHandler(this.btnRetirarProduto_Click);
@@ -466,20 +466,31 @@
             this.tlpCliente.Size = new System.Drawing.Size(630, 68);
             this.tlpCliente.TabIndex = 0;
             // 
-            // txtBoxTelefone
+            // txtBoxEmail
             // 
-            this.txtBoxTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxTelefone.Location = new System.Drawing.Point(528, 38);
-            this.txtBoxTelefone.Name = "txtBoxTelefone";
-            this.txtBoxTelefone.Size = new System.Drawing.Size(99, 20);
-            this.txtBoxTelefone.TabIndex = 1;
+            this.txtBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxEmail.Location = new System.Drawing.Point(315, 38);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Size = new System.Drawing.Size(98, 20);
+            this.txtBoxEmail.TabIndex = 4;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEmail.Location = new System.Drawing.Point(274, 42);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.TabIndex = 6;
+            this.lblEmail.Text = "Email:";
             // 
             // lblNome
             // 
             this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblNome.AutoSize = true;
             this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNome.Location = new System.Drawing.Point(64, 42);
+            this.lblNome.Location = new System.Drawing.Point(63, 42);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(38, 13);
             this.lblNome.TabIndex = 1;
@@ -490,56 +501,53 @@
             this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCPF.AutoSize = true;
             this.lblCPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCPF.Location = new System.Drawing.Point(72, 8);
+            this.lblCPF.Location = new System.Drawing.Point(71, 8);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(30, 13);
             this.lblCPF.TabIndex = 2;
             this.lblCPF.Text = "CPF:";
             // 
-            // lblTelefone
-            // 
-            this.lblTelefone.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTelefone.AutoSize = true;
-            this.lblTelefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTelefone.Location = new System.Drawing.Point(470, 42);
-            this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(52, 13);
-            this.lblTelefone.TabIndex = 3;
-            this.lblTelefone.Text = "Telefone:";
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(213, 3);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(99, 23);
-            this.btnBuscarCliente.TabIndex = 5;
-            this.btnBuscarCliente.Text = "Buscar Cliente";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
-            // 
             // txtBoxNome
             // 
             this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxNome.Location = new System.Drawing.Point(108, 38);
+            this.txtBoxNome.Location = new System.Drawing.Point(107, 38);
             this.txtBoxNome.Name = "txtBoxNome";
-            this.txtBoxNome.Size = new System.Drawing.Size(99, 20);
-            this.txtBoxNome.TabIndex = 0;
+            this.txtBoxNome.Size = new System.Drawing.Size(98, 20);
+            this.txtBoxNome.TabIndex = 3;
             // 
             // txtBoxCPF
             // 
             this.txtBoxCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxCPF.Location = new System.Drawing.Point(108, 4);
+            this.txtBoxCPF.Location = new System.Drawing.Point(107, 4);
             this.txtBoxCPF.Name = "txtBoxCPF";
-            this.txtBoxCPF.Size = new System.Drawing.Size(99, 20);
-            this.txtBoxCPF.TabIndex = 3;
+            this.txtBoxCPF.Size = new System.Drawing.Size(98, 20);
+            this.txtBoxCPF.TabIndex = 0;
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(211, 3);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(98, 23);
+            this.btnBuscarCliente.TabIndex = 1;
+            this.btnBuscarCliente.Text = "Buscar Cliente";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
+            // txtBoxTelefone
+            // 
+            this.txtBoxTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxTelefone.Location = new System.Drawing.Point(523, 38);
+            this.txtBoxTelefone.Name = "txtBoxTelefone";
+            this.txtBoxTelefone.Size = new System.Drawing.Size(104, 20);
+            this.txtBoxTelefone.TabIndex = 5;
             // 
             // chkBoxUsuarioPadrao
             // 
             this.chkBoxUsuarioPadrao.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.chkBoxUsuarioPadrao.AutoSize = true;
             this.tlpCliente.SetColumnSpan(this.chkBoxUsuarioPadrao, 2);
-            this.chkBoxUsuarioPadrao.Location = new System.Drawing.Point(318, 6);
+            this.chkBoxUsuarioPadrao.Location = new System.Drawing.Point(315, 6);
             this.chkBoxUsuarioPadrao.Name = "chkBoxUsuarioPadrao";
             this.chkBoxUsuarioPadrao.Size = new System.Drawing.Size(99, 17);
             this.chkBoxUsuarioPadrao.TabIndex = 2;
@@ -547,24 +555,16 @@
             this.chkBoxUsuarioPadrao.UseVisualStyleBackColor = true;
             this.chkBoxUsuarioPadrao.CheckedChanged += new System.EventHandler(this.chkBoxUsuarioPadrao_CheckedChanged);
             // 
-            // txtBoxEmail
+            // lblTelefone
             // 
-            this.txtBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxEmail.Location = new System.Drawing.Point(318, 38);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(99, 20);
-            this.txtBoxEmail.TabIndex = 4;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmail.Location = new System.Drawing.Point(277, 42);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 6;
-            this.lblEmail.Text = "Email:";
+            this.lblTelefone.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTelefone.Location = new System.Drawing.Point(465, 42);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefone.TabIndex = 3;
+            this.lblTelefone.Text = "Telefone:";
             // 
             // CriarPedidoView
             // 

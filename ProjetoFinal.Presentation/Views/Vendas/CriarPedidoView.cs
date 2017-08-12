@@ -110,9 +110,11 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             txtBoxCPF.Text = cliente.Cpf;
             txtBoxCPF.Enabled = false;
 
-
             txtBoxEmail.Text = cliente.Email;
             txtBoxEmail.Enabled = false;
+
+            txtBoxEndereco.Text = cliente.Endereco;
+            txtBoxEndereco.Enabled = false;
 
             btnBuscarCliente.Enabled = false;
         }
