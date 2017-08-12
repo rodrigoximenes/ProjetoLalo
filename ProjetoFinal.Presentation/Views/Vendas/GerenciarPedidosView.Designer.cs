@@ -311,7 +311,7 @@
             // 
             // Id
             // 
-            this.Id.DataPropertyName = "Id";
+            this.Id.DataPropertyName = "IdPedido";
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;

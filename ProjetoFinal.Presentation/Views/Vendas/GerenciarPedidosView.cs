@@ -126,16 +126,16 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void gridPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IdPedidoSelecionado = Convert.ToInt32(gridPedidos.SelectedRows[0].Cells[0].Value);
+            IdPedidoSelecionado = Convert.ToInt32(gridPedidos.SelectedRows[0].Cells["Id"].Value);
 
             var pedido = _pedidoRepository.Find(IdPedidoSelecionado);
 
-            //var cliente = pedido.Cliente;
+            pedido.Cliente = _clienteRepository.Find(pedido.IdCliente);
 
-            //txtBoxNomeCliente.Text = cliente.NomeCompleto;
-            //txtBoxNumeroPedido.Text = pedido.Id.ToString();
-            //dtTmPkrDataEntrega.Text = pedido.DataEntrega.ToShortDateString();
-            //dtTmPkrDataRegistro.Text = pedido.DataSolicitacao.ToShortDateString();
+            txtBoxNomeCliente.Text = pedido.Cliente.NomeCompleto;
+            txtBoxNumeroPedido.Text = pedido.Cliente.Id.ToString();
+            dtTmPkrDataEntrega.Text =  pedido.DataEntrega.ToShortDateString();
+            dtTmPkrDataRegistro.Text = pedido.DataSolicitacao.ToShortDateString();
 
         }
 
