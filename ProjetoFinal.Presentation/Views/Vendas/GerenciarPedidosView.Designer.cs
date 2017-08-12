@@ -34,17 +34,17 @@
             this.gridPedidos = new System.Windows.Forms.DataGridView();
             this.grpBoxConsultaPedidos = new System.Windows.Forms.GroupBox();
             this.tlpConsulta = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBoxNumeroPedido = new System.Windows.Forms.TextBox();
-            this.dtTmPkrDataEntrega = new System.Windows.Forms.DateTimePicker();
-            this.dtTmPkrDataRegistro = new System.Windows.Forms.DateTimePicker();
-            this.cmbBoxStatus = new System.Windows.Forms.ComboBox();
-            this.txtBoxNomeCliente = new System.Windows.Forms.TextBox();
             this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.lblNumeroPedido = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxNumeroPedido = new System.Windows.Forms.TextBox();
             this.lblDataEntrega = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.dtTmPkrDataEntrega = new System.Windows.Forms.DateTimePicker();
+            this.dtTmPkrDataRegistro = new System.Windows.Forms.DateTimePicker();
             this.lblDataRegistro = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.lblStatus = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.cmbBoxStatus = new System.Windows.Forms.ComboBox();
             this.lblNomeCliente = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.txtBoxNomeCliente = new System.Windows.Forms.TextBox();
             this.btnLimparFiltros = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.btnConsultar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -174,50 +174,6 @@
             this.tlpConsulta.Size = new System.Drawing.Size(630, 162);
             this.tlpConsulta.TabIndex = 0;
             // 
-            // txtBoxNumeroPedido
-            // 
-            this.txtBoxNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxNumeroPedido.Location = new System.Drawing.Point(151, 6);
-            this.txtBoxNumeroPedido.Name = "txtBoxNumeroPedido";
-            this.txtBoxNumeroPedido.Size = new System.Drawing.Size(148, 20);
-            this.txtBoxNumeroPedido.TabIndex = 0;
-            // 
-            // dtTmPkrDataEntrega
-            // 
-            this.dtTmPkrDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtTmPkrDataEntrega.Location = new System.Drawing.Point(151, 138);
-            this.dtTmPkrDataEntrega.Name = "dtTmPkrDataEntrega";
-            this.dtTmPkrDataEntrega.Size = new System.Drawing.Size(148, 20);
-            this.dtTmPkrDataEntrega.TabIndex = 4;
-            this.dtTmPkrDataEntrega.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
-            // 
-            // dtTmPkrDataRegistro
-            // 
-            this.dtTmPkrDataRegistro.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtTmPkrDataRegistro.Location = new System.Drawing.Point(151, 105);
-            this.dtTmPkrDataRegistro.Name = "dtTmPkrDataRegistro";
-            this.dtTmPkrDataRegistro.Size = new System.Drawing.Size(148, 20);
-            this.dtTmPkrDataRegistro.TabIndex = 3;
-            this.dtTmPkrDataRegistro.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
-            // 
-            // cmbBoxStatus
-            // 
-            this.cmbBoxStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cmbBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBoxStatus.FormattingEnabled = true;
-            this.cmbBoxStatus.Location = new System.Drawing.Point(151, 72);
-            this.cmbBoxStatus.Name = "cmbBoxStatus";
-            this.cmbBoxStatus.Size = new System.Drawing.Size(148, 21);
-            this.cmbBoxStatus.TabIndex = 2;
-            // 
-            // txtBoxNomeCliente
-            // 
-            this.txtBoxNomeCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxNomeCliente.Location = new System.Drawing.Point(151, 39);
-            this.txtBoxNomeCliente.Name = "txtBoxNomeCliente";
-            this.txtBoxNomeCliente.Size = new System.Drawing.Size(148, 20);
-            this.txtBoxNomeCliente.TabIndex = 1;
-            // 
             // btnExcluir
             // 
             this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -241,6 +197,14 @@
             this.lblNumeroPedido.TabIndex = 1;
             this.lblNumeroPedido.Text = "Número do Pedido:";
             // 
+            // txtBoxNumeroPedido
+            // 
+            this.txtBoxNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxNumeroPedido.Location = new System.Drawing.Point(151, 6);
+            this.txtBoxNumeroPedido.Name = "txtBoxNumeroPedido";
+            this.txtBoxNumeroPedido.Size = new System.Drawing.Size(148, 20);
+            this.txtBoxNumeroPedido.TabIndex = 0;
+            // 
             // lblDataEntrega
             // 
             this.lblDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -251,6 +215,24 @@
             this.lblDataEntrega.Size = new System.Drawing.Size(88, 13);
             this.lblDataEntrega.TabIndex = 4;
             this.lblDataEntrega.Text = "Data de Entrega:";
+            // 
+            // dtTmPkrDataEntrega
+            // 
+            this.dtTmPkrDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtTmPkrDataEntrega.Location = new System.Drawing.Point(151, 138);
+            this.dtTmPkrDataEntrega.Name = "dtTmPkrDataEntrega";
+            this.dtTmPkrDataEntrega.Size = new System.Drawing.Size(148, 20);
+            this.dtTmPkrDataEntrega.TabIndex = 4;
+            this.dtTmPkrDataEntrega.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
+            // 
+            // dtTmPkrDataRegistro
+            // 
+            this.dtTmPkrDataRegistro.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtTmPkrDataRegistro.Location = new System.Drawing.Point(151, 105);
+            this.dtTmPkrDataRegistro.Name = "dtTmPkrDataRegistro";
+            this.dtTmPkrDataRegistro.Size = new System.Drawing.Size(148, 20);
+            this.dtTmPkrDataRegistro.TabIndex = 3;
+            this.dtTmPkrDataRegistro.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
             // 
             // lblDataRegistro
             // 
@@ -274,6 +256,16 @@
             this.lblStatus.TabIndex = 3;
             this.lblStatus.Text = "Status do Pedido:";
             // 
+            // cmbBoxStatus
+            // 
+            this.cmbBoxStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxStatus.FormattingEnabled = true;
+            this.cmbBoxStatus.Location = new System.Drawing.Point(151, 72);
+            this.cmbBoxStatus.Name = "cmbBoxStatus";
+            this.cmbBoxStatus.Size = new System.Drawing.Size(148, 21);
+            this.cmbBoxStatus.TabIndex = 2;
+            // 
             // lblNomeCliente
             // 
             this.lblNomeCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -284,6 +276,14 @@
             this.lblNomeCliente.Size = new System.Drawing.Size(88, 13);
             this.lblNomeCliente.TabIndex = 5;
             this.lblNomeCliente.Text = "Nome do Cliente;";
+            // 
+            // txtBoxNomeCliente
+            // 
+            this.txtBoxNomeCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxNomeCliente.Location = new System.Drawing.Point(151, 39);
+            this.txtBoxNomeCliente.Name = "txtBoxNomeCliente";
+            this.txtBoxNomeCliente.Size = new System.Drawing.Size(148, 20);
+            this.txtBoxNomeCliente.TabIndex = 1;
             // 
             // btnLimparFiltros
             // 
@@ -335,7 +335,7 @@
             // 
             // Cliente
             // 
-            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.DataPropertyName = "NomeCliente";
             this.Cliente.HeaderText = "Cliente";
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;

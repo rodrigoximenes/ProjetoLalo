@@ -27,13 +27,16 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             this._pedidoViewModel = pedidoViewModel;
 
             InitializeComponent();
+
             BindComboEntregas();
 
+            _cliente.Id = pedidoViewModel.IdCliente;
             _cliente.NomeCompleto = pedidoViewModel.NomeCliente;
             _cliente.Cpf = pedidoViewModel.CPF;
             _cliente.Endereco = pedidoViewModel.EnderecoCliente;
             _cliente.Telefone = pedidoViewModel.Telefone;
             _cliente.Email = pedidoViewModel.Email;
+
 
             _pedido.DataEntrega = pedidoViewModel.DataEntrega;
             _pedido.DataSolicitacao = pedidoViewModel.DataSolicitacao;

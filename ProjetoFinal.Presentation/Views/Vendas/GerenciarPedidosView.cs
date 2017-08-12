@@ -1,5 +1,6 @@
 ﻿using ProjetoFinal.Domain.Interface.Repository;
 using ProjetoFinal.Infrastructure.NinjectConfig;
+using ProjetoFinal.Presentation.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -10,17 +11,26 @@ namespace ProjetoFinal.Presentation.Views.Vendas
     {
         public int IdPedidoSelecionado { get; set; }
         private readonly IPedidoRepository _pedidoRepository;
+        private readonly IClienteRepository _clienteRepository;
         private readonly IItemRepository _itemRepository;
+        private List<PedidoViewModel> _pedidosViewModel { get; set; }
 
         public GerenciarPedidosView()
         {
             _itemRepository = LaloKernel.GetInstance<IItemRepository>();
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
+            _clienteRepository = LaloKernel.GetInstance<IClienteRepository>();
+
+            _pedidosViewModel = new List<PedidoViewModel>();
+
             InitializeComponent();
             BindCombo();
             BindDateTime();
             StartScreen();
             this.Load += GerenciarPedidosView_Load;
+
+
+            gridPedidos.AutoGenerateColumns = false;
         }
 
         private void GerenciarPedidosView_Load(object sender, EventArgs e)
@@ -30,10 +40,28 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void LoadPedidos()
         {
-            gridPedidos.DataSource = null;
-            gridPedidos.DataSource = _pedidoRepository.FindAll();
-            ClearFields();
+            var pedidos = _pedidoRepository.FindAll();
 
+            foreach (var pedido in pedidos)
+            {
+                var cliente = _clienteRepository.Find(pedido.IdCliente);
+                pedido.Itens = _itemRepository.ListarItensPorIdPedido(pedido.Id);
+
+                var pedidoViewModel = new PedidoViewModel();
+                pedidoViewModel.NomeCliente = cliente.NomeCompleto;
+                pedidoViewModel.IdCliente = cliente.Id;
+                pedidoViewModel.IdPedido = pedido.Id;
+                pedidoViewModel.TipoEntrega = pedido.TipoEntrega;
+                pedidoViewModel.IdAtendente = pedido.IdAtendente;
+                pedidoViewModel.DataSolicitacao = pedido.DataSolicitacao;
+                pedidoViewModel.DataEntrega = pedido.DataEntrega;
+
+                _pedidosViewModel.Add(pedidoViewModel);
+            }
+
+            gridPedidos.DataSource = null;
+            gridPedidos.DataSource = _pedidosViewModel;
+            ClearFields();
         }
 
         #region PrivateMethods
