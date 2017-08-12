@@ -14,6 +14,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         public GerenciarPedidosView()
         {
+            _itemRepository = LaloKernel.GetInstance<IItemRepository>();
             _pedidoRepository = LaloKernel.GetInstance<IPedidoRepository>();
             InitializeComponent();
             BindCombo();
@@ -29,6 +30,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void LoadPedidos()
         {
+            gridPedidos.DataSource = null;
             gridPedidos.DataSource = _pedidoRepository.FindAll();
             ClearFields();
 
