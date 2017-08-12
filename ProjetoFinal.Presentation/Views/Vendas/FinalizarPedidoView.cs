@@ -115,7 +115,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
             try
             {
-                if (!Equals(_cliente.NomeCompleto, "Usuário Padrão")) _clienteRepository.Add(_cliente);
+                if (_cliente.Id <= 0) _clienteRepository.Add(_cliente);
 
                 _pedidoRepository.Add(_pedido);
 

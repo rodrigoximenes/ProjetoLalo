@@ -94,6 +94,28 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             return true;
         }
 
+        private void PreencherViewModelClienteIdentificado(Cliente cliente)
+        {
+            if (Equals(cliente, null)) return;
+
+            PedidoViewModel.IdCliente = cliente.Id;
+            PedidoViewModel.NomeCliente = cliente.NomeCompleto;
+
+            txtBoxNome.Text = cliente.NomeCompleto;
+            txtBoxNome.Enabled = false;
+
+            txtBoxTelefone.Text = cliente.Telefone;
+            txtBoxTelefone.Enabled = false;
+
+            txtBoxCPF.Text = cliente.Cpf;
+            txtBoxCPF.Enabled = false;
+
+
+            txtBoxEmail.Text = cliente.Email;
+            txtBoxEmail.Enabled = false;
+
+            btnBuscarCliente.Enabled = false;
+        }
         #endregion
 
         #region Events
@@ -101,25 +123,8 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         {
             if (chkBoxUsuarioPadrao.Checked)
             {
-                var clientePadrao = _clienteRepository.Find(9);
-
-                PedidoViewModel.IdCliente = clientePadrao.Id;
-                PedidoViewModel.NomeCliente = clientePadrao.NomeCompleto;
-
-                txtBoxNome.Text = clientePadrao.NomeCompleto;
-                txtBoxNome.Enabled = false;
-
-                txtBoxTelefone.Text = clientePadrao.Telefone;
-                txtBoxTelefone.Enabled = false;
-
-                txtBoxCPF.Text = clientePadrao.Cpf;
-                txtBoxCPF.Enabled = false;
-
-
-                txtBoxEmail.Text = clientePadrao.Email;
-                txtBoxEmail.Enabled = false;
-
-                btnBuscarCliente.Enabled = false;
+                var cliente = _clienteRepository.Find(9);
+                PreencherViewModelClienteIdentificado(cliente);
             }
             else
             {
@@ -269,8 +274,21 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrWhiteSpace(txtBoxCPF.Text) && txtBoxCPF.Text.Trim().Length != 11)
+            {
+                MessageBox.Show("CPF inválido.");
+                return;
+            }
 
+            var cliente = _clienteRepository.ObterPorCpf(txtBoxCPF.Text.Trim());
 
+            if (cliente == null)
+            {
+                MessageBox.Show("Cliente não cadastrado.");
+                return;
+            }
+
+            PreencherViewModelClienteIdentificado(cliente);
         }
 
         #endregion
