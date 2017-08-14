@@ -43,9 +43,9 @@
             this.pnlIntro = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tlpHeader = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTituloMain = new System.Windows.Forms.Label();
             this.tlpFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnFecharTela = new System.Windows.Forms.Button();
-            this.lblTituloMain = new System.Windows.Forms.Label();
             this.btnAdicionarUsuário = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarCliente = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloMenuButton();
@@ -69,6 +69,7 @@
             // 
             // pnlMenuStrip
             // 
+            this.pnlMenuStrip.BackColor = System.Drawing.Color.White;
             this.pnlMenuStrip.Controls.Add(this.grpBoxUsuario);
             this.pnlMenuStrip.Controls.Add(this.pnlGestao);
             this.pnlMenuStrip.Controls.Add(this.pnlEstoque);
@@ -84,6 +85,8 @@
             // grpBoxUsuario
             // 
             this.grpBoxUsuario.Controls.Add(this.tlpUsuario);
+            this.grpBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
             this.grpBoxUsuario.Location = new System.Drawing.Point(0, 281);
             this.grpBoxUsuario.Name = "grpBoxUsuario";
             this.grpBoxUsuario.Size = new System.Drawing.Size(239, 54);
@@ -118,6 +121,8 @@
             // 
             this.grpBoxCliente.Controls.Add(this.tlpCliente);
             this.grpBoxCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
             this.grpBoxCliente.Location = new System.Drawing.Point(0, 0);
             this.grpBoxCliente.Name = "grpBoxCliente";
             this.grpBoxCliente.Size = new System.Drawing.Size(240, 58);
@@ -152,6 +157,8 @@
             // 
             this.grpBoxEstoque.Controls.Add(this.tlpEstoque);
             this.grpBoxEstoque.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpBoxEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxEstoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
             this.grpBoxEstoque.Location = new System.Drawing.Point(0, 0);
             this.grpBoxEstoque.Name = "grpBoxEstoque";
             this.grpBoxEstoque.Size = new System.Drawing.Size(240, 59);
@@ -186,6 +193,8 @@
             // 
             this.grpBoxVendas.Controls.Add(this.tlpVendas);
             this.grpBoxVendas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpBoxVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxVendas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
             this.grpBoxVendas.Location = new System.Drawing.Point(0, 0);
             this.grpBoxVendas.Name = "grpBoxVendas";
             this.grpBoxVendas.Size = new System.Drawing.Size(240, 104);
@@ -229,7 +238,7 @@
             // 
             // tlpHeader
             // 
-            this.tlpHeader.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tlpHeader.BackColor = System.Drawing.Color.White;
             this.tlpHeader.ColumnCount = 4;
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -243,6 +252,19 @@
             this.tlpHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpHeader.Size = new System.Drawing.Size(645, 59);
             this.tlpHeader.TabIndex = 2;
+            // 
+            // lblTituloMain
+            // 
+            this.lblTituloMain.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTituloMain.AutoSize = true;
+            this.tlpHeader.SetColumnSpan(this.lblTituloMain, 3);
+            this.lblTituloMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(151)))), ((int)(((byte)(202)))));
+            this.lblTituloMain.Location = new System.Drawing.Point(3, 19);
+            this.lblTituloMain.Name = "lblTituloMain";
+            this.lblTituloMain.Size = new System.Drawing.Size(96, 20);
+            this.lblTituloMain.TabIndex = 0;
+            this.lblTituloMain.Text = "lblTituloMain";
             // 
             // tlpFooter
             // 
@@ -270,18 +292,6 @@
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
             // 
-            // lblTituloMain
-            // 
-            this.lblTituloMain.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTituloMain.AutoSize = true;
-            this.tlpHeader.SetColumnSpan(this.lblTituloMain, 3);
-            this.lblTituloMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloMain.Location = new System.Drawing.Point(3, 19);
-            this.lblTituloMain.Name = "lblTituloMain";
-            this.lblTituloMain.Size = new System.Drawing.Size(96, 20);
-            this.lblTituloMain.TabIndex = 0;
-            this.lblTituloMain.Text = "lblTituloMain";
-            // 
             // btnAdicionarUsuário
             // 
             this.btnAdicionarUsuário.BackColor = System.Drawing.Color.Transparent;
@@ -290,7 +300,7 @@
             this.btnAdicionarUsuário.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarUsuário.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarUsuário.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarUsuário.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarUsuário.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarUsuário.Location = new System.Drawing.Point(3, 3);
             this.btnAdicionarUsuário.Name = "btnAdicionarUsuário";
             this.btnAdicionarUsuário.Size = new System.Drawing.Size(180, 27);
@@ -308,7 +318,7 @@
             this.btnAdicionarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarCliente.Location = new System.Drawing.Point(3, 3);
             this.btnAdicionarCliente.Name = "btnAdicionarCliente";
             this.btnAdicionarCliente.Size = new System.Drawing.Size(180, 27);
@@ -326,7 +336,7 @@
             this.btnAdicionarProduto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarProduto.Location = new System.Drawing.Point(3, 3);
             this.btnAdicionarProduto.Name = "btnAdicionarProduto";
             this.btnAdicionarProduto.Size = new System.Drawing.Size(180, 27);
@@ -344,7 +354,7 @@
             this.btnGerenciarPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnGerenciarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGerenciarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerenciarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerenciarPedido.Location = new System.Drawing.Point(3, 45);
             this.btnGerenciarPedido.Name = "btnGerenciarPedido";
             this.btnGerenciarPedido.Size = new System.Drawing.Size(180, 27);
@@ -362,7 +372,7 @@
             this.btnCriarPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCriarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCriarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCriarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarPedido.Location = new System.Drawing.Point(3, 3);
             this.btnCriarPedido.Name = "btnCriarPedido";
             this.btnCriarPedido.Size = new System.Drawing.Size(180, 27);
