@@ -45,6 +45,7 @@
             this.tlpHeader = new System.Windows.Forms.TableLayoutPanel();
             this.tlpFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnFecharTela = new System.Windows.Forms.Button();
+            this.lblTituloMain = new System.Windows.Forms.Label();
             this.btnAdicionarUsuário = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarCliente = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloMenuButton();
@@ -62,6 +63,7 @@
             this.pnlVendas.SuspendLayout();
             this.grpBoxVendas.SuspendLayout();
             this.tlpVendas.SuspendLayout();
+            this.tlpHeader.SuspendLayout();
             this.tlpFooter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,6 +235,7 @@
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpHeader.Controls.Add(this.lblTituloMain, 0, 0);
             this.tlpHeader.Location = new System.Drawing.Point(240, 0);
             this.tlpHeader.Margin = new System.Windows.Forms.Padding(0);
             this.tlpHeader.Name = "tlpHeader";
@@ -266,6 +269,18 @@
             this.btnFecharTela.Text = "Fechar";
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
+            // 
+            // lblTituloMain
+            // 
+            this.lblTituloMain.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTituloMain.AutoSize = true;
+            this.tlpHeader.SetColumnSpan(this.lblTituloMain, 3);
+            this.lblTituloMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloMain.Location = new System.Drawing.Point(3, 19);
+            this.lblTituloMain.Name = "lblTituloMain";
+            this.lblTituloMain.Size = new System.Drawing.Size(96, 20);
+            this.lblTituloMain.TabIndex = 0;
+            this.lblTituloMain.Text = "lblTituloMain";
             // 
             // btnAdicionarUsuário
             // 
@@ -384,6 +399,8 @@
             this.pnlVendas.ResumeLayout(false);
             this.grpBoxVendas.ResumeLayout(false);
             this.tlpVendas.ResumeLayout(false);
+            this.tlpHeader.ResumeLayout(false);
+            this.tlpHeader.PerformLayout();
             this.tlpFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -413,5 +430,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpUsuario;
         private System.Windows.Forms.TableLayoutPanel tlpFooter;
         private System.Windows.Forms.Button btnFecharTela;
+        private System.Windows.Forms.Label lblTituloMain;
     }
 }

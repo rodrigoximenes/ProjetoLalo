@@ -12,6 +12,7 @@ namespace ProjetoFinal.Presentation.Views
         public Main()
         {
             InitializeComponent();
+            lblTituloMain.Visible = false;
         }
 
         #region PrivateMethods
@@ -19,6 +20,8 @@ namespace ProjetoFinal.Presentation.Views
         private void VerifyPanel()
         {
             pnlMain.Controls.Clear();
+            lblTituloMain.Visible = true;
+            lblTituloMain.Text = "";
         }
 
         #endregion
@@ -28,6 +31,7 @@ namespace ProjetoFinal.Presentation.Views
         {
             VerifyPanel();
             var form = new CriarPedidoView();
+            lblTituloMain.Text = form.Text;
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
             form.Dock = DockStyle.Fill;
@@ -39,6 +43,7 @@ namespace ProjetoFinal.Presentation.Views
         {
             VerifyPanel();
             var form = new GerenciarPedidosView();
+            lblTituloMain.Text = form.Text;
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
             form.Dock = DockStyle.Fill;
@@ -55,6 +60,7 @@ namespace ProjetoFinal.Presentation.Views
         {
             VerifyPanel();
             var form = new AdicionarClienteView();
+            lblTituloMain.Text = form.Text;
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
             form.Dock = DockStyle.Fill;
@@ -66,6 +72,7 @@ namespace ProjetoFinal.Presentation.Views
         {
             VerifyPanel();
             var form = new AdicionarProdutoView();
+            lblTituloMain.Text = form.Text;
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
             form.Dock = DockStyle.Fill;
@@ -77,6 +84,7 @@ namespace ProjetoFinal.Presentation.Views
         {
             VerifyPanel();
             var form = new AdicionarUsuarioView();
+            lblTituloMain.Text = form.Text;
             form.TopLevel = false;
             pnlMain.Controls.Add(form);
             form.Dock = DockStyle.Fill;

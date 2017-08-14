@@ -282,7 +282,7 @@
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdicionarUsuarioView";
-            this.Text = "Criar Pedido";
+            this.Text = "Gerenciar Usuários";
             this.tlpMain.ResumeLayout(false);
             this.grpBoxUsuarios.ResumeLayout(false);
             this.tlpCliente.ResumeLayout(false);

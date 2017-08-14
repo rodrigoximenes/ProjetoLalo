@@ -397,7 +397,7 @@
             this.MinimizeBox = false;
             this.Name = "FinalizarPedidoView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Criar Pedido";
+            this.Text = "Finalizar Pedido";
             this.tlpMain.ResumeLayout(false);
             this.grpBoxInfoGerais.ResumeLayout(false);
             this.tlpCliente.ResumeLayout(false);

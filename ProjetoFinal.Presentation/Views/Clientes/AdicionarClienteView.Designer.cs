@@ -31,22 +31,22 @@
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.grpBoxDadosConsulta = new System.Windows.Forms.GroupBox();
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
+            this.btnSalvar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxTelefone = new System.Windows.Forms.TextBox();
+            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.txtBoxNome = new System.Windows.Forms.TextBox();
+            this.btnNovo = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.txtBoxEndereco = new System.Windows.Forms.TextBox();
+            this.lblEndereco = new ProjetoFinal.Presentation.Components.LaloLabel();
+            this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.grpBoxDadosConsultaDetalhada = new System.Windows.Forms.GroupBox();
             this.tlpProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.gridClientes = new System.Windows.Forms.DataGridView();
-            this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.btnSalvar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.lblNome = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblTelefone = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.btnNovo = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.lblEmail = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblEndereco = new ProjetoFinal.Presentation.Components.LaloLabel();
-            this.lblCPF = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,6 +120,28 @@
             this.tlpCliente.Size = new System.Drawing.Size(630, 130);
             this.tlpCliente.TabIndex = 0;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.Location = new System.Drawing.Point(513, 89);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(111, 33);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.Location = new System.Drawing.Point(513, 46);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(114, 33);
+            this.btnSalvar.TabIndex = 6;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // txtBoxTelefone
             // 
             this.txtBoxTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -129,6 +151,28 @@
             this.txtBoxTelefone.Size = new System.Drawing.Size(155, 20);
             this.txtBoxTelefone.TabIndex = 1;
             // 
+            // lblNome
+            // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNome.AutoSize = true;
+            this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNome.Location = new System.Drawing.Point(76, 15);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.Text = "Nome:";
+            // 
+            // lblTelefone
+            // 
+            this.lblTelefone.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTelefone.Location = new System.Drawing.Point(294, 15);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefone.TabIndex = 3;
+            this.lblTelefone.Text = "Telefone:";
+            // 
             // txtBoxNome
             // 
             this.txtBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -136,6 +180,17 @@
             this.txtBoxNome.Name = "txtBoxNome";
             this.txtBoxNome.Size = new System.Drawing.Size(155, 20);
             this.txtBoxNome.TabIndex = 0;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovo.Location = new System.Drawing.Point(513, 3);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(114, 33);
+            this.btnNovo.TabIndex = 5;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // txtBoxCPF
             // 
@@ -154,6 +209,17 @@
             this.txtBoxEmail.Size = new System.Drawing.Size(155, 20);
             this.txtBoxEmail.TabIndex = 3;
             // 
+            // lblEmail
+            // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEmail.Location = new System.Drawing.Point(311, 58);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.TabIndex = 1;
+            this.lblEmail.Text = "Email:";
+            // 
             // txtBoxEndereco
             // 
             this.txtBoxEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -162,6 +228,28 @@
             this.txtBoxEndereco.Name = "txtBoxEndereco";
             this.txtBoxEndereco.Size = new System.Drawing.Size(387, 20);
             this.txtBoxEndereco.TabIndex = 4;
+            // 
+            // lblEndereco
+            // 
+            this.lblEndereco.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEndereco.Location = new System.Drawing.Point(58, 101);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(56, 13);
+            this.lblEndereco.TabIndex = 2;
+            this.lblEndereco.Text = "Endereço:";
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCPF.Location = new System.Drawing.Point(84, 58);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(30, 13);
+            this.lblCPF.TabIndex = 7;
+            this.lblCPF.Text = "CPF:";
             // 
             // grpBoxDadosConsultaDetalhada
             // 
@@ -215,94 +303,6 @@
             this.gridClientes.TabIndex = 0;
             this.gridClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellClick);
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.Location = new System.Drawing.Point(513, 89);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(111, 33);
-            this.btnExcluir.TabIndex = 7;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.Location = new System.Drawing.Point(513, 46);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(114, 33);
-            this.btnSalvar.TabIndex = 6;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // lblNome
-            // 
-            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNome.AutoSize = true;
-            this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNome.Location = new System.Drawing.Point(76, 15);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
-            this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome:";
-            // 
-            // lblTelefone
-            // 
-            this.lblTelefone.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTelefone.AutoSize = true;
-            this.lblTelefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTelefone.Location = new System.Drawing.Point(294, 15);
-            this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(52, 13);
-            this.lblTelefone.TabIndex = 3;
-            this.lblTelefone.Text = "Telefone:";
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.Location = new System.Drawing.Point(513, 3);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(114, 33);
-            this.btnNovo.TabIndex = 5;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = false;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmail.Location = new System.Drawing.Point(311, 58);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 1;
-            this.lblEmail.Text = "Email:";
-            // 
-            // lblEndereco
-            // 
-            this.lblEndereco.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblEndereco.AutoSize = true;
-            this.lblEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEndereco.Location = new System.Drawing.Point(58, 101);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(56, 13);
-            this.lblEndereco.TabIndex = 2;
-            this.lblEndereco.Text = "Endereço:";
-            // 
-            // lblCPF
-            // 
-            this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblCPF.AutoSize = true;
-            this.lblCPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCPF.Location = new System.Drawing.Point(84, 58);
-            this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(30, 13);
-            this.lblCPF.TabIndex = 7;
-            this.lblCPF.Text = "CPF:";
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
@@ -355,7 +355,7 @@
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdicionarClienteView";
-            this.Text = "Criar Pedido";
+            this.Text = "Gerenciar Clientes";
             this.tlpMain.ResumeLayout(false);
             this.grpBoxDadosConsulta.ResumeLayout(false);
             this.tlpCliente.ResumeLayout(false);

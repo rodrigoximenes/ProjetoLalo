@@ -289,7 +289,7 @@
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdicionarProdutoView";
-            this.Text = "Criar Pedido";
+            this.Text = "Gerenciar Produtos";
             this.tlpMain.ResumeLayout(false);
             this.grpBoxProdutos.ResumeLayout(false);
             this.tlpCliente.ResumeLayout(false);
