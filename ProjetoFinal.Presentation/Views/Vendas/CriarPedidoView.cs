@@ -45,6 +45,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             dtTmPkrDataEntrega.Format = DateTimePickerFormat.Short;
             cmbBoxFormaEntrega.SelectedIndex = -1;
             cmbBoxProdutos.SelectedIndex = -1;
+            txtBoxEndereco.Text = string.Empty;
         }
 
         private void BindComboEntregas()
@@ -108,7 +109,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             txtBoxTelefone.Enabled = false;
 
             txtBoxCPF.Text = cliente.Cpf;
-            txtBoxCPF.Enabled = false;
 
             txtBoxEmail.Text = cliente.Email;
             txtBoxEmail.Enabled = false;
@@ -116,7 +116,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             txtBoxEndereco.Text = cliente.Endereco;
             txtBoxEndereco.Enabled = false;
 
-            btnBuscarCliente.Enabled = false;
         }
         #endregion
 
@@ -164,7 +163,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             else
             {
                 txtBoxEndereco.Enabled = true;
-                txtBoxEndereco.Text = string.Empty;
 
                 dtTmPkrDataEntrega.Enabled = true;
                 dtTmPkrDataEntrega.Text = string.Empty;
