@@ -48,17 +48,19 @@ namespace ProjetoFinal.Presentation.Views.Vendas
                 pedido.Itens = _itemRepository.ListarItensPorIdPedido(pedido.Id);
 
                 var pedidoViewModel = new PedidoViewModel();
-                pedidoViewModel.NomeCliente = cliente.NomeCompleto;
-                pedidoViewModel.IdCliente = cliente.Id;
-                pedidoViewModel.IdPedido = pedido.Id;
-                pedidoViewModel.TipoEntrega = pedido.TipoEntrega;
-                pedidoViewModel.IdAtendente = pedido.IdAtendente;
-                pedidoViewModel.DataSolicitacao = pedido.DataSolicitacao;
-                pedidoViewModel.DataEntrega = pedido.DataEntrega;
 
+                if (!Equals(cliente, null))
+                {
+                    pedidoViewModel.NomeCliente = cliente.NomeCompleto;
+                    pedidoViewModel.IdCliente = cliente.Id;
+                    pedidoViewModel.IdPedido = pedido.Id;
+                    pedidoViewModel.TipoEntrega = pedido.TipoEntrega;
+                    pedidoViewModel.IdAtendente = pedido.IdAtendente;
+                    pedidoViewModel.DataSolicitacao = pedido.DataSolicitacao;
+                    pedidoViewModel.DataEntrega = pedido.DataEntrega;
+                }
                 _pedidosViewModel.Add(pedidoViewModel);
             }
-
             gridPedidos.DataSource = null;
             gridPedidos.DataSource = _pedidosViewModel;
             ClearFields();
@@ -68,7 +70,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void StartScreen()
         {
-            dtTmPkrDataEntrega.Value = DateTime.Now; 
+            dtTmPkrDataEntrega.Value = DateTime.Now;
             dtTmPkrDataRegistro.Value = DateTime.Today.AddDays(-1);
             cmbBoxStatus.SelectedIndex = -1;
             txtBoxNumeroPedido.Text = string.Empty;
@@ -106,12 +108,12 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if(dtTmPkrDataRegistro.Value > dtTmPkrDataEntrega.Value)
+            if (dtTmPkrDataRegistro.Value > dtTmPkrDataEntrega.Value)
             {
                 MessageBox.Show("Data de Entrega não pode ser menor que a Data de Registro");
                 return;
             }
-            
+
         }
 
         private void btnLimparFiltros_Click(object sender, EventArgs e)
@@ -134,7 +136,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
             txtBoxNomeCliente.Text = pedido.Cliente.NomeCompleto;
             txtBoxNumeroPedido.Text = pedido.Cliente.Id.ToString();
-            dtTmPkrDataEntrega.Text =  pedido.DataEntrega.ToShortDateString();
+            dtTmPkrDataEntrega.Text = pedido.DataEntrega.ToShortDateString();
             dtTmPkrDataRegistro.Text = pedido.DataSolicitacao.ToShortDateString();
 
         }
@@ -158,10 +160,10 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             {
                 MessageBox.Show("Pedido não pode ser excluído.");
             }
-            
+
         }
 
         #endregion
-       
+
     }
 }

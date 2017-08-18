@@ -120,6 +120,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             {
                 if (_cliente.Id <= 0) _clienteRepository.Add(_cliente);
 
+                _pedido.IdCliente = _cliente.Id;
                 _pedidoRepository.Add(_pedido);
 
                 foreach (var itemViewModel in _pedidoViewModel.ItemsViewModel)
