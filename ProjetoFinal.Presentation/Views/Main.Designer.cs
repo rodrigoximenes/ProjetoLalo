@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlMenuStrip = new System.Windows.Forms.Panel();
             this.grpBoxUsuario = new System.Windows.Forms.GroupBox();
             this.tlpUsuario = new System.Windows.Forms.TableLayoutPanel();
@@ -46,6 +47,7 @@
             this.lblTituloMain = new System.Windows.Forms.Label();
             this.tlpFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnFecharTela = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdicionarUsuário = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarCliente = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloMenuButton();
@@ -63,8 +65,10 @@
             this.pnlVendas.SuspendLayout();
             this.grpBoxVendas.SuspendLayout();
             this.tlpVendas.SuspendLayout();
+            this.pnlIntro.SuspendLayout();
             this.tlpHeader.SuspendLayout();
             this.tlpFooter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuStrip
@@ -220,6 +224,7 @@
             // pnlIntro
             // 
             this.pnlIntro.BackColor = System.Drawing.Color.Gray;
+            this.pnlIntro.Controls.Add(this.pictureBox1);
             this.pnlIntro.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIntro.Location = new System.Drawing.Point(0, 0);
             this.pnlIntro.Name = "pnlIntro";
@@ -291,6 +296,17 @@
             this.btnFecharTela.Text = "Fechar";
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnAdicionarUsuário
             // 
@@ -409,9 +425,11 @@
             this.pnlVendas.ResumeLayout(false);
             this.grpBoxVendas.ResumeLayout(false);
             this.tlpVendas.ResumeLayout(false);
+            this.pnlIntro.ResumeLayout(false);
             this.tlpHeader.ResumeLayout(false);
             this.tlpHeader.PerformLayout();
             this.tlpFooter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,5 +459,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpFooter;
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.Label lblTituloMain;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

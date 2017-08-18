@@ -32,9 +32,16 @@
             this.grpBoxResultados = new System.Windows.Forms.GroupBox();
             this.tlpResultados = new System.Windows.Forms.TableLayoutPanel();
             this.gridPedidos = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EnderecoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Atendente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBoxConsultaPedidos = new System.Windows.Forms.GroupBox();
             this.tlpConsulta = new System.Windows.Forms.TableLayoutPanel();
-            this.btnExcluir = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
             this.lblNumeroPedido = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.txtBoxNumeroPedido = new System.Windows.Forms.TextBox();
             this.lblDataEntrega = new ProjetoFinal.Presentation.Components.LaloLabel();
@@ -46,15 +53,6 @@
             this.lblNomeCliente = new ProjetoFinal.Presentation.Components.LaloLabel();
             this.txtBoxNomeCliente = new System.Windows.Forms.TextBox();
             this.btnLimparFiltros = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.btnConsultar = new ProjetoFinal.Presentation.Components.LaloPrimaryButton();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EnderecoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Atendente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpMain.SuspendLayout();
             this.grpBoxResultados.SuspendLayout();
             this.tlpResultados.SuspendLayout();
@@ -129,186 +127,6 @@
             this.gridPedidos.TabIndex = 0;
             this.gridPedidos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPedidos_CellClick);
             // 
-            // grpBoxConsultaPedidos
-            // 
-            this.tlpMain.SetColumnSpan(this.grpBoxConsultaPedidos, 2);
-            this.grpBoxConsultaPedidos.Controls.Add(this.tlpConsulta);
-            this.grpBoxConsultaPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpBoxConsultaPedidos.Location = new System.Drawing.Point(3, 3);
-            this.grpBoxConsultaPedidos.Name = "grpBoxConsultaPedidos";
-            this.grpBoxConsultaPedidos.Size = new System.Drawing.Size(636, 181);
-            this.grpBoxConsultaPedidos.TabIndex = 0;
-            this.grpBoxConsultaPedidos.TabStop = false;
-            this.grpBoxConsultaPedidos.Text = "Consulta de Pedidos";
-            // 
-            // tlpConsulta
-            // 
-            this.tlpConsulta.ColumnCount = 4;
-            this.tlpConsulta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.49206F));
-            this.tlpConsulta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.19048F));
-            this.tlpConsulta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.723371F));
-            this.tlpConsulta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.4833F));
-            this.tlpConsulta.Controls.Add(this.btnExcluir, 3, 2);
-            this.tlpConsulta.Controls.Add(this.lblNumeroPedido, 0, 0);
-            this.tlpConsulta.Controls.Add(this.txtBoxNumeroPedido, 1, 0);
-            this.tlpConsulta.Controls.Add(this.lblDataEntrega, 0, 4);
-            this.tlpConsulta.Controls.Add(this.dtTmPkrDataEntrega, 1, 4);
-            this.tlpConsulta.Controls.Add(this.dtTmPkrDataRegistro, 1, 3);
-            this.tlpConsulta.Controls.Add(this.lblDataRegistro, 0, 3);
-            this.tlpConsulta.Controls.Add(this.lblStatus, 0, 2);
-            this.tlpConsulta.Controls.Add(this.cmbBoxStatus, 1, 2);
-            this.tlpConsulta.Controls.Add(this.lblNomeCliente, 0, 1);
-            this.tlpConsulta.Controls.Add(this.txtBoxNomeCliente, 1, 1);
-            this.tlpConsulta.Controls.Add(this.btnLimparFiltros, 3, 0);
-            this.tlpConsulta.Controls.Add(this.btnConsultar, 3, 1);
-            this.tlpConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpConsulta.Location = new System.Drawing.Point(3, 16);
-            this.tlpConsulta.Name = "tlpConsulta";
-            this.tlpConsulta.RowCount = 5;
-            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpConsulta.Size = new System.Drawing.Size(630, 162);
-            this.tlpConsulta.TabIndex = 0;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.Location = new System.Drawing.Point(478, 69);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(111, 27);
-            this.btnExcluir.TabIndex = 0;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // lblNumeroPedido
-            // 
-            this.lblNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNumeroPedido.AutoSize = true;
-            this.lblNumeroPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNumeroPedido.Location = new System.Drawing.Point(47, 10);
-            this.lblNumeroPedido.Name = "lblNumeroPedido";
-            this.lblNumeroPedido.Size = new System.Drawing.Size(98, 13);
-            this.lblNumeroPedido.TabIndex = 1;
-            this.lblNumeroPedido.Text = "Número do Pedido:";
-            // 
-            // txtBoxNumeroPedido
-            // 
-            this.txtBoxNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxNumeroPedido.Location = new System.Drawing.Point(151, 6);
-            this.txtBoxNumeroPedido.Name = "txtBoxNumeroPedido";
-            this.txtBoxNumeroPedido.Size = new System.Drawing.Size(148, 20);
-            this.txtBoxNumeroPedido.TabIndex = 0;
-            // 
-            // lblDataEntrega
-            // 
-            this.lblDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblDataEntrega.AutoSize = true;
-            this.lblDataEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDataEntrega.Location = new System.Drawing.Point(57, 142);
-            this.lblDataEntrega.Name = "lblDataEntrega";
-            this.lblDataEntrega.Size = new System.Drawing.Size(88, 13);
-            this.lblDataEntrega.TabIndex = 4;
-            this.lblDataEntrega.Text = "Data de Entrega:";
-            // 
-            // dtTmPkrDataEntrega
-            // 
-            this.dtTmPkrDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtTmPkrDataEntrega.Location = new System.Drawing.Point(151, 138);
-            this.dtTmPkrDataEntrega.Name = "dtTmPkrDataEntrega";
-            this.dtTmPkrDataEntrega.Size = new System.Drawing.Size(148, 20);
-            this.dtTmPkrDataEntrega.TabIndex = 4;
-            this.dtTmPkrDataEntrega.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
-            // 
-            // dtTmPkrDataRegistro
-            // 
-            this.dtTmPkrDataRegistro.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtTmPkrDataRegistro.Location = new System.Drawing.Point(151, 105);
-            this.dtTmPkrDataRegistro.Name = "dtTmPkrDataRegistro";
-            this.dtTmPkrDataRegistro.Size = new System.Drawing.Size(148, 20);
-            this.dtTmPkrDataRegistro.TabIndex = 3;
-            this.dtTmPkrDataRegistro.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
-            // 
-            // lblDataRegistro
-            // 
-            this.lblDataRegistro.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblDataRegistro.AutoSize = true;
-            this.lblDataRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDataRegistro.Location = new System.Drawing.Point(55, 109);
-            this.lblDataRegistro.Name = "lblDataRegistro";
-            this.lblDataRegistro.Size = new System.Drawing.Size(90, 13);
-            this.lblDataRegistro.TabIndex = 2;
-            this.lblDataRegistro.Text = "Data de Registro:";
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblStatus.Location = new System.Drawing.Point(54, 76);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(91, 13);
-            this.lblStatus.TabIndex = 3;
-            this.lblStatus.Text = "Status do Pedido:";
-            // 
-            // cmbBoxStatus
-            // 
-            this.cmbBoxStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cmbBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBoxStatus.FormattingEnabled = true;
-            this.cmbBoxStatus.Location = new System.Drawing.Point(151, 72);
-            this.cmbBoxStatus.Name = "cmbBoxStatus";
-            this.cmbBoxStatus.Size = new System.Drawing.Size(148, 21);
-            this.cmbBoxStatus.TabIndex = 2;
-            // 
-            // lblNomeCliente
-            // 
-            this.lblNomeCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNomeCliente.AutoSize = true;
-            this.lblNomeCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNomeCliente.Location = new System.Drawing.Point(57, 43);
-            this.lblNomeCliente.Name = "lblNomeCliente";
-            this.lblNomeCliente.Size = new System.Drawing.Size(88, 13);
-            this.lblNomeCliente.TabIndex = 5;
-            this.lblNomeCliente.Text = "Nome do Cliente;";
-            // 
-            // txtBoxNomeCliente
-            // 
-            this.txtBoxNomeCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxNomeCliente.Location = new System.Drawing.Point(151, 39);
-            this.txtBoxNomeCliente.Name = "txtBoxNomeCliente";
-            this.txtBoxNomeCliente.Size = new System.Drawing.Size(148, 20);
-            this.txtBoxNomeCliente.TabIndex = 1;
-            // 
-            // btnLimparFiltros
-            // 
-            this.btnLimparFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(478, 3);
-            this.btnLimparFiltros.Name = "btnLimparFiltros";
-            this.btnLimparFiltros.Size = new System.Drawing.Size(111, 27);
-            this.btnLimparFiltros.TabIndex = 1;
-            this.btnLimparFiltros.Text = "Novo";
-            this.btnLimparFiltros.UseVisualStyleBackColor = false;
-            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(478, 36);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(110, 27);
-            this.btnConsultar.TabIndex = 0;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseCompatibleTextRendering = true;
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "IdPedido";
@@ -369,6 +187,163 @@
             this.Atendente.ReadOnly = true;
             this.Atendente.Visible = false;
             // 
+            // grpBoxConsultaPedidos
+            // 
+            this.tlpMain.SetColumnSpan(this.grpBoxConsultaPedidos, 2);
+            this.grpBoxConsultaPedidos.Controls.Add(this.tlpConsulta);
+            this.grpBoxConsultaPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpBoxConsultaPedidos.Location = new System.Drawing.Point(3, 3);
+            this.grpBoxConsultaPedidos.Name = "grpBoxConsultaPedidos";
+            this.grpBoxConsultaPedidos.Size = new System.Drawing.Size(636, 181);
+            this.grpBoxConsultaPedidos.TabIndex = 0;
+            this.grpBoxConsultaPedidos.TabStop = false;
+            this.grpBoxConsultaPedidos.Text = "Consulta de Pedidos";
+            // 
+            // tlpConsulta
+            // 
+            this.tlpConsulta.ColumnCount = 4;
+            this.tlpConsulta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.49206F));
+            this.tlpConsulta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.19048F));
+            this.tlpConsulta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.723371F));
+            this.tlpConsulta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.4833F));
+            this.tlpConsulta.Controls.Add(this.lblNumeroPedido, 0, 0);
+            this.tlpConsulta.Controls.Add(this.txtBoxNumeroPedido, 1, 0);
+            this.tlpConsulta.Controls.Add(this.lblDataEntrega, 0, 4);
+            this.tlpConsulta.Controls.Add(this.dtTmPkrDataEntrega, 1, 4);
+            this.tlpConsulta.Controls.Add(this.dtTmPkrDataRegistro, 1, 3);
+            this.tlpConsulta.Controls.Add(this.lblDataRegistro, 0, 3);
+            this.tlpConsulta.Controls.Add(this.lblStatus, 0, 2);
+            this.tlpConsulta.Controls.Add(this.cmbBoxStatus, 1, 2);
+            this.tlpConsulta.Controls.Add(this.lblNomeCliente, 0, 1);
+            this.tlpConsulta.Controls.Add(this.txtBoxNomeCliente, 1, 1);
+            this.tlpConsulta.Controls.Add(this.btnLimparFiltros, 3, 0);
+            this.tlpConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpConsulta.Location = new System.Drawing.Point(3, 16);
+            this.tlpConsulta.Name = "tlpConsulta";
+            this.tlpConsulta.RowCount = 5;
+            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tlpConsulta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpConsulta.Size = new System.Drawing.Size(630, 162);
+            this.tlpConsulta.TabIndex = 0;
+            // 
+            // lblNumeroPedido
+            // 
+            this.lblNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNumeroPedido.AutoSize = true;
+            this.lblNumeroPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNumeroPedido.Location = new System.Drawing.Point(47, 10);
+            this.lblNumeroPedido.Name = "lblNumeroPedido";
+            this.lblNumeroPedido.Size = new System.Drawing.Size(98, 13);
+            this.lblNumeroPedido.TabIndex = 1;
+            this.lblNumeroPedido.Text = "Número do Pedido:";
+            // 
+            // txtBoxNumeroPedido
+            // 
+            this.txtBoxNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxNumeroPedido.Enabled = false;
+            this.txtBoxNumeroPedido.Location = new System.Drawing.Point(151, 6);
+            this.txtBoxNumeroPedido.Name = "txtBoxNumeroPedido";
+            this.txtBoxNumeroPedido.Size = new System.Drawing.Size(148, 20);
+            this.txtBoxNumeroPedido.TabIndex = 0;
+            // 
+            // lblDataEntrega
+            // 
+            this.lblDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDataEntrega.AutoSize = true;
+            this.lblDataEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDataEntrega.Location = new System.Drawing.Point(57, 142);
+            this.lblDataEntrega.Name = "lblDataEntrega";
+            this.lblDataEntrega.Size = new System.Drawing.Size(88, 13);
+            this.lblDataEntrega.TabIndex = 4;
+            this.lblDataEntrega.Text = "Data de Entrega:";
+            // 
+            // dtTmPkrDataEntrega
+            // 
+            this.dtTmPkrDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtTmPkrDataEntrega.Enabled = false;
+            this.dtTmPkrDataEntrega.Location = new System.Drawing.Point(151, 138);
+            this.dtTmPkrDataEntrega.Name = "dtTmPkrDataEntrega";
+            this.dtTmPkrDataEntrega.Size = new System.Drawing.Size(148, 20);
+            this.dtTmPkrDataEntrega.TabIndex = 4;
+            this.dtTmPkrDataEntrega.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
+            // 
+            // dtTmPkrDataRegistro
+            // 
+            this.dtTmPkrDataRegistro.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtTmPkrDataRegistro.Enabled = false;
+            this.dtTmPkrDataRegistro.Location = new System.Drawing.Point(151, 105);
+            this.dtTmPkrDataRegistro.Name = "dtTmPkrDataRegistro";
+            this.dtTmPkrDataRegistro.Size = new System.Drawing.Size(148, 20);
+            this.dtTmPkrDataRegistro.TabIndex = 3;
+            this.dtTmPkrDataRegistro.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
+            // 
+            // lblDataRegistro
+            // 
+            this.lblDataRegistro.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDataRegistro.AutoSize = true;
+            this.lblDataRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDataRegistro.Location = new System.Drawing.Point(55, 109);
+            this.lblDataRegistro.Name = "lblDataRegistro";
+            this.lblDataRegistro.Size = new System.Drawing.Size(90, 13);
+            this.lblDataRegistro.TabIndex = 2;
+            this.lblDataRegistro.Text = "Data de Registro:";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblStatus.Location = new System.Drawing.Point(54, 76);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(91, 13);
+            this.lblStatus.TabIndex = 3;
+            this.lblStatus.Text = "Status do Pedido:";
+            // 
+            // cmbBoxStatus
+            // 
+            this.cmbBoxStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxStatus.FormattingEnabled = true;
+            this.cmbBoxStatus.Location = new System.Drawing.Point(151, 72);
+            this.cmbBoxStatus.Name = "cmbBoxStatus";
+            this.cmbBoxStatus.Size = new System.Drawing.Size(148, 21);
+            this.cmbBoxStatus.TabIndex = 2;
+            // 
+            // lblNomeCliente
+            // 
+            this.lblNomeCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNomeCliente.AutoSize = true;
+            this.lblNomeCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNomeCliente.Location = new System.Drawing.Point(57, 43);
+            this.lblNomeCliente.Name = "lblNomeCliente";
+            this.lblNomeCliente.Size = new System.Drawing.Size(88, 13);
+            this.lblNomeCliente.TabIndex = 5;
+            this.lblNomeCliente.Text = "Nome do Cliente;";
+            // 
+            // txtBoxNomeCliente
+            // 
+            this.txtBoxNomeCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxNomeCliente.Enabled = false;
+            this.txtBoxNomeCliente.Location = new System.Drawing.Point(151, 39);
+            this.txtBoxNomeCliente.Name = "txtBoxNomeCliente";
+            this.txtBoxNomeCliente.Size = new System.Drawing.Size(148, 20);
+            this.txtBoxNomeCliente.TabIndex = 1;
+            // 
+            // btnLimparFiltros
+            // 
+            this.btnLimparFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparFiltros.Location = new System.Drawing.Point(478, 3);
+            this.btnLimparFiltros.Name = "btnLimparFiltros";
+            this.btnLimparFiltros.Size = new System.Drawing.Size(111, 27);
+            this.btnLimparFiltros.TabIndex = 1;
+            this.btnLimparFiltros.Text = "Novo";
+            this.btnLimparFiltros.UseVisualStyleBackColor = false;
+            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
+            // 
             // GerenciarPedidosView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,10 +380,8 @@
         private System.Windows.Forms.DateTimePicker dtTmPkrDataRegistro;
         private System.Windows.Forms.DateTimePicker dtTmPkrDataEntrega;
         private System.Windows.Forms.ComboBox cmbBoxStatus;
-        private Components.LaloPrimaryButton btnConsultar;
         private Components.LaloPrimaryButton btnLimparFiltros;
         private System.Windows.Forms.DataGridView gridPedidos;
-        private Components.LaloPrimaryButton btnExcluir;
         private Components.LaloLabel lblNomeCliente;
         private System.Windows.Forms.TextBox txtBoxNomeCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;

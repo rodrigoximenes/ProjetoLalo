@@ -29,7 +29,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             StartScreen();
             this.Load += GerenciarPedidosView_Load;
 
-
+           
             gridPedidos.AutoGenerateColumns = false;
         }
 
@@ -72,7 +72,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
         {
             dtTmPkrDataEntrega.Value = DateTime.Now;
             dtTmPkrDataRegistro.Value = DateTime.Today.AddDays(-1);
-            cmbBoxStatus.SelectedIndex = -1;
+            cmbBoxStatus.SelectedIndex = 0;
             txtBoxNumeroPedido.Text = string.Empty;
         }
 
@@ -108,11 +108,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (dtTmPkrDataRegistro.Value > dtTmPkrDataEntrega.Value)
-            {
-                MessageBox.Show("Data de Entrega não pode ser menor que a Data de Registro");
-                return;
-            }
 
         }
 
@@ -143,23 +138,6 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            try
-            {
-                IdPedidoSelecionado = Convert.ToInt32(gridPedidos.SelectedRows[0].Cells[0].Value);
-
-                var itens = _itemRepository.ListarItensPorIdPedido(IdPedidoSelecionado);
-
-                foreach (var item in itens)
-                    _itemRepository.Delete(item.Id);
-
-                _pedidoRepository.Delete(IdPedidoSelecionado);
-
-                LoadPedidos();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Pedido não pode ser excluído.");
-            }
 
         }
 
