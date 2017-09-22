@@ -30,7 +30,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
             this.Load += GerenciarPedidosView_Load;
 
            
-            gridPedidos.AutoGenerateColumns = false;
+            gridPedidos.AutoGenerateColumns =false;
         }
 
         private void GerenciarPedidosView_Load(object sender, EventArgs e)
