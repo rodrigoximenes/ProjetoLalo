@@ -274,7 +274,7 @@ namespace ProjetoFinal.Presentation.Views.Vendas
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtBoxCPF.Text) && txtBoxCPF.Text.Trim().Length != 11)
+            if (!string.IsNullOrWhiteSpace(txtBoxCPF.Text) && txtBoxCPF.Text.Trim().Length < 11)
             {
                 MessageBox.Show("CPF inválido.");
                 return;
