@@ -302,7 +302,7 @@
             this.pnlMain.Margin = new System.Windows.Forms.Padding(1);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Padding = new System.Windows.Forms.Padding(1);
-            this.pnlMain.Size = new System.Drawing.Size(860, 569);
+            this.pnlMain.Size = new System.Drawing.Size(860, 557);
             this.pnlMain.TabIndex = 1;
             // 
             // tlpHeader
@@ -338,10 +338,9 @@
             // 
             // tlpFooter
             // 
-            this.tlpFooter.ColumnCount = 3;
+            this.tlpFooter.ColumnCount = 2;
             this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 681F));
             this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
-            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tlpFooter.Controls.Add(this.btnFecharTela, 1, 0);
             this.tlpFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tlpFooter.Location = new System.Drawing.Point(320, 632);
@@ -358,7 +357,7 @@
             this.btnFecharTela.Location = new System.Drawing.Point(685, 4);
             this.btnFecharTela.Margin = new System.Windows.Forms.Padding(4);
             this.btnFecharTela.Name = "btnFecharTela";
-            this.btnFecharTela.Size = new System.Drawing.Size(153, 38);
+            this.btnFecharTela.Size = new System.Drawing.Size(171, 38);
             this.btnFecharTela.TabIndex = 0;
             this.btnFecharTela.Text = "Fechar";
             this.btnFecharTela.UseVisualStyleBackColor = true;

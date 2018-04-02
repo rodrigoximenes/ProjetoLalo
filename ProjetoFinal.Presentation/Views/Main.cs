@@ -30,6 +30,7 @@ namespace ProjetoFinal.Presentation.Views
         {
             pnlMain.Controls.Clear();
             lblTituloMain.Visible = true;
+            if (pnlMain.Controls.Count.Equals(0)) lblTituloMain.Text = string.Empty;
 
         }
 
