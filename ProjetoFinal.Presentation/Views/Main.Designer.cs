@@ -42,12 +42,12 @@
             this.grpBoxVendas = new System.Windows.Forms.GroupBox();
             this.tlpVendas = new System.Windows.Forms.TableLayoutPanel();
             this.pnlIntro = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tlpHeader = new System.Windows.Forms.TableLayoutPanel();
             this.lblTituloMain = new System.Windows.Forms.Label();
             this.tlpFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnFecharTela = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdicionarUsuário = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarCliente = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloMenuButton();
@@ -66,9 +66,9 @@
             this.grpBoxVendas.SuspendLayout();
             this.tlpVendas.SuspendLayout();
             this.pnlIntro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tlpHeader.SuspendLayout();
             this.tlpFooter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuStrip
@@ -83,7 +83,7 @@
             this.pnlMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuStrip.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMenuStrip.Name = "pnlMenuStrip";
-            this.pnlMenuStrip.Size = new System.Drawing.Size(240, 551);
+            this.pnlMenuStrip.Size = new System.Drawing.Size(320, 678);
             this.pnlMenuStrip.TabIndex = 0;
             // 
             // grpBoxUsuario
@@ -91,9 +91,11 @@
             this.grpBoxUsuario.Controls.Add(this.tlpUsuario);
             this.grpBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
-            this.grpBoxUsuario.Location = new System.Drawing.Point(0, 281);
+            this.grpBoxUsuario.Location = new System.Drawing.Point(0, 346);
+            this.grpBoxUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.grpBoxUsuario.Name = "grpBoxUsuario";
-            this.grpBoxUsuario.Size = new System.Drawing.Size(239, 54);
+            this.grpBoxUsuario.Padding = new System.Windows.Forms.Padding(4);
+            this.grpBoxUsuario.Size = new System.Drawing.Size(319, 66);
             this.grpBoxUsuario.TabIndex = 4;
             this.grpBoxUsuario.TabStop = false;
             this.grpBoxUsuario.Text = "Usuários";
@@ -104,21 +106,22 @@
             this.tlpUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpUsuario.Controls.Add(this.btnAdicionarUsuário, 0, 0);
             this.tlpUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpUsuario.Location = new System.Drawing.Point(3, 16);
+            this.tlpUsuario.Location = new System.Drawing.Point(4, 20);
             this.tlpUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.tlpUsuario.Name = "tlpUsuario";
             this.tlpUsuario.RowCount = 1;
             this.tlpUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpUsuario.Size = new System.Drawing.Size(233, 36);
+            this.tlpUsuario.Size = new System.Drawing.Size(311, 44);
             this.tlpUsuario.TabIndex = 6;
             // 
             // pnlGestao
             // 
             this.pnlGestao.Controls.Add(this.grpBoxCliente);
             this.pnlGestao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGestao.Location = new System.Drawing.Point(0, 222);
+            this.pnlGestao.Location = new System.Drawing.Point(0, 274);
+            this.pnlGestao.Margin = new System.Windows.Forms.Padding(4);
             this.pnlGestao.Name = "pnlGestao";
-            this.pnlGestao.Size = new System.Drawing.Size(240, 58);
+            this.pnlGestao.Size = new System.Drawing.Size(320, 71);
             this.pnlGestao.TabIndex = 3;
             // 
             // grpBoxCliente
@@ -128,8 +131,10 @@
             this.grpBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBoxCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
             this.grpBoxCliente.Location = new System.Drawing.Point(0, 0);
+            this.grpBoxCliente.Margin = new System.Windows.Forms.Padding(4);
             this.grpBoxCliente.Name = "grpBoxCliente";
-            this.grpBoxCliente.Size = new System.Drawing.Size(240, 58);
+            this.grpBoxCliente.Padding = new System.Windows.Forms.Padding(4);
+            this.grpBoxCliente.Size = new System.Drawing.Size(320, 71);
             this.grpBoxCliente.TabIndex = 0;
             this.grpBoxCliente.TabStop = false;
             this.grpBoxCliente.Text = "Clientes";
@@ -140,21 +145,22 @@
             this.tlpCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpCliente.Controls.Add(this.btnAdicionarCliente, 0, 0);
             this.tlpCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCliente.Location = new System.Drawing.Point(3, 16);
+            this.tlpCliente.Location = new System.Drawing.Point(4, 20);
             this.tlpCliente.Margin = new System.Windows.Forms.Padding(0);
             this.tlpCliente.Name = "tlpCliente";
             this.tlpCliente.RowCount = 1;
             this.tlpCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpCliente.Size = new System.Drawing.Size(234, 39);
+            this.tlpCliente.Size = new System.Drawing.Size(312, 47);
             this.tlpCliente.TabIndex = 2;
             // 
             // pnlEstoque
             // 
             this.pnlEstoque.Controls.Add(this.grpBoxEstoque);
             this.pnlEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEstoque.Location = new System.Drawing.Point(0, 163);
+            this.pnlEstoque.Location = new System.Drawing.Point(0, 201);
+            this.pnlEstoque.Margin = new System.Windows.Forms.Padding(4);
             this.pnlEstoque.Name = "pnlEstoque";
-            this.pnlEstoque.Size = new System.Drawing.Size(240, 59);
+            this.pnlEstoque.Size = new System.Drawing.Size(320, 73);
             this.pnlEstoque.TabIndex = 2;
             // 
             // grpBoxEstoque
@@ -164,8 +170,10 @@
             this.grpBoxEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBoxEstoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
             this.grpBoxEstoque.Location = new System.Drawing.Point(0, 0);
+            this.grpBoxEstoque.Margin = new System.Windows.Forms.Padding(4);
             this.grpBoxEstoque.Name = "grpBoxEstoque";
-            this.grpBoxEstoque.Size = new System.Drawing.Size(240, 59);
+            this.grpBoxEstoque.Padding = new System.Windows.Forms.Padding(4);
+            this.grpBoxEstoque.Size = new System.Drawing.Size(320, 73);
             this.grpBoxEstoque.TabIndex = 0;
             this.grpBoxEstoque.TabStop = false;
             this.grpBoxEstoque.Text = "Produtos";
@@ -176,21 +184,22 @@
             this.tlpEstoque.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpEstoque.Controls.Add(this.btnAdicionarProduto, 0, 0);
             this.tlpEstoque.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpEstoque.Location = new System.Drawing.Point(3, 16);
+            this.tlpEstoque.Location = new System.Drawing.Point(4, 20);
             this.tlpEstoque.Margin = new System.Windows.Forms.Padding(0);
             this.tlpEstoque.Name = "tlpEstoque";
             this.tlpEstoque.RowCount = 1;
             this.tlpEstoque.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpEstoque.Size = new System.Drawing.Size(234, 40);
+            this.tlpEstoque.Size = new System.Drawing.Size(312, 49);
             this.tlpEstoque.TabIndex = 2;
             // 
             // pnlVendas
             // 
             this.pnlVendas.Controls.Add(this.grpBoxVendas);
             this.pnlVendas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlVendas.Location = new System.Drawing.Point(0, 59);
+            this.pnlVendas.Location = new System.Drawing.Point(0, 73);
+            this.pnlVendas.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVendas.Name = "pnlVendas";
-            this.pnlVendas.Size = new System.Drawing.Size(240, 104);
+            this.pnlVendas.Size = new System.Drawing.Size(320, 128);
             this.pnlVendas.TabIndex = 1;
             // 
             // grpBoxVendas
@@ -200,8 +209,10 @@
             this.grpBoxVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBoxVendas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
             this.grpBoxVendas.Location = new System.Drawing.Point(0, 0);
+            this.grpBoxVendas.Margin = new System.Windows.Forms.Padding(4);
             this.grpBoxVendas.Name = "grpBoxVendas";
-            this.grpBoxVendas.Size = new System.Drawing.Size(240, 104);
+            this.grpBoxVendas.Padding = new System.Windows.Forms.Padding(4);
+            this.grpBoxVendas.Size = new System.Drawing.Size(320, 128);
             this.grpBoxVendas.TabIndex = 0;
             this.grpBoxVendas.TabStop = false;
             this.grpBoxVendas.Text = "Vendas";
@@ -213,12 +224,13 @@
             this.tlpVendas.Controls.Add(this.btnGerenciarPedido, 0, 1);
             this.tlpVendas.Controls.Add(this.btnCriarPedido, 0, 0);
             this.tlpVendas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpVendas.Location = new System.Drawing.Point(3, 16);
+            this.tlpVendas.Location = new System.Drawing.Point(4, 20);
+            this.tlpVendas.Margin = new System.Windows.Forms.Padding(4);
             this.tlpVendas.Name = "tlpVendas";
             this.tlpVendas.RowCount = 2;
             this.tlpVendas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpVendas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpVendas.Size = new System.Drawing.Size(234, 85);
+            this.tlpVendas.Size = new System.Drawing.Size(312, 104);
             this.tlpVendas.TabIndex = 0;
             // 
             // pnlIntro
@@ -227,18 +239,32 @@
             this.pnlIntro.Controls.Add(this.pictureBox1);
             this.pnlIntro.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIntro.Location = new System.Drawing.Point(0, 0);
+            this.pnlIntro.Margin = new System.Windows.Forms.Padding(4);
             this.pnlIntro.Name = "pnlIntro";
-            this.pnlIntro.Size = new System.Drawing.Size(240, 59);
+            this.pnlIntro.Size = new System.Drawing.Size(320, 73);
             this.pnlIntro.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(320, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnlMain.Location = new System.Drawing.Point(240, 60);
+            this.pnlMain.Location = new System.Drawing.Point(320, 74);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(1);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Padding = new System.Windows.Forms.Padding(1);
-            this.pnlMain.Size = new System.Drawing.Size(645, 462);
+            this.pnlMain.Size = new System.Drawing.Size(860, 569);
             this.pnlMain.TabIndex = 1;
             // 
             // tlpHeader
@@ -250,12 +276,12 @@
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpHeader.Controls.Add(this.lblTituloMain, 0, 0);
-            this.tlpHeader.Location = new System.Drawing.Point(240, 0);
+            this.tlpHeader.Location = new System.Drawing.Point(320, 0);
             this.tlpHeader.Margin = new System.Windows.Forms.Padding(0);
             this.tlpHeader.Name = "tlpHeader";
             this.tlpHeader.RowCount = 1;
             this.tlpHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpHeader.Size = new System.Drawing.Size(645, 59);
+            this.tlpHeader.Size = new System.Drawing.Size(860, 73);
             this.tlpHeader.TabIndex = 2;
             // 
             // lblTituloMain
@@ -265,48 +291,40 @@
             this.tlpHeader.SetColumnSpan(this.lblTituloMain, 3);
             this.lblTituloMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(151)))), ((int)(((byte)(202)))));
-            this.lblTituloMain.Location = new System.Drawing.Point(3, 19);
+            this.lblTituloMain.Location = new System.Drawing.Point(4, 24);
+            this.lblTituloMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTituloMain.Name = "lblTituloMain";
-            this.lblTituloMain.Size = new System.Drawing.Size(96, 20);
+            this.lblTituloMain.Size = new System.Drawing.Size(122, 25);
             this.lblTituloMain.TabIndex = 0;
             this.lblTituloMain.Text = "lblTituloMain";
             // 
             // tlpFooter
             // 
             this.tlpFooter.ColumnCount = 3;
-            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 511F));
-            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
-            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 681F));
+            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
+            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tlpFooter.Controls.Add(this.btnFecharTela, 1, 0);
             this.tlpFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tlpFooter.Location = new System.Drawing.Point(240, 514);
+            this.tlpFooter.Location = new System.Drawing.Point(320, 632);
+            this.tlpFooter.Margin = new System.Windows.Forms.Padding(4);
             this.tlpFooter.Name = "tlpFooter";
             this.tlpFooter.RowCount = 1;
             this.tlpFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpFooter.Size = new System.Drawing.Size(645, 37);
+            this.tlpFooter.Size = new System.Drawing.Size(860, 46);
             this.tlpFooter.TabIndex = 3;
             // 
             // btnFecharTela
             // 
             this.btnFecharTela.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFecharTela.Location = new System.Drawing.Point(514, 3);
+            this.btnFecharTela.Location = new System.Drawing.Point(685, 4);
+            this.btnFecharTela.Margin = new System.Windows.Forms.Padding(4);
             this.btnFecharTela.Name = "btnFecharTela";
-            this.btnFecharTela.Size = new System.Drawing.Size(115, 31);
+            this.btnFecharTela.Size = new System.Drawing.Size(153, 38);
             this.btnFecharTela.TabIndex = 0;
             this.btnFecharTela.Text = "Fechar";
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnAdicionarUsuário
             // 
@@ -317,9 +335,10 @@
             this.btnAdicionarUsuário.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarUsuário.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarUsuário.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarUsuário.Location = new System.Drawing.Point(3, 3);
+            this.btnAdicionarUsuário.Location = new System.Drawing.Point(4, 4);
+            this.btnAdicionarUsuário.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionarUsuário.Name = "btnAdicionarUsuário";
-            this.btnAdicionarUsuário.Size = new System.Drawing.Size(180, 27);
+            this.btnAdicionarUsuário.Size = new System.Drawing.Size(240, 33);
             this.btnAdicionarUsuário.TabIndex = 0;
             this.btnAdicionarUsuário.Text = "Gerenciar Usuários";
             this.btnAdicionarUsuário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -335,9 +354,10 @@
             this.btnAdicionarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarCliente.Location = new System.Drawing.Point(3, 3);
+            this.btnAdicionarCliente.Location = new System.Drawing.Point(4, 4);
+            this.btnAdicionarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionarCliente.Name = "btnAdicionarCliente";
-            this.btnAdicionarCliente.Size = new System.Drawing.Size(180, 27);
+            this.btnAdicionarCliente.Size = new System.Drawing.Size(240, 33);
             this.btnAdicionarCliente.TabIndex = 0;
             this.btnAdicionarCliente.Text = "Gerenciar Clientes";
             this.btnAdicionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -353,9 +373,10 @@
             this.btnAdicionarProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarProduto.Location = new System.Drawing.Point(3, 3);
+            this.btnAdicionarProduto.Location = new System.Drawing.Point(4, 4);
+            this.btnAdicionarProduto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionarProduto.Name = "btnAdicionarProduto";
-            this.btnAdicionarProduto.Size = new System.Drawing.Size(180, 27);
+            this.btnAdicionarProduto.Size = new System.Drawing.Size(240, 33);
             this.btnAdicionarProduto.TabIndex = 0;
             this.btnAdicionarProduto.Text = "Gerenciar Produtos";
             this.btnAdicionarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -371,9 +392,10 @@
             this.btnGerenciarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGerenciarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerenciarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerenciarPedido.Location = new System.Drawing.Point(3, 45);
+            this.btnGerenciarPedido.Location = new System.Drawing.Point(4, 56);
+            this.btnGerenciarPedido.Margin = new System.Windows.Forms.Padding(4);
             this.btnGerenciarPedido.Name = "btnGerenciarPedido";
-            this.btnGerenciarPedido.Size = new System.Drawing.Size(180, 27);
+            this.btnGerenciarPedido.Size = new System.Drawing.Size(240, 33);
             this.btnGerenciarPedido.TabIndex = 1;
             this.btnGerenciarPedido.Text = "Gerenciar Pedidos";
             this.btnGerenciarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -389,9 +411,10 @@
             this.btnCriarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCriarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCriarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarPedido.Location = new System.Drawing.Point(3, 3);
+            this.btnCriarPedido.Location = new System.Drawing.Point(4, 4);
+            this.btnCriarPedido.Margin = new System.Windows.Forms.Padding(4);
             this.btnCriarPedido.Name = "btnCriarPedido";
-            this.btnCriarPedido.Size = new System.Drawing.Size(180, 27);
+            this.btnCriarPedido.Size = new System.Drawing.Size(240, 33);
             this.btnCriarPedido.TabIndex = 0;
             this.btnCriarPedido.Text = "Criar Pedido";
             this.btnCriarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -400,14 +423,15 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 551);
+            this.ClientSize = new System.Drawing.Size(1180, 678);
             this.Controls.Add(this.tlpFooter);
             this.Controls.Add(this.tlpHeader);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
@@ -426,10 +450,10 @@
             this.grpBoxVendas.ResumeLayout(false);
             this.tlpVendas.ResumeLayout(false);
             this.pnlIntro.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tlpHeader.ResumeLayout(false);
             this.tlpHeader.PerformLayout();
             this.tlpFooter.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

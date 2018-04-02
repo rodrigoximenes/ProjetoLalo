@@ -18,7 +18,8 @@ namespace ProjetoFinal.Infrastructure.Repository
 
         public Usuario AutenticaUsuario(string Login, string Senha)
         {
-            _usuarioLogado = _context.Usuario.Where(x => x.Nome == Login && x.Senha == Senha).SingleOrDefault();
+            _usuarioLogado = _context.Usuario.Where(x => x.Nome.ToLower() == Login.ToLower()
+            && x.Senha.ToLower() == Senha.ToLower()).SingleOrDefault();
             return _usuarioLogado;
         }
 
