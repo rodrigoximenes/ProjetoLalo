@@ -1,4 +1,6 @@
-﻿using ProjetoFinal.Presentation.Views.Clientes;
+﻿using ProjetoFinal.Domain.Interface.Repository;
+using ProjetoFinal.Infrastructure.NinjectConfig;
+using ProjetoFinal.Presentation.Views.Clientes;
 using ProjetoFinal.Presentation.Views.Estoque;
 using ProjetoFinal.Presentation.Views.Usuarios;
 using ProjetoFinal.Presentation.Views.Vendas;
@@ -9,10 +11,17 @@ namespace ProjetoFinal.Presentation.Views
 {
     public partial class Main : Form
     {
+
+        private readonly IUsuarioRepository _usuarioRepository;
+
         public Main()
         {
+            _usuarioRepository = LaloKernel.GetInstance<IUsuarioRepository>();
+
             InitializeComponent();
             lblTituloMain.Visible = false;
+            btnUsuarioNome.Text = "Nome: " + _usuarioRepository.ObterUsuarioLogado().Nome;
+            btnTipoUsuario.Text = "Perfil: " + _usuarioRepository.ObterUsuarioLogado().Perfil;
         }
 
         #region PrivateMethods
@@ -21,7 +30,7 @@ namespace ProjetoFinal.Presentation.Views
         {
             pnlMain.Controls.Clear();
             lblTituloMain.Visible = true;
-            lblTituloMain.Text = "";
+
         }
 
         #endregion

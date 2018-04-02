@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlMenuStrip = new System.Windows.Forms.Panel();
+            this.grpBoxConsolidado = new System.Windows.Forms.GroupBox();
+            this.tlpInfoGerais = new System.Windows.Forms.TableLayoutPanel();
             this.grpBoxUsuario = new System.Windows.Forms.GroupBox();
             this.tlpUsuario = new System.Windows.Forms.TableLayoutPanel();
             this.pnlGestao = new System.Windows.Forms.Panel();
@@ -48,12 +50,16 @@
             this.lblTituloMain = new System.Windows.Forms.Label();
             this.tlpFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnFecharTela = new System.Windows.Forms.Button();
+            this.btnUsuarioNome = new ProjetoFinal.Presentation.Components.LaloMenuButton();
+            this.btnTipoUsuario = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarUsuário = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarCliente = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnGerenciarPedido = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.btnCriarPedido = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.pnlMenuStrip.SuspendLayout();
+            this.grpBoxConsolidado.SuspendLayout();
+            this.tlpInfoGerais.SuspendLayout();
             this.grpBoxUsuario.SuspendLayout();
             this.tlpUsuario.SuspendLayout();
             this.pnlGestao.SuspendLayout();
@@ -74,6 +80,7 @@
             // pnlMenuStrip
             // 
             this.pnlMenuStrip.BackColor = System.Drawing.Color.White;
+            this.pnlMenuStrip.Controls.Add(this.grpBoxConsolidado);
             this.pnlMenuStrip.Controls.Add(this.grpBoxUsuario);
             this.pnlMenuStrip.Controls.Add(this.pnlGestao);
             this.pnlMenuStrip.Controls.Add(this.pnlEstoque);
@@ -85,6 +92,37 @@
             this.pnlMenuStrip.Name = "pnlMenuStrip";
             this.pnlMenuStrip.Size = new System.Drawing.Size(320, 678);
             this.pnlMenuStrip.TabIndex = 0;
+            // 
+            // grpBoxConsolidado
+            // 
+            this.grpBoxConsolidado.Controls.Add(this.tlpInfoGerais);
+            this.grpBoxConsolidado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxConsolidado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(162)))));
+            this.grpBoxConsolidado.Location = new System.Drawing.Point(4, 570);
+            this.grpBoxConsolidado.Margin = new System.Windows.Forms.Padding(4);
+            this.grpBoxConsolidado.Name = "grpBoxConsolidado";
+            this.grpBoxConsolidado.Padding = new System.Windows.Forms.Padding(4);
+            this.grpBoxConsolidado.Size = new System.Drawing.Size(312, 104);
+            this.grpBoxConsolidado.TabIndex = 7;
+            this.grpBoxConsolidado.TabStop = false;
+            this.grpBoxConsolidado.Text = "Informações Gerais";
+            // 
+            // tlpInfoGerais
+            // 
+            this.tlpInfoGerais.ColumnCount = 1;
+            this.tlpInfoGerais.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpInfoGerais.Controls.Add(this.btnUsuarioNome, 0, 0);
+            this.tlpInfoGerais.Controls.Add(this.btnTipoUsuario, 0, 1);
+            this.tlpInfoGerais.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpInfoGerais.Location = new System.Drawing.Point(4, 20);
+            this.tlpInfoGerais.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpInfoGerais.Name = "tlpInfoGerais";
+            this.tlpInfoGerais.RowCount = 3;
+            this.tlpInfoGerais.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpInfoGerais.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpInfoGerais.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpInfoGerais.Size = new System.Drawing.Size(304, 125);
+            this.tlpInfoGerais.TabIndex = 6;
             // 
             // grpBoxUsuario
             // 
@@ -326,6 +364,42 @@
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
             // 
+            // btnUsuarioNome
+            // 
+            this.btnUsuarioNome.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarioNome.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnUsuarioNome.FlatAppearance.BorderSize = 0;
+            this.btnUsuarioNome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarioNome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarioNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarioNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarioNome.Location = new System.Drawing.Point(4, 4);
+            this.btnUsuarioNome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUsuarioNome.Name = "btnUsuarioNome";
+            this.btnUsuarioNome.Size = new System.Drawing.Size(240, 33);
+            this.btnUsuarioNome.TabIndex = 0;
+            this.btnUsuarioNome.Text = "Nome Usuário";
+            this.btnUsuarioNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarioNome.UseVisualStyleBackColor = false;
+            // 
+            // btnTipoUsuario
+            // 
+            this.btnTipoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btnTipoUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTipoUsuario.FlatAppearance.BorderSize = 0;
+            this.btnTipoUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTipoUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipoUsuario.Location = new System.Drawing.Point(4, 45);
+            this.btnTipoUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTipoUsuario.Name = "btnTipoUsuario";
+            this.btnTipoUsuario.Size = new System.Drawing.Size(240, 32);
+            this.btnTipoUsuario.TabIndex = 1;
+            this.btnTipoUsuario.Text = "Tipo Usuário";
+            this.btnTipoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoUsuario.UseVisualStyleBackColor = false;
+            // 
             // btnAdicionarUsuário
             // 
             this.btnAdicionarUsuário.BackColor = System.Drawing.Color.Transparent;
@@ -438,6 +512,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.pnlMenuStrip.ResumeLayout(false);
+            this.grpBoxConsolidado.ResumeLayout(false);
+            this.tlpInfoGerais.ResumeLayout(false);
             this.grpBoxUsuario.ResumeLayout(false);
             this.tlpUsuario.ResumeLayout(false);
             this.pnlGestao.ResumeLayout(false);
@@ -484,5 +560,9 @@
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.Label lblTituloMain;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox grpBoxConsolidado;
+        private System.Windows.Forms.TableLayoutPanel tlpInfoGerais;
+        private Components.LaloMenuButton btnUsuarioNome;
+        private Components.LaloMenuButton btnTipoUsuario;
     }
 }

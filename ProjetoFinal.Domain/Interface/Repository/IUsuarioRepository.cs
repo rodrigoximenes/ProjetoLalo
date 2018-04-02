@@ -7,5 +7,6 @@ namespace ProjetoFinal.Domain.Interface.Repository
         Usuario AutenticaUsuario(string Login, string Senha);
 
         Usuario ObterUsuarioLogado();
+
     }
 }
