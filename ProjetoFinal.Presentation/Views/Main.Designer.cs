@@ -32,31 +32,31 @@
             this.pnlMenuStrip = new System.Windows.Forms.Panel();
             this.grpBoxConsolidado = new System.Windows.Forms.GroupBox();
             this.tlpInfoGerais = new System.Windows.Forms.TableLayoutPanel();
+            this.btnUsuarioNome = new ProjetoFinal.Presentation.Components.LaloMenuButton();
+            this.btnTipoUsuario = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.grpBoxUsuario = new System.Windows.Forms.GroupBox();
             this.tlpUsuario = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAdicionarUsuário = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.pnlGestao = new System.Windows.Forms.Panel();
             this.grpBoxCliente = new System.Windows.Forms.GroupBox();
             this.tlpCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAdicionarCliente = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.pnlEstoque = new System.Windows.Forms.Panel();
             this.grpBoxEstoque = new System.Windows.Forms.GroupBox();
             this.tlpEstoque = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.pnlVendas = new System.Windows.Forms.Panel();
             this.grpBoxVendas = new System.Windows.Forms.GroupBox();
             this.tlpVendas = new System.Windows.Forms.TableLayoutPanel();
+            this.btnGerenciarPedido = new ProjetoFinal.Presentation.Components.LaloMenuButton();
+            this.btnCriarPedido = new ProjetoFinal.Presentation.Components.LaloMenuButton();
             this.pnlIntro = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tlpHeader = new System.Windows.Forms.TableLayoutPanel();
             this.lblTituloMain = new System.Windows.Forms.Label();
             this.tlpFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnFecharTela = new System.Windows.Forms.Button();
-            this.btnUsuarioNome = new ProjetoFinal.Presentation.Components.LaloMenuButton();
-            this.btnTipoUsuario = new ProjetoFinal.Presentation.Components.LaloMenuButton();
-            this.btnAdicionarUsuário = new ProjetoFinal.Presentation.Components.LaloMenuButton();
-            this.btnAdicionarCliente = new ProjetoFinal.Presentation.Components.LaloMenuButton();
-            this.btnAdicionarProduto = new ProjetoFinal.Presentation.Components.LaloMenuButton();
-            this.btnGerenciarPedido = new ProjetoFinal.Presentation.Components.LaloMenuButton();
-            this.btnCriarPedido = new ProjetoFinal.Presentation.Components.LaloMenuButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMenuStrip.SuspendLayout();
             this.grpBoxConsolidado.SuspendLayout();
             this.tlpInfoGerais.SuspendLayout();
@@ -72,9 +72,9 @@
             this.grpBoxVendas.SuspendLayout();
             this.tlpVendas.SuspendLayout();
             this.pnlIntro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tlpHeader.SuspendLayout();
             this.tlpFooter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuStrip
@@ -124,6 +124,42 @@
             this.tlpInfoGerais.Size = new System.Drawing.Size(304, 125);
             this.tlpInfoGerais.TabIndex = 6;
             // 
+            // btnUsuarioNome
+            // 
+            this.btnUsuarioNome.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarioNome.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnUsuarioNome.FlatAppearance.BorderSize = 0;
+            this.btnUsuarioNome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarioNome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarioNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarioNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarioNome.Location = new System.Drawing.Point(4, 4);
+            this.btnUsuarioNome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUsuarioNome.Name = "btnUsuarioNome";
+            this.btnUsuarioNome.Size = new System.Drawing.Size(240, 33);
+            this.btnUsuarioNome.TabIndex = 0;
+            this.btnUsuarioNome.Text = "Nome Usuário";
+            this.btnUsuarioNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarioNome.UseVisualStyleBackColor = false;
+            // 
+            // btnTipoUsuario
+            // 
+            this.btnTipoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btnTipoUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTipoUsuario.FlatAppearance.BorderSize = 0;
+            this.btnTipoUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTipoUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipoUsuario.Location = new System.Drawing.Point(4, 45);
+            this.btnTipoUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTipoUsuario.Name = "btnTipoUsuario";
+            this.btnTipoUsuario.Size = new System.Drawing.Size(240, 32);
+            this.btnTipoUsuario.TabIndex = 1;
+            this.btnTipoUsuario.Text = "Tipo Usuário";
+            this.btnTipoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoUsuario.UseVisualStyleBackColor = false;
+            // 
             // grpBoxUsuario
             // 
             this.grpBoxUsuario.Controls.Add(this.tlpUsuario);
@@ -151,6 +187,25 @@
             this.tlpUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpUsuario.Size = new System.Drawing.Size(311, 44);
             this.tlpUsuario.TabIndex = 6;
+            // 
+            // btnAdicionarUsuário
+            // 
+            this.btnAdicionarUsuário.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarUsuário.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarUsuário.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarUsuário.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarUsuário.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarUsuário.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarUsuário.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarUsuário.Location = new System.Drawing.Point(4, 4);
+            this.btnAdicionarUsuário.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdicionarUsuário.Name = "btnAdicionarUsuário";
+            this.btnAdicionarUsuário.Size = new System.Drawing.Size(240, 33);
+            this.btnAdicionarUsuário.TabIndex = 0;
+            this.btnAdicionarUsuário.Text = "Gerenciar Usuários";
+            this.btnAdicionarUsuário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarUsuário.UseVisualStyleBackColor = false;
+            this.btnAdicionarUsuário.Click += new System.EventHandler(this.btnAdicionarUsuário_Click);
             // 
             // pnlGestao
             // 
@@ -191,6 +246,25 @@
             this.tlpCliente.Size = new System.Drawing.Size(312, 47);
             this.tlpCliente.TabIndex = 2;
             // 
+            // btnAdicionarCliente
+            // 
+            this.btnAdicionarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarCliente.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarCliente.Location = new System.Drawing.Point(4, 4);
+            this.btnAdicionarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdicionarCliente.Name = "btnAdicionarCliente";
+            this.btnAdicionarCliente.Size = new System.Drawing.Size(240, 33);
+            this.btnAdicionarCliente.TabIndex = 0;
+            this.btnAdicionarCliente.Text = "Gerenciar Clientes";
+            this.btnAdicionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarCliente.UseVisualStyleBackColor = false;
+            this.btnAdicionarCliente.Click += new System.EventHandler(this.btnAdicionarCliente_Click);
+            // 
             // pnlEstoque
             // 
             this.pnlEstoque.Controls.Add(this.grpBoxEstoque);
@@ -229,6 +303,25 @@
             this.tlpEstoque.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpEstoque.Size = new System.Drawing.Size(312, 49);
             this.tlpEstoque.TabIndex = 2;
+            // 
+            // btnAdicionarProduto
+            // 
+            this.btnAdicionarProduto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarProduto.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarProduto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarProduto.Location = new System.Drawing.Point(4, 4);
+            this.btnAdicionarProduto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdicionarProduto.Name = "btnAdicionarProduto";
+            this.btnAdicionarProduto.Size = new System.Drawing.Size(240, 33);
+            this.btnAdicionarProduto.TabIndex = 0;
+            this.btnAdicionarProduto.Text = "Gerenciar Produtos";
+            this.btnAdicionarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarProduto.UseVisualStyleBackColor = false;
+            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
             // 
             // pnlVendas
             // 
@@ -271,6 +364,44 @@
             this.tlpVendas.Size = new System.Drawing.Size(312, 104);
             this.tlpVendas.TabIndex = 0;
             // 
+            // btnGerenciarPedido
+            // 
+            this.btnGerenciarPedido.BackColor = System.Drawing.Color.Transparent;
+            this.btnGerenciarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGerenciarPedido.FlatAppearance.BorderSize = 0;
+            this.btnGerenciarPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGerenciarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGerenciarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerenciarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerenciarPedido.Location = new System.Drawing.Point(4, 56);
+            this.btnGerenciarPedido.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGerenciarPedido.Name = "btnGerenciarPedido";
+            this.btnGerenciarPedido.Size = new System.Drawing.Size(240, 33);
+            this.btnGerenciarPedido.TabIndex = 1;
+            this.btnGerenciarPedido.Text = "Gerenciar Pedidos";
+            this.btnGerenciarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGerenciarPedido.UseVisualStyleBackColor = false;
+            this.btnGerenciarPedido.Click += new System.EventHandler(this.btnGerenciarPedido_Click);
+            // 
+            // btnCriarPedido
+            // 
+            this.btnCriarPedido.BackColor = System.Drawing.Color.Transparent;
+            this.btnCriarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCriarPedido.FlatAppearance.BorderSize = 0;
+            this.btnCriarPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCriarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCriarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCriarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarPedido.Location = new System.Drawing.Point(4, 4);
+            this.btnCriarPedido.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCriarPedido.Name = "btnCriarPedido";
+            this.btnCriarPedido.Size = new System.Drawing.Size(240, 33);
+            this.btnCriarPedido.TabIndex = 0;
+            this.btnCriarPedido.Text = "Criar Pedido";
+            this.btnCriarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCriarPedido.UseVisualStyleBackColor = false;
+            this.btnCriarPedido.Click += new System.EventHandler(this.btnCriarPedido_Click);
+            // 
             // pnlIntro
             // 
             this.pnlIntro.BackColor = System.Drawing.Color.Gray;
@@ -281,19 +412,6 @@
             this.pnlIntro.Name = "pnlIntro";
             this.pnlIntro.Size = new System.Drawing.Size(320, 73);
             this.pnlIntro.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(320, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pnlMain
             // 
@@ -340,7 +458,7 @@
             // 
             this.tlpFooter.ColumnCount = 2;
             this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 681F));
-            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
+            this.tlpFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179F));
             this.tlpFooter.Controls.Add(this.btnFecharTela, 1, 0);
             this.tlpFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tlpFooter.Location = new System.Drawing.Point(320, 632);
@@ -363,136 +481,18 @@
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
             // 
-            // btnUsuarioNome
+            // pictureBox1
             // 
-            this.btnUsuarioNome.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarioNome.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnUsuarioNome.FlatAppearance.BorderSize = 0;
-            this.btnUsuarioNome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarioNome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarioNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarioNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarioNome.Location = new System.Drawing.Point(4, 4);
-            this.btnUsuarioNome.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUsuarioNome.Name = "btnUsuarioNome";
-            this.btnUsuarioNome.Size = new System.Drawing.Size(240, 33);
-            this.btnUsuarioNome.TabIndex = 0;
-            this.btnUsuarioNome.Text = "Nome Usuário";
-            this.btnUsuarioNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarioNome.UseVisualStyleBackColor = false;
-            // 
-            // btnTipoUsuario
-            // 
-            this.btnTipoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btnTipoUsuario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnTipoUsuario.FlatAppearance.BorderSize = 0;
-            this.btnTipoUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnTipoUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnTipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTipoUsuario.Location = new System.Drawing.Point(4, 45);
-            this.btnTipoUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTipoUsuario.Name = "btnTipoUsuario";
-            this.btnTipoUsuario.Size = new System.Drawing.Size(240, 32);
-            this.btnTipoUsuario.TabIndex = 1;
-            this.btnTipoUsuario.Text = "Tipo Usuário";
-            this.btnTipoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoUsuario.UseVisualStyleBackColor = false;
-            // 
-            // btnAdicionarUsuário
-            // 
-            this.btnAdicionarUsuário.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarUsuário.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarUsuário.FlatAppearance.BorderSize = 0;
-            this.btnAdicionarUsuário.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarUsuário.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarUsuário.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarUsuário.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarUsuário.Location = new System.Drawing.Point(4, 4);
-            this.btnAdicionarUsuário.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdicionarUsuário.Name = "btnAdicionarUsuário";
-            this.btnAdicionarUsuário.Size = new System.Drawing.Size(240, 33);
-            this.btnAdicionarUsuário.TabIndex = 0;
-            this.btnAdicionarUsuário.Text = "Gerenciar Usuários";
-            this.btnAdicionarUsuário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionarUsuário.UseVisualStyleBackColor = false;
-            this.btnAdicionarUsuário.Click += new System.EventHandler(this.btnAdicionarUsuário_Click);
-            // 
-            // btnAdicionarCliente
-            // 
-            this.btnAdicionarCliente.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarCliente.FlatAppearance.BorderSize = 0;
-            this.btnAdicionarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarCliente.Location = new System.Drawing.Point(4, 4);
-            this.btnAdicionarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdicionarCliente.Name = "btnAdicionarCliente";
-            this.btnAdicionarCliente.Size = new System.Drawing.Size(240, 33);
-            this.btnAdicionarCliente.TabIndex = 0;
-            this.btnAdicionarCliente.Text = "Gerenciar Clientes";
-            this.btnAdicionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionarCliente.UseVisualStyleBackColor = false;
-            this.btnAdicionarCliente.Click += new System.EventHandler(this.btnAdicionarCliente_Click);
-            // 
-            // btnAdicionarProduto
-            // 
-            this.btnAdicionarProduto.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarProduto.FlatAppearance.BorderSize = 0;
-            this.btnAdicionarProduto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarProduto.Location = new System.Drawing.Point(4, 4);
-            this.btnAdicionarProduto.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdicionarProduto.Name = "btnAdicionarProduto";
-            this.btnAdicionarProduto.Size = new System.Drawing.Size(240, 33);
-            this.btnAdicionarProduto.TabIndex = 0;
-            this.btnAdicionarProduto.Text = "Gerenciar Produtos";
-            this.btnAdicionarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionarProduto.UseVisualStyleBackColor = false;
-            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
-            // 
-            // btnGerenciarPedido
-            // 
-            this.btnGerenciarPedido.BackColor = System.Drawing.Color.Transparent;
-            this.btnGerenciarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGerenciarPedido.FlatAppearance.BorderSize = 0;
-            this.btnGerenciarPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGerenciarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGerenciarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerenciarPedido.Location = new System.Drawing.Point(4, 56);
-            this.btnGerenciarPedido.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGerenciarPedido.Name = "btnGerenciarPedido";
-            this.btnGerenciarPedido.Size = new System.Drawing.Size(240, 33);
-            this.btnGerenciarPedido.TabIndex = 1;
-            this.btnGerenciarPedido.Text = "Gerenciar Pedidos";
-            this.btnGerenciarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGerenciarPedido.UseVisualStyleBackColor = false;
-            this.btnGerenciarPedido.Click += new System.EventHandler(this.btnGerenciarPedido_Click);
-            // 
-            // btnCriarPedido
-            // 
-            this.btnCriarPedido.BackColor = System.Drawing.Color.Transparent;
-            this.btnCriarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCriarPedido.FlatAppearance.BorderSize = 0;
-            this.btnCriarPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCriarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCriarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCriarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarPedido.Location = new System.Drawing.Point(4, 4);
-            this.btnCriarPedido.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCriarPedido.Name = "btnCriarPedido";
-            this.btnCriarPedido.Size = new System.Drawing.Size(240, 33);
-            this.btnCriarPedido.TabIndex = 0;
-            this.btnCriarPedido.Text = "Criar Pedido";
-            this.btnCriarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCriarPedido.UseVisualStyleBackColor = false;
-            this.btnCriarPedido.Click += new System.EventHandler(this.btnCriarPedido_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(320, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 
@@ -509,7 +509,8 @@
             this.MinimizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Projeto";
+            this.TopMost = true;
             this.pnlMenuStrip.ResumeLayout(false);
             this.grpBoxConsolidado.ResumeLayout(false);
             this.tlpInfoGerais.ResumeLayout(false);
@@ -525,10 +526,10 @@
             this.grpBoxVendas.ResumeLayout(false);
             this.tlpVendas.ResumeLayout(false);
             this.pnlIntro.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tlpHeader.ResumeLayout(false);
             this.tlpHeader.PerformLayout();
             this.tlpFooter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

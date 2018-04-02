@@ -241,6 +241,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>dbLalo.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\MeuProjetoLogo.jpg" />
     <None Include="Resources\ProjetoLogo.jpg" />
     <None Include="Resources\GloboLogo.jpg" />
   </ItemGroup>

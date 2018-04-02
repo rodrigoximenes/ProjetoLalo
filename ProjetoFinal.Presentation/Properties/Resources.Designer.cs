@@ -73,6 +73,16 @@ namespace ProjetoFinal.Presentation.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MeuProjetoLogo {
+            get {
+                object obj = ResourceManager.GetObject("MeuProjetoLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ProjetoLogo {
             get {
                 object obj = ResourceManager.GetObject("ProjetoLogo", resourceCulture);
